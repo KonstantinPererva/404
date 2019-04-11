@@ -302,7 +302,9 @@ $starts = [
           <div class="go-in-team flex-box">
             <p class="statistic-text">и это только начало...</p>
             <div>
-              <button class="black-btn ppf">хочу в team404</button>
+              <a class="btn-tur ppf">
+                  <span class="btn-tur__text">Хочу в team404</span>
+              </a>
             </div>
           </div>
         </div>

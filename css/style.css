@@ -159,16 +159,8 @@ button a {
 /* line 21, ../sass/_modules.scss */
 .name-block {
   font-family: Oswald-Regular;
-  font-size: 2.6em;
-  text-transform: uppercase;
-  flex-basis: 100%;
+  font-size: 24px;
   max-width: 1366px;
-}
-@media screen and (min-width: 1200px) {
-  /* line 29, ../sass/_modules.scss */
-  .name-block span {
-    margin-left: 20px;
-  }
 }
 
 /* line 35, ../sass/_modules.scss */
@@ -185,16 +177,18 @@ button a {
 
 /* line 46, ../sass/_modules.scss */
 .st-num {
-  font-family: Oswald-Regular;
-  font-size: 4em;
+  font-family: Oswald-Bold;
+  font-size: 40px;
   text-align: center;
-  margin: 0;
+  margin: 0 0 10px;
+  color: #89D7D7;
 }
 
 /* line 52, ../sass/_modules.scss */
 .st-text {
-  font-family: Montserrat-Regular;
-  font-size: 1.6em;
+  font-family: Montserrat-SemiBold;
+  font-size: 12px;
+  line-height: 16px;
   text-align: center;
   margin: 0;
 }
@@ -310,7 +304,6 @@ label input:focus {
 /* line 18, ../sass/_layouts.scss */
 .start {
   flex-direction: column;
-  justify-content: space-between;
   position: relative;
   padding-bottom: 30px;
   padding-top: 130px;
@@ -336,11 +329,11 @@ label input:focus {
 @media only screen and (min-width: 992px) {
   /* line 25, ../sass/_layouts.scss */
   .start header {
-    flex-basis: 100%;
-    width: auto;
+    margin: 0 auto;
     position: static;
     align-items: center;
     background-color: transparent;
+    padding: 56px 0 120px;
   }
   /* line 49, ../sass/_layouts.scss */
   .start header > div {
@@ -411,6 +404,13 @@ label input:focus {
 .start .menu nav ul a {
   color: inherit;
   text-decoration: none;
+  transition: .15s;
+}
+
+@media (hover: hover) {
+  .start .menu nav ul a:hover {
+    color: #89D7D7;
+  }
 }
 /* line 108, ../sass/_layouts.scss */
 .start .menu nav .nav-slider {
@@ -500,10 +500,11 @@ label input:focus {
   }
   /* line 174, ../sass/_layouts.scss */
   .start .content {
-    flex-direction: row;
+    margin: 0 auto;
   }
   /* line 176, ../sass/_layouts.scss */
   .start .content .menu {
+    padding: 90px 0 0;
     flex-basis: 50%;
   }
   /* line 179, ../sass/_layouts.scss */
@@ -518,12 +519,7 @@ label input:focus {
 @media only screen and (min-width: 1200px) {
   /* line 18, ../sass/_layouts.scss */
   .start {
-    height: 100vh;
     padding: 0;
-    flex-direction: row;
-    align-content: space-around;
-    justify-content: center;
-    flex-wrap: wrap;
   }
   /* line 205, ../sass/_layouts.scss */
   .start .content .slider-menu {
@@ -607,8 +603,7 @@ label input:focus {
 /* line 293, ../sass/_layouts.scss */
 .team {
   position: relative;
-  flex-wrap: wrap;
-  align-self: flex-start;
+  flex-direction: column;
   background-image: url("../img/team.jpg");
   background-repeat: no-repeat;
   background-position: left center;
@@ -638,7 +633,8 @@ label input:focus {
 /* line 318, ../sass/_layouts.scss */
 .team > div {
   max-width: 1366px;
-  margin: auto;
+  width: 100%;
+  margin: 0 auto;
 }
 /* line 323, ../sass/_layouts.scss */
 .team .content, .team .name-block {
@@ -652,11 +648,11 @@ label input:focus {
 }
 /* line 334, ../sass/_layouts.scss */
 .team .name-block {
-  margin-top: 20px;
+  margin-top: 100px;
 }
 /* line 336, ../sass/_layouts.scss */
 .team .name-block span {
-  margin-left: 20px;
+  margin-left: 55px;
 }
 /* line 342, ../sass/_layouts.scss */
 .team .m-team-photo img {
@@ -669,7 +665,13 @@ label input:focus {
 }
 /* line 352, ../sass/_layouts.scss */
 .team .team-info {
-  background-color: #7dd7d7;
+  background-color: #000;
+  color: #fff;
+  padding: 45px 40px 50px;
+}
+
+.team .team-info * {
+  box-sizing: border-box;
 }
 /* line 355, ../sass/_layouts.scss */
 .team .team-info > *:not(.m-team-photo) {
@@ -689,13 +691,11 @@ label input:focus {
 .team .team-info .statistic-data {
   flex-wrap: wrap;
   justify-content: space-around;
-  margin: 40px 0 15px 0;
+  margin: 20px 0 25px 0;
 }
 /* line 373, ../sass/_layouts.scss */
 .team .team-info .statistic-data div {
-  margin: 5px;
-  margin-top: 0;
-  margin-bottom: 15px;
+  margin: 0 5px;
 }
 /* line 380, ../sass/_layouts.scss */
 .team .team-info .team-statistic {
@@ -716,7 +716,7 @@ label input:focus {
 @media screen and (min-width: 992px) {
   /* line 402, ../sass/_layouts.scss */
   .team .name-block {
-    margin-bottom: 100px;
+    margin-bottom: 50px;
   }
   /* line 407, ../sass/_layouts.scss */
   .team .team-info > *:not(.m-team-photo) {
@@ -729,14 +729,6 @@ label input:focus {
   /* line 413, ../sass/_layouts.scss */
   .team .team-info .title-des {
     margin-bottom: 50px;
-  }
-  /* line 416, ../sass/_layouts.scss */
-  .team .team-info .statistic-data {
-    margin-top: 20px;
-  }
-  /* line 419, ../sass/_layouts.scss */
-  .team .team-info .go-in-team {
-    margin-bottom: 20px;
   }
   /* line 426, ../sass/_layouts.scss */
   .team:before {
@@ -752,17 +744,6 @@ label input:focus {
   /* line 293, ../sass/_layouts.scss */
   .team {
     height: 100%;
-    align-content: space-around;
-    justify-content: center;
-  }
-  /* line 443, ../sass/_layouts.scss */
-  .team .name-block {
-    margin: 0;
-    /*padding-left: 20px;*/
-  }
-  /* line 446, ../sass/_layouts.scss */
-  .team .name-block span {
-    margin-left: 20px;
   }
   /* line 451, ../sass/_layouts.scss */
   .team .m-team-photo {
@@ -770,7 +751,7 @@ label input:focus {
   }
   /* line 456, ../sass/_layouts.scss */
   .team .team-info > *:not(.m-team-photo) {
-    max-width: 600px;
+    max-width: 712px;
   }
 }
 @media screen and (min-width: 1360px) {
@@ -794,7 +775,7 @@ label input:focus {
   }
   /* line 478, ../sass/_layouts.scss */
   .team .team-info .title-des {
-    margin-bottom: 70px;
+    margin-bottom: 40px;
   }
   /* line 483, ../sass/_layouts.scss */
   .team .title-des {
@@ -2520,14 +2501,14 @@ label input:focus {
 }
 /* line 225, ../sass/_main.scss */
 .team .title-des {
-  font-family: Montserrat-Light;
-  font-size: 1.8em;
-  line-height: 25px;
+  font-family: Montserrat-Regular;
+  font-size: 14px;
+  line-height: 22px;
 }
 /* line 232, ../sass/_main.scss */
 .team .team-statistic .statistic-text {
-  font-family: Montserrat-Medium;
-  font-size: 2.4em;
+  font-family: Montserrat-Bold;
+  font-size: 18px;
 }
 /* line 237, ../sass/_main.scss */
 .team .team-statistic button {
@@ -2569,7 +2550,7 @@ label input:focus {
   }
   /* line 273, ../sass/_main.scss */
   .team .title-team {
-    font-size: 3em;
+    font-size: 24px;
   }
 }
 
