@@ -1,0 +1,29 @@
+.btn-tur {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 316px;
+  height: 50px;
+  border-radius: 25px;
+  padding: 0 21px;
+  background: $tur;
+  color: #fff;
+  font-family: $ff-mb;
+  font-size: 18px;
+  transition: .15s;
+  text-decoration: none;
+  outline: none;
+  box-sizing: border-box;
+
+  &:hover, &:focus, &:active {
+    outline: none;
+  }
+  
+  &:hover {
+    @media (hover: hover) {
+      cursor: pointer;
+      background: #fff;
+      color: #000;
+    }
+  }
+}
