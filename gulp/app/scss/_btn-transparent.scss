@@ -1,0 +1,21 @@
+@import "btn";
+
+.btn-transparent {
+  @extend %btn;
+  background: transparent;
+  color: $tur;
+  border-color: $tur;
+
+  &:hover {
+    @media (hover: hover) {
+      background: $tur;
+      color: #fff;
+    }
+  }
+
+  &_registration {
+    min-width: 220px;
+    height: 35px;
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,15 @@
+@import "btn";
+
+.btn-black {
+  @extend %btn;
+  background: #111;
+  color: #fff;
+
+  &:hover {
+    @media (hover: hover) {
+      border-color: #111;
+      color: #111;
+      background: $tur;
+    }
+  };
+}

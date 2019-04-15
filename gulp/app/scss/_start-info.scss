@@ -1,0 +1,117 @@
+.start-info {
+  flex-shrink: 0;
+  width: 488px;
+  display: flex;
+  flex-direction: column;
+  background: #000;
+  padding: 10px 37px 40px;
+}
+
+.start-info-title {
+  flex-shrink: 0;
+  padding: 30px 0;
+  font-size: 36px;
+  font-family: Montserrat-Bold, sans-serif;
+  color: #fff;
+
+}
+
+.start-info-list {
+  flex: 1 0 auto;
+  position: relative;
+  width: 100%;
+  height: calc(100% - 154px);
+  padding: 0 20px 0 0;
+}
+
+.start-info-card {
+  position: relative;
+  //height: 320px;
+  padding: 16px 14px 10px;
+  margin: 0 0 20px;
+  border: 1px solid transparent;
+  transition: .15s;
+
+  &:hover {
+    @media (hover: hover) {
+      cursor: pointer;
+      border: 1px solid rgba(255,255,255,.4);
+    }
+  }
+
+  &.active {
+    background: rgba(255,255,255,.2);
+
+    & .start-info-card-local__ico {
+      & svg path {
+        fill: #89D7D7;
+      }
+    }
+  }
+  
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 128px;
+    height: 2px;
+    border-radius: 1px;
+    background: #B8E1E5;
+    top: calc(100% + 8px);
+    left: 7px;
+  }
+
+  &__row {
+    display: flex;
+    align-items: flex-start;
+    padding: 8px 0 7px;
+
+    &_registration {
+      padding: 20px 0;
+      align-items: center;
+    }
+  }
+}
+
+.start-info-card-local {
+  min-height: 30px;
+  display: flex;
+  align-items: center;
+  margin: 0 0 25px;
+
+  &__text {
+    font-size: 24px;
+    font-family: Montserrat-Bold, sans-serif;
+    color: #fff;
+    margin: 0 12px 0 0;
+  }
+  
+  &__ico {
+    & svg path {
+      fill: #fff;
+    }
+  }
+}
+
+.start-info-card-property {
+  flex-shrink: 0;
+  display: block;
+  width: 100px;
+  color: #fff;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: Montserrat-Regular, sans-serif;
+}
+
+.start-info-card-value {
+  display: block;
+  color: #fff;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: Montserrat-Bold, sans-serif;
+  padding: 0 0 0 12px;
+
+  &_name {
+    text-transform: uppercase;
+  }
+}

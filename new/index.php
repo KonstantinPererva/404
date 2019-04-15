@@ -123,10 +123,14 @@ $starts = [
 			);
 		}
   </script>
-  <link rel="shortcut icon" href="/new/favicon.ico">
-  <link rel="stylesheet" href="css/animate.css">
-  <link rel="stylesheet" href="css/style.css?<?= VER_CSS; ?>">
-<!--  <link rel="stylesheet" href="./gulp/app/css/style.css">-->
+
+  <link rel="shortcut icon" href="/new/favicon.ico" />
+  <link rel="stylesheet" href="css/animate.css" />
+  <link rel="stylesheet" href="css/perfect-scrollbar.css" />
+  <link rel="stylesheet" href="css/style.css?<?= VER_CSS; ?>" />
+
+  <link rel="preload" href="img/dir-run.jpg" as="image" />
+<!--  <link rel="stylesheet" href="./gulp/app/css/style.css" />-->
 
   <title>Team 404 подготовка к марафону и триатлону в Харькове</title>
   <meta name="description" content="Стань Ironman, марафонцем, пловцом и просто здоровым счастливым человеком под руководством профессиональных тренеров Team404" />
@@ -142,7 +146,6 @@ $starts = [
 <div class="main">
   <!-- start -->
   <section data-slide="start" class="start flex-box slide">
-
     <header class="flex-box">
       <div class="logo">
         <img src="img/logo.png" alt="logo" title="logo">
@@ -255,8 +258,6 @@ $starts = [
 
       <div class="banners"></div>
     </div>
-
-
   </section>
 
   <!-- team -->
@@ -355,6 +356,7 @@ $starts = [
         </div>
       </div>
     </div>
+
     <!-- triathlon -->
     <div class="content dir-triathlon">
       <div class="direction-triathlon">
@@ -655,356 +657,339 @@ $starts = [
 
   <!-- start map -->
   <section data-slide="start-map" class="start-map flex-box slide">
-    <div class="name-block"><span>Карта стартов</span></div>
-    <div class="content">
-      <div class="start-map-main">
-        <div class="map-img">
-          <img src="img/map.png" alt="Карта стартов">
-          <?php foreach($starts['triathlon'] as $start): ?>
-            <div class="point" id="p<?= $start['id'] ; ?>"><span><?= $start['symbol'] ; ?></span></div>
-          <?php endforeach; ?>
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="name-block"><span>Карта основных стартов</span></div>
 
-          <?php foreach($starts['marathon'] as $start): ?>
-            <div class="point" id="p<?= $start['id'] ; ?>"><span><?= $start['symbol'] ; ?></span></div>
-          <?php endforeach; ?>
-          <div class="point" id="kharkov" data-id="p4,p6,p8,p9"><span>k</span></div>
-        </div>
-        <div class="start-map-left-block">
+        <div class="start-map-main">
           <div class="start-map-title">
-            Главные старты<br>
-            сезона 2019
+            <span class="start-map-title__text">Главные старты сезона 2019</span>
           </div>
-          <div class="start-mobile">
-            <div class="start-list-block">
-              <div class="point"><span>т</span></div><span>Триатлон</span>
-              <br>
-              <div class="start-list">
-                <?php $i = 1; ?>
-                <?php foreach($starts['triathlon'] as $start): ?>
-                  <div class="about-start-mobile">
-                    <div class="title-start">
-                      <?= $start['name']; ?>
-                    </div>
-                    <div data-id="p<?= $start['id']; ?>" class="des-start">
-                      <div>
-                        <div>Название</div>
-                        <div class="des-start-name"><?= $start['name']; ?></div>
-                      </div>
-                      <div>
-                        <div>Страна</div>
-                        <div><?= $start['country']; ?></div>
-                      </div>
-                      <div>
-                        <div>Город</div>
-                        <div><?= $start['city']; ?></div>
-                      </div>
-                      <div>
-                        <div>Дата</div>
-                        <div class="des-start-date"><?= $start['date']; ?></div>
-                      </div>
-                      <div>
-                        <div>Дистанция</div>
-                        <div class="des-start-distance"><?= $start['distance']; ?></div>
-                      </div>
-                      <?php if (!empty($start['reg-link'])) : ?>
-                        <div>
-                          <div>На старт</div>
-                          <div><a href="<?= $start['reg-link']; ?>">зарегистрироваться</a></div>
-                        </div>
-                      <?php endif; ?>
-                    </div>
-                  </div>
-                  <?php $i++; ?>
-                <?php endforeach; ?>
-              </div>
-            </div>
-            <div class="start-list-block">
-              <div class="point"><span>м</span></div><span>Марафон</span>
-              <br>
-              <div class="start-list">
-                <?php foreach($starts['marathon'] as $start): ?>
-                  <div class="about-start-mobile">
-                    <div class="title-start">
-                      <?= $start['name']; ?>
-                    </div>
-                    <div data-id="p<?= $start['id']; ?>" class="des-start">
-                      <div>
-                        <div>Название</div>
-                        <div><?= $start['name']; ?></div>
-                      </div>
-                      <div>
-                        <div>Страна</div>
-                        <div><?= $start['country']; ?></div>
-                      </div>
-                      <div>
-                        <div>Город</div>
-                        <div><?= $start['city']; ?></div>
-                      </div>
-                      <div>
-                        <div>Дата</div>
-                        <div><?= $start['date']; ?></div>
-                      </div>
-                      <div>
-                        <div>Дистанция</div>
-                        <div><?= $start['distance']; ?></div>
-                      </div>
-                      <?php if (!empty($start['reg-link'])) : ?>
-                        <div>
-                          <div>На старт</div>
-                          <div><a href="<?= $start['reg-link']; ?>">зарегистрироваться</a></div>
-                        </div>
-                      <?php endif; ?>
-                    </div>
-                  </div>
-                  <?php $i++; ?>
-                <?php endforeach; ?>
+
+          <div class="map-wrapper">
+            <div class="map-img">
+              <img src="img/map-canvas.png" alt="Карта стартов" />
+
+              <div class="map-point" data-point="Gdynia">
+                <span class="map-point__ico"></span>
+                <span class="map-point__text">Gdynia</span>
               </div>
 
-            </div>
-          </div>
-        </div>
-        <div class="start-map-description">
+              <div class="map-point" data-point="Cervia">
+                <span class="map-point__ico"></span>
+                <span class="map-point__text">Cervia</span>
+              </div>
 
-          <div class="about-start-title">
-            О старте
-          </div>
-          <?php foreach($starts['triathlon'] as $start): ?>
-            <div class="about-start">
-              <div class="des-start">
-                <div>
-                  <div>Название</div>
-                  <div><?= $start['name']; ?></div>
-                </div>
-                <div>
-                  <div>Страна</div>
-                  <div><?= $start['country']; ?></div>
-                </div>
-                <div>
-                  <div>Город</div>
-                  <div><?= $start['city']; ?>4</div>
-                </div>
-                <div>
-                  <div>Дата</div>
-                  <div><?= $start['date']; ?></div>
-                </div>
-                <div>
-                  <div>Дистанция</div>
-                  <div><?= $start['distance']; ?></div>
-                </div>
-                <?php if (!empty($start['reg-link'])) : ?>
-                  <div>
-                    <div>На старт</div>
-                    <div><a href="<?= $start['reg-link']; ?>">зарегистрироваться</a></div>
-                  </div>
-                <?php endif; ?>
+              <div class="map-point" data-point="Athens">
+                <span class="map-point__ico"></span>
+                <span class="map-point__text">Athens</span>
+              </div>
+
+              <div class="map-point" data-point="Dnieper">
+                <span class="map-point__ico"></span>
+                <span class="map-point__text">Dnieper</span>
               </div>
             </div>
-            <?php break; ?>
-          <?php endforeach; ?>
+          </div>
+
+          <div class="additional-info">
+            <div class="additional-info__left">
+              <div class="additional-info-warning">
+            <span class="additional-info-warning__ico">
+              <svg width="30" height="29" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14.9997 19.8818C14.161 19.8818 13.458 20.5849 13.458 21.4236C13.458 22.2623 14.161 22.9653 14.9997 22.9653C15.8076 22.9653 16.5415 22.2623 16.5045 21.4606C16.5415 20.5787 15.8446 19.8818 14.9997 19.8818Z" fill="#111111"/>
+                <path d="M29.27 25.3456C30.2382 23.6743 30.2444 21.6824 29.2823 20.0173L19.6249 3.29249C18.669 1.60891 16.9422 0.609863 15.0058 0.609863C13.0694 0.609863 11.3426 1.61508 10.3867 3.28633L0.716939 20.0296C-0.245107 21.7132 -0.23894 23.7175 0.73544 25.3887C1.69749 27.0415 3.41807 28.0344 5.34216 28.0344H24.6324C26.5627 28.0344 28.2956 27.0291 29.27 25.3456ZM27.1732 24.1368C26.6367 25.0619 25.687 25.6107 24.6263 25.6107H5.336C4.28761 25.6107 3.34407 25.0742 2.81987 24.1677C2.28952 23.2488 2.28335 22.1511 2.81371 21.226L12.4835 4.48888C13.0077 3.57001 13.9451 3.02731 15.0058 3.02731C16.0603 3.02731 17.0039 3.57617 17.5281 4.49505L27.1917 21.2322C27.7097 22.1326 27.7036 23.218 27.1732 24.1368Z" fill="#111111"/>
+                <path d="M14.6172 9.05866C13.8834 9.26834 13.427 9.93437 13.427 10.7422C13.464 11.2294 13.4948 11.7228 13.5318 12.21C13.6367 14.0662 13.7415 15.8855 13.8464 17.7417C13.8834 18.3708 14.3705 18.8271 14.9996 18.8271C15.6286 18.8271 16.122 18.3399 16.1528 17.7047C16.1528 17.3224 16.1528 16.9709 16.1898 16.5824C16.2576 15.3921 16.3316 14.2019 16.3995 13.0117C16.4365 12.2408 16.5043 11.4699 16.5413 10.6991C16.5413 10.4216 16.5043 10.1749 16.3995 9.9282C16.085 9.2375 15.3511 8.88599 14.6172 9.05866Z" fill="#111111"/>
+              </svg>
+            </span>
+
+                <span class="additional-info-warning__text">team404 не работает с людьми, купившими слоты на старт без согласования с тренером</span>
+              </div>
+            </div>
+
+            <div class="additional-info__right">
+              <span class="additional-info__text">Готовься к любому из них вместе с нами</span>
+
+              <div>
+            <span class="btn-black my-animate ppt" data-animated="fadeIn">
+              <span class="btn-tur__text">Начать подготовку</span>
+            </span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="start-map-bottom">
-        <div class="start-training">
-          <div>
-            <p>Готовься к любому из них<br>
-              вместе с нами</p>
+    </div>
+
+    <div class="start-info">
+      <div class="start-info-title">
+        <span class="start-info-title__text">О старте</span>
+      </div>
+
+      <div class="start-info-list" id="startInfo">
+        <div class="start-info-card" data-card="Gdynia">
+          <div class="start-info-card-local">
+            <span class="start-info-card-local__text">Poland</span>
+
+            <span class="start-info-card-local__ico">
+              <svg width="18" height="26" viewBox="0 0 18 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16.8349 6.97859C16.7459 6.64508 16.5652 6.28971 16.4315 5.97857C14.8318 2.13412 11.3365 0.756348 8.51425 0.756348C4.73612 0.756348 0.57496 3.28975 0.0194092 8.51168V9.57854C0.0194092 9.62307 0.0347539 10.023 0.0565505 10.2231C0.36798 12.7117 2.3317 15.3566 3.79829 17.8452C5.37613 20.5116 7.01337 23.1345 8.63544 25.7563C9.63564 24.0453 10.6322 22.3119 11.6097 20.6453C11.876 20.1561 12.1853 19.6673 12.4519 19.2005C12.6297 18.8896 12.9692 18.5788 13.1244 18.2895C14.7021 15.4008 17.2418 12.4898 17.2418 9.62301V8.4453C17.2418 8.13451 16.8566 7.04561 16.8349 6.97859ZM8.58342 12.3343C7.47284 12.3343 6.25723 11.7789 5.65722 10.2453C5.56782 10.0012 5.57503 9.51199 5.57503 9.46718V8.77829C5.57503 6.82323 7.23505 5.93416 8.67921 5.93416C10.4571 5.93416 11.8321 7.35657 11.8321 9.13447C11.8321 10.9123 10.3613 12.3343 8.58342 12.3343Z" />
+              </svg>
+            </span>
           </div>
-          <div>
-            <button class="black-btn ppf">начать подготовку</button>
+
+          <div class="start-info-card__row">
+            <span class="start-info-card-property">Название</span>
+
+            <span class="start-info-card-value start-info-card-value_name">IRONMAN 70.3 GDYNIA</span>
+          </div>
+
+          <div class="start-info-card__row">
+            <span class="start-info-card-property">Страна</span>
+
+            <span class="start-info-card-value">Poland</span>
+          </div>
+
+          <div class="start-info-card__row">
+            <span class="start-info-card-property">Город</span>
+
+            <span class="start-info-card-value">Gdynia</span>
+          </div>
+
+          <div class="start-info-card__row">
+            <span class="start-info-card-property">Дата</span>
+
+            <span class="start-info-card-value">19 Августа 2019</span>
+          </div>
+
+          <div class="start-info-card__row">
+            <span class="start-info-card-property">Дистанция</span>
+
+            <span class="start-info-card-value">Триатлон 1900 / 90 / 21.1</span>
+          </div>
+
+          <div class="start-info-card__row start-info-card__row_registration">
+            <span class="start-info-card-property">На старт</span>
+
+            <span class="btn-transparent btn-transparent_registration"><span class="btn-transparent__text">Зарегистрироваться</span></span>
           </div>
         </div>
-        <div class="warning">
-          <div class="warning-img">
-            <img src="/new/img/!.png" alt="">
+
+        <div class="start-info-card" data-card="Cervia">
+          <div class="start-info-card-local">
+            <span class="start-info-card-local__text">Italy</span>
+
+            <span class="start-info-card-local__ico">
+              <svg width="18" height="26" viewBox="0 0 18 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16.8349 6.97859C16.7459 6.64508 16.5652 6.28971 16.4315 5.97857C14.8318 2.13412 11.3365 0.756348 8.51425 0.756348C4.73612 0.756348 0.57496 3.28975 0.0194092 8.51168V9.57854C0.0194092 9.62307 0.0347539 10.023 0.0565505 10.2231C0.36798 12.7117 2.3317 15.3566 3.79829 17.8452C5.37613 20.5116 7.01337 23.1345 8.63544 25.7563C9.63564 24.0453 10.6322 22.3119 11.6097 20.6453C11.876 20.1561 12.1853 19.6673 12.4519 19.2005C12.6297 18.8896 12.9692 18.5788 13.1244 18.2895C14.7021 15.4008 17.2418 12.4898 17.2418 9.62301V8.4453C17.2418 8.13451 16.8566 7.04561 16.8349 6.97859ZM8.58342 12.3343C7.47284 12.3343 6.25723 11.7789 5.65722 10.2453C5.56782 10.0012 5.57503 9.51199 5.57503 9.46718V8.77829C5.57503 6.82323 7.23505 5.93416 8.67921 5.93416C10.4571 5.93416 11.8321 7.35657 11.8321 9.13447C11.8321 10.9123 10.3613 12.3343 8.58342 12.3343Z" />
+              </svg>
+            </span>
           </div>
-          <div>
-            <p>team404 не работает с людьми, купившими
-              слоты на старт без согласования с тренером</p>
+
+          <div class="start-info-card__row">
+            <span class="start-info-card-property">Название</span>
+
+            <span class="start-info-card-value start-info-card-value_name">IRONMAN 70.3 GDYNIA</span>
+          </div>
+
+          <div class="start-info-card__row">
+            <span class="start-info-card-property">Страна</span>
+
+            <span class="start-info-card-value">Italy</span>
+          </div>
+
+          <div class="start-info-card__row">
+            <span class="start-info-card-property">Город</span>
+
+            <span class="start-info-card-value">Cervia</span>
+          </div>
+
+          <div class="start-info-card__row">
+            <span class="start-info-card-property">Дата</span>
+
+            <span class="start-info-card-value">19 Августа 2019</span>
+          </div>
+
+          <div class="start-info-card__row">
+            <span class="start-info-card-property">Дистанция</span>
+
+            <span class="start-info-card-value">Триатлон 1900 / 90 / 21.1</span>
+          </div>
+
+          <div class="start-info-card__row start-info-card__row_registration">
+            <span class="start-info-card-property">На старт</span>
+
+            <span class="btn-transparent btn-transparent_registration"><span class="btn-transparent__text">Зарегистрироваться</span></span>
+          </div>
+        </div>
+
+        <div class="start-info-card" data-card="Athens">
+          <div class="start-info-card-local">
+            <span class="start-info-card-local__text">Greece</span>
+
+            <span class="start-info-card-local__ico">
+              <svg width="18" height="26" viewBox="0 0 18 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16.8349 6.97859C16.7459 6.64508 16.5652 6.28971 16.4315 5.97857C14.8318 2.13412 11.3365 0.756348 8.51425 0.756348C4.73612 0.756348 0.57496 3.28975 0.0194092 8.51168V9.57854C0.0194092 9.62307 0.0347539 10.023 0.0565505 10.2231C0.36798 12.7117 2.3317 15.3566 3.79829 17.8452C5.37613 20.5116 7.01337 23.1345 8.63544 25.7563C9.63564 24.0453 10.6322 22.3119 11.6097 20.6453C11.876 20.1561 12.1853 19.6673 12.4519 19.2005C12.6297 18.8896 12.9692 18.5788 13.1244 18.2895C14.7021 15.4008 17.2418 12.4898 17.2418 9.62301V8.4453C17.2418 8.13451 16.8566 7.04561 16.8349 6.97859ZM8.58342 12.3343C7.47284 12.3343 6.25723 11.7789 5.65722 10.2453C5.56782 10.0012 5.57503 9.51199 5.57503 9.46718V8.77829C5.57503 6.82323 7.23505 5.93416 8.67921 5.93416C10.4571 5.93416 11.8321 7.35657 11.8321 9.13447C11.8321 10.9123 10.3613 12.3343 8.58342 12.3343Z" />
+              </svg>
+            </span>
+          </div>
+
+          <div class="start-info-card__row">
+            <span class="start-info-card-property">Название</span>
+
+            <span class="start-info-card-value start-info-card-value_name">IRONMAN 70.3 GDYNIA</span>
+          </div>
+
+          <div class="start-info-card__row">
+            <span class="start-info-card-property">Страна</span>
+
+            <span class="start-info-card-value">Greece</span>
+          </div>
+
+          <div class="start-info-card__row">
+            <span class="start-info-card-property">Город</span>
+
+            <span class="start-info-card-value">Athens</span>
+          </div>
+
+          <div class="start-info-card__row">
+            <span class="start-info-card-property">Дата</span>
+
+            <span class="start-info-card-value">19 Августа 2019</span>
+          </div>
+
+          <div class="start-info-card__row">
+            <span class="start-info-card-property">Дистанция</span>
+
+            <span class="start-info-card-value">Триатлон 1900 / 90 / 21.1</span>
+          </div>
+
+          <div class="start-info-card__row start-info-card__row_registration">
+            <span class="start-info-card-property">На старт</span>
+
+            <span class="btn-transparent btn-transparent_registration"><span class="btn-transparent__text">Зарегистрироваться</span></span>
+          </div>
+        </div>
+
+        <div class="start-info-card" data-card="Dnieper">
+          <div class="start-info-card-local">
+            <span class="start-info-card-local__text">Ukraine</span>
+
+            <span class="start-info-card-local__ico">
+              <svg width="18" height="26" viewBox="0 0 18 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16.8349 6.97859C16.7459 6.64508 16.5652 6.28971 16.4315 5.97857C14.8318 2.13412 11.3365 0.756348 8.51425 0.756348C4.73612 0.756348 0.57496 3.28975 0.0194092 8.51168V9.57854C0.0194092 9.62307 0.0347539 10.023 0.0565505 10.2231C0.36798 12.7117 2.3317 15.3566 3.79829 17.8452C5.37613 20.5116 7.01337 23.1345 8.63544 25.7563C9.63564 24.0453 10.6322 22.3119 11.6097 20.6453C11.876 20.1561 12.1853 19.6673 12.4519 19.2005C12.6297 18.8896 12.9692 18.5788 13.1244 18.2895C14.7021 15.4008 17.2418 12.4898 17.2418 9.62301V8.4453C17.2418 8.13451 16.8566 7.04561 16.8349 6.97859ZM8.58342 12.3343C7.47284 12.3343 6.25723 11.7789 5.65722 10.2453C5.56782 10.0012 5.57503 9.51199 5.57503 9.46718V8.77829C5.57503 6.82323 7.23505 5.93416 8.67921 5.93416C10.4571 5.93416 11.8321 7.35657 11.8321 9.13447C11.8321 10.9123 10.3613 12.3343 8.58342 12.3343Z" />
+              </svg>
+            </span>
+          </div>
+
+          <div class="start-info-card__row">
+            <span class="start-info-card-property">Название</span>
+
+            <span class="start-info-card-value start-info-card-value_name">IRONMAN 70.3 GDYNIA</span>
+          </div>
+
+          <div class="start-info-card__row">
+            <span class="start-info-card-property">Страна</span>
+
+            <span class="start-info-card-value">Ukraine</span>
+          </div>
+
+          <div class="start-info-card__row">
+            <span class="start-info-card-property">Город</span>
+
+            <span class="start-info-card-value">Dnieper</span>
+          </div>
+
+          <div class="start-info-card__row">
+            <span class="start-info-card-property">Дата</span>
+
+            <span class="start-info-card-value">19 Августа 2019</span>
+          </div>
+
+          <div class="start-info-card__row">
+            <span class="start-info-card-property">Дистанция</span>
+
+            <span class="start-info-card-value">Триатлон 1900 / 90 / 21.1</span>
+          </div>
+
+          <div class="start-info-card__row start-info-card__row_registration">
+            <span class="start-info-card-property">На старт</span>
+
+            <span class="btn-transparent btn-transparent_registration"><span class="btn-transparent__text">Зарегистрироваться</span></span>
           </div>
         </div>
       </div>
     </div>
   </section>
-
-  <!-- shop -->
-  <!--<section data-slide="shop" class="shop flex-box slide">
-
-    <div class="name-block">
-      <span data-name="product-list">Магазин</span>
-      <span data-name="payment">Оплата</span>
-      <span data-name="deliver">Досавка</span>
-    </div>
-
-    <div class="content product-list">
-      <div data-animated="fadeInLeft" class="product p1 my-animate">
-
-        <p class="name-product">Футболка</p>
-
-        <div class="img-product">
-          <img src="./img/shirt.png" alt="shirt-team404">
-        </div>
-        <div class="product-options">
-          <p class="price-product">350 грн.</p>
-          <div class="option">
-            <p class="name-option">Состав:</p>
-            <p class="val-option">100% Хлопок</p>
-          </div>
-          <div class="btn-product">
-            <button type="button" class="black-btn ppf">Купить</button>
-          </div>
-        </div>
-      </div>
-      <div class="join">
-
-        <div data-animated="fadeInDown" class="product p2 my-animate">
-
-          <p class="name-product">Кепка</p>
-
-          <div class="img-product">
-            <img src="./img/cap.png" alt="cap-team404">
-          </div>
-          <div class="product-options">
-            <p class="price-product">250 грн.</p>
-            <div class="option">
-              <p class="name-option">Состав:</p>
-              <p class="val-option">100% Хлопок</p>
-            </div>
-            <div class="btn-product">
-              <button type="button" class="black-btn ppf">Купить</button>
-            </div>
-          </div>
-        </div>
-
-        <div data-animated="fadeInUp" class="product p3 my-animate">
-
-          <p class="name-product">Носки</p>
-
-          <div class="product-options">
-            <p class="price-product">100 грн.</p>
-            <div class="option">
-              <p class="name-option">Состав:</p>
-              <p class="val-option">100% Хлопок</p>
-            </div>
-            <div class="btn-product">
-              <button type="button" class="black-btn ppf">Купить</button>
-            </div>
-          </div>
-          <div class="img-product">
-            <img src="./img/socks.png" alt="socks-team404">
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <div class="content payment">
-      <h3>Оплата</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi aperiam asperiores atque aut, commodi culpa
-        cum cupiditate delectus dicta dignissimos dolor dolores eaque eos esse explicabo incidunt inventore laudantium
-        magni maxime minus mollitia odit officia officiis praesentium provident quam qui repudiandae, sit soluta tempora
-        tempore tenetur unde veniam, voluptate voluptates voluptatum. Adipisci aliquid animi dolore dolorem ducimus,
-        eaque ipsa iste itaque modi officiis quidem rem repellat, ut vero voluptatum. Aliquid cumque dignissimos dolorem
-        eaque enim, esse et libero maiores nam, provident quaerat quia quisquam quo quos vel? Animi consectetur fugiat
-        nam nostrum ut! Atque culpa debitis dolore placeat quas?</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dicta dolorum enim fuga incidunt ipsam
-        ipsum iusto neque qui, quos. Accusamus aspernatur, deleniti dolore dolorum ipsam itaque maxime non perspiciatis,
-        quos ratione recusandae tempora tempore vitae? Animi, error, harum illo impedit iusto modi nihil odit sapiente
-        suscipit, tempora temporibus ullam?</p>
-
-    </div>
-
-    <div class="content deliver">
-      <h3>Доставка</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur nulla quae quis sequi. Aliquam, at
-        deserunt dolor exercitationem illo, ipsa obcaecati quo repellendus repudiandae suscipit tempore tenetur ut
-        voluptas. Debitis eaque expedita itaque neque, nobis quas quia quos repudiandae saepe totam? Alias amet autem
-        commodi consequatur dicta ducimus in ipsa ipsam itaque, iure laborum molestiae nam non placeat porro repellat
-        sapiente similique tenetur voluptate voluptates. Distinctio eligendi harum inventore ipsum laudantium maxime
-        mollitia quia? Accusantium, culpa et eum fugiat laborum nihil praesentium quibusdam vero? Dicta dolorum earum
-        impedit in itaque, magnam necessitatibus neque nobis, odio officiis pariatur quaerat qui quis.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, reiciendis?</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium amet, animi quidem totam unde voluptatum?
-        Ab alias aliquam amet consectetur corporis, deleniti doloremque ea error eum ipsum libero maiores necessitatibus
-        officia quam quibusdam repudiandae similique vitae! Facilis incidunt optio perferendis?</p>
-    </div>
-
-
-  </section>-->
 
   <!-- sponsors -->
   <section data-slide="sponsors" class="sponsors flex-box slide">
-
     <div class="name-block"><span>Спонсоры</span></div>
 
     <div class="content">
-
-      <div data-animated="fadeIn" data-delay="250" class="sponsor my-animate">
-          <div class="logo-sponsor">
-            <a href="https://veloplaneta.com.ua" target="_blank">
-              <img src="img/sponsor1.png" alt="Велопланета">
-            </a>
+      <a href="https://veloplaneta.com.ua" target="_blank" data-animated="fadeIn" data-delay="250" class="sponsor-card my-animate">
+          <div class="sponsor-card-logo">
+              <img src="img/svg/veloplaneta.svg" alt="Велопланета">
           </div>
-          <div class="text-sponsor">
-            <p><a href="https://veloplaneta.com.ua" target="_blank">Велоинвентарь и экипировка</a></p>
+
+          <div class="sponsor-card-name">
+            <span class="sponsor-card-name__text">Велоинвентарь и экипировка</span>
           </div>
-      </div>
+      </a>
 
-      <div data-animated="fadeIn" data-delay="500" class="sponsor my-animate">
-        <div class="logo-sponsor">
-          <a href="https://www.cannondale.com/en/International" target="_blank">
-            <img src="img/sponsor4.png" alt="Сannondale">
-          </a>
+      <a href="https://www.cannondale.com/en/International" target="_blank" data-animated="fadeIn" data-delay="500" class="sponsor-card my-animate">
+        <div class="sponsor-card-logo">
+            <img src="img/svg/cannondale.svg" alt="Сannondale">
         </div>
-        <div class="text-sponsor">
-          <p><a href="https://www.cannondale.com/en/International" target="_blank">Спонсор</a></p>
-        </div>
-      </div>
 
-      <div data-animated="fadeIn" data-delay="700" class="sponsor my-animate">
-        <div class="logo-sponsor">
-          <a href="https://www.patreon.com/javascriptninja" target="_blank">
-            <img src="img/sponsor2.png" alt="JavaScriptNinja">
-          </a>
+        <div class="sponsor-card-name">
+          <span class="sponsor-card-name__text">Спонсор</span>
         </div>
-        <div class="text-sponsor">
-          <p><a href="https://www.patreon.com/javascriptninja" target="_blank">Спонсор</a></p>
-        </div>
-      </div>
+      </a>
 
-      <div data-animated="fadeIn" data-delay="1000" class="sponsor my-animate">
-        <div class="logo-sponsor">
-          <a href="http://www.akvarena.com.ua" target="_blank">
-            <img src="img/sponsor3.png" alt="Акварена">
-          </a>
+      <a href="https://www.patreon.com/javascriptninja" target="_blank" data-animated="fadeIn" data-delay="700" class="sponsor-card my-animate">
+        <div class="sponsor-card-logo">
+            <img src="img/javascriptNinja.png" alt="JavaScriptNinja">
         </div>
-        <div class="text-sponsor">
-          <p><a href="http://www.akvarena.com.ua" target="_blank">Тренировочная база</a></p>
-        </div>
-      </div>
 
-      <div data-animated="fadeIn" data-delay="1200" class="sponsor my-animate">
-        <div class="logo-sponsor">
-          <a href="http://www.kunaiconsulting.com" target="_blank">
-            <img src="img/sponsor5.png" alt="Kunai">
-          </a>
+        <div class="sponsor-card-name">
+          <span class="sponsor-card-name__text">Спонсор</span>
         </div>
-        <div class="text-sponsor">
-          <p><a href="http://www.kunaiconsulting.com" target="_blank">Спонсор</a></p>
+      </a>
+
+      <a href="http://www.akvarena.com.ua" target="_blank" data-animated="fadeIn" data-delay="1000" class="sponsor-card my-animate">
+        <div class="sponsor-card-logo">
+            <img src="img/acvarena.png" alt="Акварена">
         </div>
-      </div>
 
-    </div>
+        <div class="sponsor-card-name">
+          <span class="sponsor-card-name__text">Тренировочная база</span>
+        </div>
+      </a>
 
-    <div class="become-sponsor">
-      <p>Как стать спонсором?</p>
-      <a href="team404_presentation-sponsor_preview.pdf">
-        <button type="button" class="white-btn">Скачать презентацию</button>
+      <a href="http://www.kunaiconsulting.com" target="_blank" data-animated="fadeIn" data-delay="1200" class="sponsor-card my-animate">
+        <div class="sponsor-card-logo">
+            <img src="img/kunai.png" alt="Kunai">
+        </div>
+
+        <div class="sponsor-card-name">
+          <span class="sponsor-card-name__text">Спонсор</span>
+        </div>
       </a>
     </div>
 
+    <div class="become-sponsor">
+      <div class="become-sponsor__title">
+        <span class="become-sponsor__text">Как стать спонсором?</span>
+      </div>
 
+      <div class="become-sponsor__row">
+        <span class="btn-tur">
+          <span class="btn-tur__text">Записаться на встречу</span>
+        </span>
+      </div>
+    </div>
   </section>
-
 </div>
 
 <!-- pp form -->
@@ -1016,9 +1001,7 @@ $starts = [
     <div class="close">
       <svg id="close-pp-form" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"
            xmlns:xlink="http://www.w3.org/1999/xlink">
-        <g>
-          <path d="M28.941,31.786L0.613,60.114c-0.787,0.787-0.787,2.062,0,2.849c0.393,0.394,0.909,0.59,1.424,0.59   c0.516,0,1.031-0.196,1.424-0.59l28.541-28.541l28.541,28.541c0.394,0.394,0.909,0.59,1.424,0.59c0.515,0,1.031-0.196,1.424-0.59   c0.787-0.787,0.787-2.062,0-2.849L35.064,31.786L63.41,3.438c0.787-0.787,0.787-2.062,0-2.849c-0.787-0.786-2.062-0.786-2.848,0   L32.003,29.15L3.441,0.59c-0.787-0.786-2.061-0.786-2.848,0c-0.787,0.787-0.787,2.062,0,2.849L28.941,31.786z"/>
-        </g>
+        <path d="M28.941,31.786L0.613,60.114c-0.787,0.787-0.787,2.062,0,2.849c0.393,0.394,0.909,0.59,1.424,0.59   c0.516,0,1.031-0.196,1.424-0.59l28.541-28.541l28.541,28.541c0.394,0.394,0.909,0.59,1.424,0.59c0.515,0,1.031-0.196,1.424-0.59   c0.787-0.787,0.787-2.062,0-2.849L35.064,31.786L63.41,3.438c0.787-0.787,0.787-2.062,0-2.849c-0.787-0.786-2.062-0.786-2.848,0   L32.003,29.15L3.441,0.59c-0.787-0.786-2.061-0.786-2.848,0c-0.787,0.787-0.787,2.062,0,2.849L28.941,31.786z"/>
       </svg>
     </div>
 
@@ -1040,7 +1023,88 @@ $starts = [
 <script src="js/jquery.maskedinput.js"></script>
 <script type="text/javascript" src="js/onepage-scroll/jquery.onepage-scroll.js"></script>
 <script src="js/layouts.js?<?= VER_JS; ?>"></script>
+<script src="js/perfect-scrollbar.js"></script>
+  <script>
+    window.addEventListener('load', scrollbars);
 
+    function scrollbars() {
+      var ps = new PerfectScrollbar('#startInfo', {
+        wheelSpeed: 2,
+        wheelPropagation: false,
+        minScrollbarLength: 20
+      });
+    }
+
+    var pointList = [
+        {
+            title: 'Gdynia',
+            y: '52.2%',
+            x: '54.5%'
+        },
+        {
+            title: 'Cervia',
+            y: '75%',
+            x: '38%'
+        },
+        {
+            title: 'Athens',
+            y: '89.5%',
+            x: '59%'
+        },
+        {
+            title: 'Dnieper',
+            y: '66%',
+            x: '80%'
+        }
+    ];
+
+    var points = document.querySelectorAll('[data-point]');
+    var cards = document.querySelectorAll('[data-card]');
+    var list = document.querySelector('.start-info-list');
+
+    for (var i=0; i < pointList.length; i++) {
+      [].forEach.call(points, function (el) {
+          if(el.dataset.point == pointList[i].title) {
+              pointList[i].point = el;
+              el.style.top = pointList[i].y;
+              el.style.left = pointList[i].x;
+          }
+      });
+
+      [].forEach.call(cards, function (el) {
+          if(el.dataset.card == pointList[i].title) {
+              pointList[i].card = el;
+          }
+      });
+    }
+
+    function removeClass() {
+        [].forEach.call(points, function (point) {
+            point.classList.remove('active');
+        });
+
+        [].forEach.call(cards, function (card) {
+            card.classList.remove('active');
+        });
+    }
+
+    pointList.map(function (el) {
+        el.point.addEventListener('click', function () {
+            removeClass();
+
+            this.classList.add('active');
+            el.card.classList.add('active');
+            list.insertBefore(el.card, list.firstChild);
+        });
+
+        el.card.addEventListener('click', function () {
+            removeClass();
+
+            this.classList.add('active');
+            el.point.classList.add('active');
+        })
+    })
+  </script>
 </body>
 </html>
 
