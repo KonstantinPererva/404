@@ -26,16 +26,13 @@
 
 .start-info-card {
   position: relative;
-  //height: 320px;
   padding: 16px 14px 10px;
   margin: 0 0 20px;
   border: 1px solid transparent;
-  transition: .15s;
 
   &:hover {
     @media (hover: hover) {
       cursor: pointer;
-      border: 1px solid rgba(255,255,255,.4);
     }
   }
 

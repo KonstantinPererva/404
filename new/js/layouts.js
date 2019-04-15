@@ -19,12 +19,12 @@ $(document).ready(function () {
 	/*===============
 				PHONE
 	===============*/
-	if ($(window).width() < 1200) {
-		elem = $(".phone");
-		elem.html(
-			'<a href="tel:'+elem.data('phone')+'">'+elem.html()+'</a>'
-		);
-	}
+	// if ($(window).width() < 1200) {
+	// 	elem = $(".phone");
+	// 	elem.html(
+	// 		'<a href="tel:'+elem.data('phone')+'">'+elem.html()+'</a>'
+	// 	);
+	// }
 
 
 	/*===============
@@ -63,7 +63,7 @@ $(document).ready(function () {
 		event.preventDefault();
 
 
-		if ($(window).width() > 1200) {
+		if ($(window).width() >= 1152) {
 			var index = $(this).data('index-slide');
 			Slide.current = $("section").eq(index);
 			$(".main").moveTo(index);
@@ -189,7 +189,7 @@ $(document).ready(function () {
 
 
 
-			if ($(window).width() > 1200) {
+			if ($(window).width() >= 1152) {
 				Slide.goSlide();
 
 				$(".main").onepage_scroll({
@@ -299,7 +299,7 @@ $(document).ready(function () {
 
 		setAnimation : function () {
 
-			if ($(window).width() > 1200) {
+			if ($(window).width() >= 1152) {
 				Slide.next.find('.my-animate').each(function( index ) {
 					var el = $(this);
 					var animate = el.data('animated');
@@ -323,7 +323,7 @@ $(document).ready(function () {
 			if (Slide.next.is("section")) {
 
 				// не анимировать если вернулись назад в высоком блоке
-				if ($(window).width() > 1200
+				if ($(window).width() >= 1152
 					//&& Slide.next.data('slide') !== Slide.current.data('slide')
 				)
 				{

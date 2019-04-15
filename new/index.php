@@ -3,102 +3,6 @@
 define("VER_JS", '1.22');
 define("VER_CSS", '1.31');
 
-$starts = [
-  "triathlon" => [
-    [ "name"     => "IRONMAN 70.3 GDYNIA",
-      "country"  => "Poland",
-      "city"     => "Gdynia",
-      "date"     => "19 Авнуста 2019",
-      "distance" => "Триатлон 1900 / 90 / 21.1",
-      "reg-link" => "#",
-      "id"       => "1",
-      "symbol"   => "т",
-    ],
-
-    ["name"     => "Dnipro Triathlon Fest 2019",
-      "country"  => "Украина",
-      "city"     => "Днепр",
-      "date"     => "08 Июня 2019",
-      "distance" => "Триатлон 800 / 20 / 5",
-      "reg-link" => "#",
-      "id"       => "2",
-      "symbol"   => "т",
-    ],
-
-    /*["name"     => "Полтава Триатлон Спринт",
-      "country"  => "Украина",
-      "city"     => "Полтава",
-      "date"     => "Июнь 2019",
-      "distance" => "Триатлон 800 / 20 / 5",
-      "reg-link" => "#",
-      "id"       => "3",
-      "symbol"   => "т",
-    ],*/
-
-    ["name"     => "IRON WAY Kharkiv Man sprint",
-      "country"  => "Украина",
-      "city"     => "Харьков",
-      "date"     => "Июль 2019",
-      "distance" => "Триатлон 800 / 20 / 5",
-      "reg-link" => "#",
-      "id"       => "4",
-      "symbol"   => "т",
-    ],
-
-    ["name"     => "IRONMAN ITALY EMILIA-ROMAGNA",
-      "country"  => "Italy",
-      "city"     => "Cervia",
-      "date"     => "21 Сентября 2019",
-      "distance" => "Дистанция 3.8 / 180 / 42.2",
-      "reg-link" => "#",
-      "id"       => "5",
-      "symbol"   => "т",
-    ],
-
-    ["name"     => "IRON WAY 70.3",
-      "country"  => "Украина",
-      "city"     => "Харьков",
-      "date"     => "Август 2019",
-      "distance" => "Триатлон 1900 / 90 / 21.1",
-      "reg-link" => "#",
-      "id"       => "6",
-      "symbol"   => "т",
-    ],
-
-  ],
-  "marathon"  => [
-    [
-      "name"     => "Kharkiv Half Marathon",
-      "country"  => "Украина",
-      "city"     => "Харьков",
-      "date"     => "24 Марта 2019",
-      "distance" => "Бег 21.1 км.",
-      "reg-link" => "#",
-      "id"       => "8",
-      "symbol"   => "м",
-    ],
-    [
-      "name"     => "ZHYTLOBUD-1 Kharkiv International Marathon",
-      "country"  => "Украина",
-      "city"     => "Харьков",
-      "date"     => "14 Апреля 2019",
-      "distance" => "Бег 42.2 км.",
-      "reg-link" => "#",
-      "id"       => "9",
-      "symbol"   => "м",
-    ],
-    [
-      "name"     => "Athens Marathon",
-      "country"  => "Греция",
-      "city"     => "Афины",
-      "date"     => "ноябрь 2019",
-      "distance" => "Бег 42.2 км.",
-      "reg-link" => "#",
-      "id"       => "7",
-      "symbol"   => "м",
-    ],
-  ],
-];
 ?>
 
 <!doctype html>
@@ -117,7 +21,7 @@ $starts = [
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
   <script>
-		if (window.innerWidth > 1200) {
+		if (window.innerWidth >= 1152) {
 			document.write(
 				"<link href='js/onepage-scroll/onepage-scroll.css' rel='stylesheet' type='text/css'>"
 			);
@@ -126,11 +30,7 @@ $starts = [
 
   <link rel="shortcut icon" href="/new/favicon.ico" />
   <link rel="stylesheet" href="css/animate.css" />
-  <link rel="stylesheet" href="css/perfect-scrollbar.css" />
   <link rel="stylesheet" href="css/style.css?<?= VER_CSS; ?>" />
-
-  <link rel="preload" href="img/dir-run.jpg" as="image" />
-<!--  <link rel="stylesheet" href="./gulp/app/css/style.css" />-->
 
   <title>Team 404 подготовка к марафону и триатлону в Харькове</title>
   <meta name="description" content="Стань Ironman, марафонцем, пловцом и просто здоровым счастливым человеком под руководством профессиональных тренеров Team404" />
@@ -146,15 +46,24 @@ $starts = [
 <div class="main">
   <!-- start -->
   <section data-slide="start" class="start flex-box slide">
-    <header class="flex-box">
-      <div class="logo">
-        <img src="img/logo.png" alt="logo" title="logo">
-      </div>
+    <div class="start__inner">
+      <header class="header flex-box">
+        <div class="logo">
+          <img src="img/logo.png" alt="logo" title="logo">
+        </div>
 
-      <div class="phone" data-phone="+380938476795">+38 093 847 67 95</div>
+        <a href="tel:+380938476795" class="header-phone" data-phone="+380938476795">
+          <span class="header-phone__ico">
+            <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.82801 0.0953369H1.14058C0.583441 0.0953369 0.127441 0.550908 0.127441 1.10848V14.0818C0.127441 14.6393 0.583441 15.0953 1.14058 15.0953H7.82801C8.38516 15.0953 8.84116 14.6402 8.84116 14.0822V1.10848C8.84116 0.550908 8.38516 0.0953369 7.82801 0.0953369ZM3.41458 0.825623H5.55401C5.62173 0.825623 5.67658 0.88048 5.67658 0.948623C5.67658 1.01634 5.62173 1.07119 5.55401 1.07119H3.41458C3.34687 1.07119 3.29201 1.01634 3.29201 0.948623C3.29201 0.88048 3.34687 0.825623 3.41458 0.825623ZM4.4843 14.5888C4.20444 14.5888 3.97773 14.3621 3.97773 14.0818C3.97773 13.8015 4.20444 13.5752 4.4843 13.5752C4.76416 13.5752 4.99087 13.8015 4.99087 14.0818C4.99087 14.3621 4.76416 14.5888 4.4843 14.5888ZM8.13616 13.2203H0.832441V1.70205H8.13616V13.2203Z" fill="#ffffff"/>
+            </svg>
+          </span>
 
-      <div class="social">
-        <a href="https://www.instagram.com/team404.official/" target="_blank">
+          <span class="header-phone__text">+38 093 847 67 95</span>
+        </a>
+
+        <div class="social">
+          <a href="https://www.instagram.com/team404.official/" target="_blank">
           <span>
             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                  x="0px" y="0px" viewBox="0 0 169.063 169.063"
@@ -171,9 +80,9 @@ $starts = [
                 C135.661,29.421,132.821,28.251,129.921,28.251z"/>
             </svg>
           </span>
-        </a>
+          </a>
 
-        <a href="https://www.youtube.com/channel/UCAPvzH2uFQUxwivVq4KhFOw" target="_blank">
+          <a href="https://www.youtube.com/channel/UCAPvzH2uFQUxwivVq4KhFOw" target="_blank">
           <span>
             <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                  viewBox="0 0 512 512" xml:space="preserve">
@@ -185,9 +94,9 @@ $starts = [
                 C512,181.088,504.704,138.592,490.24,113.92z M192,352V160l160,96L192,352z"/>
             </svg>
           </span>
-        </a>
+          </a>
 
-        <a href="https://www.facebook.com/Team404-1601179950004340/?modal=admin_todo_tour" target="_blank">
+          <a href="https://www.facebook.com/Team404-1601179950004340/?modal=admin_todo_tour" target="_blank">
           <span>
             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                  x="0px" y="0px"
@@ -201,138 +110,156 @@ $starts = [
               </g>
             </svg>
           </span>
-        </a>
-      </div>
-    </header>
+          </a>
+        </div>
+      </header>
 
-    <div class="content">
-
-      <div class="mobile-menu">
-        <svg id="open-menu" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-             viewBox="0 0 53 53" xml:space="preserve">
-          <path d="M2,13.5h49c1.104,0,2-0.896,2-2s-0.896-2-2-2H2c-1.104,0-2,0.896-2,2S0.896,13.5,2,13.5z"/>
-              <path d="M2,28.5h49c1.104,0,2-0.896,2-2s-0.896-2-2-2H2c-1.104,0-2,0.896-2,2S0.896,28.5,2,28.5z"/>
-              <path d="M2,43.5h49c1.104,0,2-0.896,2-2s-0.896-2-2-2H2c-1.104,0-2,0.896-2,2S0.896,43.5,2,43.5z"/>
+      <div class="content">
+        <div class="mobile-menu">
+          <svg id="open-menu" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+               viewBox="0 0 53 53" xml:space="preserve">
+          <path d="M2,13.5h49c1.104,0,2-0.896,2-2s-0.896-2-2-2H2c-1.104,0-2,0.896-2,2S0.896,13.5,2,13.5z" />
+            <path d="M2,28.5h49c1.104,0,2-0.896,2-2s-0.896-2-2-2H2c-1.104,0-2,0.896-2,2S0.896,28.5,2,28.5z" />
+            <path d="M2,43.5h49c1.104,0,2-0.896,2-2s-0.896-2-2-2H2c-1.104,0-2,0.896-2,2S0.896,43.5,2,43.5z" />
         </svg>
 
-        <svg id="close-menu" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"
-             xmlns:xlink="http://www.w3.org/1999/xlink">
-          <g>
+          <svg id="close-menu" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"
+               xmlns:xlink="http://www.w3.org/1999/xlink">
             <path fill="#1D1D1B"
-                  d="M28.941,31.786L0.613,60.114c-0.787,0.787-0.787,2.062,0,2.849c0.393,0.394,0.909,0.59,1.424,0.59   c0.516,0,1.031-0.196,1.424-0.59l28.541-28.541l28.541,28.541c0.394,0.394,0.909,0.59,1.424,0.59c0.515,0,1.031-0.196,1.424-0.59   c0.787-0.787,0.787-2.062,0-2.849L35.064,31.786L63.41,3.438c0.787-0.787,0.787-2.062,0-2.849c-0.787-0.786-2.062-0.786-2.848,0   L32.003,29.15L3.441,0.59c-0.787-0.786-2.061-0.786-2.848,0c-0.787,0.787-0.787,2.062,0,2.849L28.941,31.786z"/>
-          </g>
+                  d="M28.941,31.786L0.613,60.114c-0.787,0.787-0.787,2.062,0,2.849c0.393,0.394,0.909,0.59,1.424,0.59   c0.516,0,1.031-0.196,1.424-0.59l28.541-28.541l28.541,28.541c0.394,0.394,0.909,0.59,1.424,0.59c0.515,0,1.031-0.196,1.424-0.59   c0.787-0.787,0.787-2.062,0-2.849L35.064,31.786L63.41,3.438c0.787-0.787,0.787-2.062,0-2.849c-0.787-0.786-2.062-0.786-2.848,0   L32.003,29.15L3.441,0.59c-0.787-0.786-2.061-0.786-2.848,0c-0.787,0.787-0.787,2.062,0,2.849L28.941,31.786z" />
+          </svg>
+        </div>
+
+        <div class="menu">
+          <nav data-animated="fadeInLeft" class="flex-box my-animate">
+            <ul>
+              <!--            <li data-index-slide="1"><a href="#start">Главная</a></li>-->
+              <li data-index-slide="2"><a href="#team">Команда</a></li>
+              <li data-index-slide="3"><a href="#philosophy">Философия</a></li>
+              <li data-index-slide="4"><a href="#directions">Направления</a></li>
+              <li data-index-slide="5"><a href="#cost">Стоимость</a></li>
+              <li data-index-slide="6"><a href="#directions-coach">Тренеры</a></li>
+              <li data-index-slide="7"><a href="#start-map">Карта основных стартов</a></li>
+              <!--<li data-index-slide="8"><a href="#shop">магазин</a></li>-->
+              <li data-index-slide="8"><a href="#sponsors">Спонсоры</a></li>
+              <!--<li>новости</li>-->
+              <!--<li>приложение</li>-->
+            </ul>
+          </nav>
+        </div>
+
+        <div class="slider-content">
+          <h2 data-animated="fadeInRight" class="slider-title my-animate">OLD YOU<br>NOT FOUND</h2>
+
+          <h3 data-animated="fadeIn" class="slider-title-small my-animate delay-1s">Подготовка к триатлону, марафону и <span class="slider-title-small__mark">IRONMAN</span> с любого уровня</h3>
+
+          <p data-animated="fadeIn" class="slider-text my-animate delay-1s faster">Team 404 – команда, в которой под руководством профессиональных тренеров, каждый, вне зависимости от исходного уровня, сможет стать Ironman, марафонцем, пловцом и просто здоровым счастливым человеком.</p>
+
+          <div>
+            <a href="#" class="btn-tur my-animate delay-1s" data-animated="fadeIn">
+              <span class="btn-tur__text">Присоединиться к команде</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="banners"></div>
+      </div>
+
+      <div class="mouse">
+        <svg width="28" height="68" viewBox="0 0 28 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M14 0C6.64779 0 0.666626 5.97869 0.666626 13.3269V26.6739C0.666626 34.0219 6.64779 40 14 40C21.3521 40 27.3333 34.0221 27.3333 26.6739V13.3269C27.3333 5.97869 21.3519 0 14 0ZM25.8518 26.6739C25.8518 33.2052 20.5351 38.5185 14 38.5185C7.46484 38.5185 2.14809 33.2052 2.14809 26.6739V13.3269C2.14809 6.79555 7.46484 1.48146 14 1.48146C20.5351 1.48146 25.8518 6.79536 25.8518 13.3269V26.6739Z" fill="white"/>
+          <path d="M14 4.44438C13.5909 4.44438 13.2592 4.77573 13.2592 5.18521V11.8931C13.2592 12.3026 13.5909 12.634 14 12.634C14.4091 12.634 14.7408 12.3026 14.7408 11.8931V5.18521C14.7406 4.77573 14.4091 4.44438 14 4.44438Z" fill="white"/>
+          <circle cx="14" cy="52.0319" r="3.5" stroke="white"/>
+          <circle cx="14" cy="64.5577" r="2" stroke="white"/>
         </svg>
       </div>
+    </div>
+  </section>
 
-      <div class="menu">
-        <nav data-animated="fadeInLeft" class="flex-box my-animate">
-          <ul>
-<!--            <li data-index-slide="1"><a href="#start">Главная</a></li>-->
-            <li data-index-slide="2"><a href="#team">Команда</a></li>
-            <li data-index-slide="3"><a href="#philosophy">Философия</a></li>
-            <li data-index-slide="4"><a href="#directions">Направления</a></li>
-            <li data-index-slide="5"><a href="#cost">Стоимость</a></li>
-            <li data-index-slide="6"><a href="#directions-coach">Тренеры</a></li>
-            <li data-index-slide="7"><a href="#start-map">Карта основных стартов</a></li>
-            <!--<li data-index-slide="8"><a href="#shop">магазин</a></li>-->
-            <li data-index-slide="8"><a href="#sponsors">Спонсоры</a></li>
-            <!--<li>новости</li>-->
-            <!--<li>приложение</li>-->
-          </ul>
-        </nav>
+  <!-- team -->
+  <section data-slide="team" class="team flex-box slide">
+    <div class="team__inner">
+      <div class="name-block"><span>Команда</span></div>
+
+      <div class="content flex-box">
+        <div class="team-info">
+          <div class="title-team">Больше, чем люди,<br>тренирующиеся вместе</div>
+
+          <div class="title-des"><strong>team404</strong> - место, где в тебя поверят и поддержат любые твои безумства. В
+            команду не берут кого попало, команда- это почти семья. Вне зависимости от уровня подготовки и целей, именно
+            здесь ты найдешь тех, кто должен быть рядом для комфортного достижения цели.
+          </div>
+
+          <div class="m-team-photo">
+            <img src="img/team.jpg" alt="team404">
+          </div>
+
+          <div class="team-statistic">
+            <div class="statistic-text">В команде сегодня:</div>
+
+            <div data-animated="fadeInUp" class="flex-box statistic-data my-animate">
+              <div>
+                <p class="st-num">2</p>
+                <p class="st-text">проф.<br>тренера</p>
+              </div>
+
+              <div>
+                <p class="st-num">6</p>
+                <p class="st-text">финишеров<br>IRONMAN</p>
+              </div>
+
+              <div>
+                <p class="st-num">20+</p>
+                <p class="st-text">финишеров<br>1/2 IRONMAN</p>
+              </div>
+
+              <div>
+                <p class="st-num">20+</p>
+                <p class="st-text">пробежавших<br>марафон</p>
+              </div>
+
+              <div>
+                <p class="st-num">50+</p>
+                <p class="st-text">счастливых<br>учеников</p>
+              </div>
+            </div>
+
+            <div class="go-in-team flex-box">
+              <p class="statistic-text">и это только начало...</p>
+
+              <div>
+                <a class="btn-tur ppf">
+                  <span class="btn-tur__text">Хочу в team404</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="team-photo"></div>
       </div>
+    </div>
+  </section>
 
-      <div class="slider-content">
-        <h2 data-animated="fadeInRight" class="slider-title my-animate">OLD YOU<br>NOT FOUND</h2>
+  <!-- philosophy -->
+  <section data-slide="philosophy" class="philosophy flex-box slide">
+    <div class="philosophy__inner">
+      <div class="name-block"><span>Философия</span></div>
 
-        <h3 data-animated="fadeIn" class="slider-title-small my-animate delay-1s">Подготовка к триатлону, марафону и <span class="slider-title-small__mark">IRONMAN</span> с любого уровня</h3>
+      <div class="content">
+        <div class="content__row">
+          <p data-animated="fadeInRight" class="philosophy-big-text my-animate">Мы в <span>team404</span> считаем, что для команды нет ничего важнее, чем <span>ЛЮДИ</span></p>
 
-        <p data-animated="fadeIn" class="slider-text my-animate delay-1s faster">Team 404 – команда, в которой под руководством профессиональных тренеров, каждый, вне зависимости от исходного уровня, сможет стать Ironman, марафонцем, пловцом и просто здоровым счастливым человеком.</p>
+          <p class="philosophy-small-text">Каждая успешная команда строится вокруг профессионального тренера и состоит из крутых спортсменов.</p>
+
+          <p class="philosophy-small-text">И мы тут сейчас не про результаты на соревнованиях, а про атмосферу в коллективе и огромную всестороннюю поддержку внутри team404.</p>
+        </div>
 
         <div>
           <a href="#" class="btn-tur my-animate delay-1s" data-animated="fadeIn">
             <span class="btn-tur__text">Присоединиться к команде</span>
           </a>
         </div>
-      </div>
-
-      <div class="banners"></div>
-    </div>
-  </section>
-
-  <!-- team -->
-  <section data-slide="team" class="team flex-box slide">
-    <div class="name-block"><span>Команда</span></div>
-
-    <div class="content flex-box">
-
-      <div class="team-info">
-        <div class="title-team">Больше, чем люди,<br>тренирующиеся вместе</div>
-        <div class="title-des"><strong>team404</strong> - место, где в тебя поверят и поддержат любые твои безумства. В
-          команду не берут кого попало, команда- это почти семья. Вне зависимости от уровня подготовки и целей, именно
-          здесь ты найдешь тех, кто должен быть рядом для комфортного достижения цели.
-        </div>
-
-        <div class="m-team-photo">
-          <img src="img/team.jpg" alt="team404">
-        </div>
-
-        <div class="team-statistic">
-          <div class="statistic-text">В команде сегодня:</div>
-          <div data-animated="fadeInUp" class="flex-box statistic-data my-animate">
-            <div>
-              <p class="st-num">2</p>
-              <p class="st-text">проф.<br>тренера</p>
-            </div>
-            <div>
-              <p class="st-num">6</p>
-              <p class="st-text">финишеров<br>IRONMAN</p>
-            </div>
-            <div>
-              <p class="st-num">20+</p>
-              <p class="st-text">финишеров<br>1/2 IRONMAN</p>
-            </div>
-            <div>
-              <p class="st-num">20+</p>
-              <p class="st-text">пробежавших<br>марафон</p>
-            </div>
-            <div>
-              <p class="st-num">50+</p>
-              <p class="st-text">счастливых<br>учеников</p>
-            </div>
-          </div>
-          <div class="go-in-team flex-box">
-            <p class="statistic-text">и это только начало...</p>
-            <div>
-              <a class="btn-tur ppf">
-                  <span class="btn-tur__text">Хочу в team404</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="team-photo"></div>
-    </div>
-  </section>
-
-  <!-- philosophy -->
-  <section data-slide="philosophy" class="philosophy flex-box slide">
-    <div class="name-block"><span>Философия</span></div>
-
-    <div class="content">
-      <div class="content__row">
-        <p data-animated="fadeInRight" class="philosophy-big-text my-animate">Мы в <span>team404</span> считаем, что для команды нет ничего важнее, чем <span>ЛЮДИ</span></p>
-
-        <p class="philosophy-small-text">Каждая успешная команда строится вокруг профессионального тренера и состоит из крутых спортсменов.</p>
-
-        <p class="philosophy-small-text">И мы тут сейчас не про результаты на соревнованиях, а про атмосферу в коллективе и огромную всестороннюю поддержку внутри team404.</p>
-      </div>
-
-      <div>
-        <a href="#" class="btn-tur my-animate delay-1s" data-animated="fadeIn">
-          <span class="btn-tur__text">Присоединиться к команде</span>
-        </a>
       </div>
     </div>
   </section>
@@ -357,90 +284,93 @@ $starts = [
       </div>
     </div>
 
-    <!-- triathlon -->
-    <div class="content dir-triathlon">
-      <div class="direction-triathlon">
-        <div class="triathlon-description">
-          <div class="directions-title">Триатлон</div>
+    <div class="directions__inner">
 
-          <div data-animated="fadeIn" data-delay="300" class="directions-subtitle my-animate">Плавание. Вело. Бег.</div>
+      <!-- triathlon -->
+      <div class="content dir-triathlon">
+        <div class="direction-triathlon">
+          <div class="triathlon-description">
+            <div class="directions-title">Триатлон</div>
 
-          <div data-animated="fadeInUp" data-delay="300" class="directions-text my-animate">Триатлон объединяет в себе три популярных и любимых всеми вида спорта. Гармоничное развитие организма во всех направлениях, масса здоровья и незабываемые эмоции от соревнований на любом уровне привели его к огромной популярности среди любителей в Европе и США. Триатлон в Харькове еще совсем молод, но с каждым месяцем число занимающихся в team404 растет почти так же быстро, как уровень результатов наших учеников.</div>
+            <div data-animated="fadeIn" data-delay="300" class="directions-subtitle my-animate">Плавание. Вело. Бег.</div>
 
-          <div class="ironman-block">
-            <div class="ironman-title">Ironman</div>
+            <div data-animated="fadeInUp" data-delay="300" class="directions-text my-animate">Триатлон объединяет в себе три популярных и любимых всеми вида спорта. Гармоничное развитие организма во всех направлениях, масса здоровья и незабываемые эмоции от соревнований на любом уровне привели его к огромной популярности среди любителей в Европе и США. Триатлон в Харькове еще совсем молод, но с каждым месяцем число занимающихся в team404 растет почти так же быстро, как уровень результатов наших учеников.</div>
 
-            <div class="ironman-subtitle">соревнования, о которых мечтает каждый спортсмен.</div>
+            <div class="ironman-block">
+              <div class="ironman-title">Ironman</div>
 
-            <div class="iroman-distances">
-              <div>
-                <img src="/new/img/swim.png" alt="swim" width="60"/>
+              <div class="ironman-subtitle">соревнования, о которых мечтает каждый спортсмен.</div>
 
-                <span>3,9 км</span>
+              <div class="iroman-distances">
+                <div>
+                  <img src="/new/img/swim.png" alt="swim" width="60"/>
+
+                  <span>3,9 км</span>
+                </div>
+
+                <div>
+                  <img src="/new/img/velo.png" alt="velo" width="60"/>
+
+                  <span>180 км</span>
+                </div>
+
+                <div>
+                  <img src="/new/img/run.png" alt="run" width="56"/>
+
+                  <span>42,2 км</span>
+                </div>
               </div>
 
-              <div>
-                <img src="/new/img/velo.png" alt="velo" width="60"/>
-
-                <span>180 км</span>
-              </div>
-
-              <div>
-                <img src="/new/img/run.png" alt="run" width="56"/>
-
-                <span>42,2 км</span>
-              </div>
+              <p>В нашей команде преодоление IRONMAN становится реальностью уже через 1-2 года занятий триатлоном.</p>
             </div>
 
-            <p>В нашей команде преодоление IRONMAN становится реальностью уже через 1-2 года занятий триатлоном.</p>
+            <div class="triathlon-description__row">
+              <a href="#" class="btn-tur my-animate delay-1s" data-animated="fadeIn">
+                <span class="btn-tur__text">Хочу стать триатлетом</span>
+              </a>
+            </div>
           </div>
 
-          <div class="triathlon-description__row">
-            <a href="#" class="btn-tur my-animate delay-1s" data-animated="fadeIn">
-              <span class="btn-tur__text">Хочу стать триатлетом</span>
-            </a>
+          <div class="triathlon-photo">
           </div>
-        </div>
-
-        <div class="triathlon-photo">
         </div>
       </div>
-    </div>
 
-    <!-- run -->
-    <div class="content dir-run">
-      <div class="direction-triathlon">
-        <div class="triathlon-description">
-          <div class="directions-title">Бег</div>
+      <!-- run -->
+      <div class="content dir-run">
+        <div class="direction-triathlon">
+          <div class="triathlon-description">
+            <div class="directions-title">Бег</div>
 
-          <div data-animated="fadeIn" data-delay="300" class="directions-subtitle my-animate">
-            Если хочешь быть сильным — бегай,<br>
-            хочешь быть красивым — бегай,<br>
-            хочешь быть умным — бегай.
-          </div>
+            <div data-animated="fadeIn" data-delay="300" class="directions-subtitle my-animate">
+              Если хочешь быть сильным — бегай,<br>
+              хочешь быть красивым — бегай,<br>
+              хочешь быть умным — бегай.
+            </div>
 
-          <div data-animated="fadeInUp" data-delay="300" class="directions-text my-animate">Беговые тренировки в Харькове стали культовым спортивным направлением совсем недавно. Многие на сегодняшний день вышли на улицу и начали заниматься этим прекрасным видом спорта. Но мало кто делает это обдуманно и полезно.</div>
+            <div data-animated="fadeInUp" data-delay="300" class="directions-text my-animate">Беговые тренировки в Харькове стали культовым спортивным направлением совсем недавно. Многие на сегодняшний день вышли на улицу и начали заниматься этим прекрасным видом спорта. Но мало кто делает это обдуманно и полезно.</div>
 
-          <div class="ironman-block">
-            <div class="ironman-title">МАРАФОН 42,195 км.</div>
+            <div class="ironman-block">
+              <div class="ironman-title">МАРАФОН 42,195 км.</div>
 
-            <div class="ironman-subtitle">
-              <p>легендарная дистанция, о которой (тайно) мечтает каждый бегун-любитель*</p>
+              <div class="ironman-subtitle">
+                <p>легендарная дистанция, о которой (тайно) мечтает каждый бегун-любитель*</p>
 
-              <p>В team404 подготовка к марафону с нуля занимает около 1 года.</p>
+                <p>В team404 подготовка к марафону с нуля занимает около 1 года.</p>
 
-              <p class="ironman-subtitle__mark">* всего 1% людей преодолевают хотя бы 1 марафон</p>
+                <p class="ironman-subtitle__mark">* всего 1% людей преодолевают хотя бы 1 марафон</p>
+              </div>
+            </div>
+
+            <div class="triathlon-description__row">
+              <a href="#" class="btn-tur my-animate delay-1s" data-animated="fadeIn">
+                <span class="btn-tur__text">Хочу бегать правильно</span>
+              </a>
             </div>
           </div>
 
-          <div class="triathlon-description__row">
-            <a href="#" class="btn-tur my-animate delay-1s" data-animated="fadeIn">
-              <span class="btn-tur__text">Хочу бегать правильно</span>
-            </a>
+          <div class="triathlon-photo">
           </div>
-        </div>
-
-        <div class="triathlon-photo">
         </div>
       </div>
     </div>
@@ -464,64 +394,67 @@ $starts = [
       </div>
     </div>
 
-    <div class="content cost-triathlon">
-      <div class="flex-box">
-        <div class="cost-price">
-          <p>150 <span><sup>$</sup>/<sub>мес.</sub></span></p>
-          <div class="discount">
-            <p>скидка 20% при оплате за год</p>
+    <div class="cost__inner">
+
+      <div class="content cost-triathlon">
+        <div class="flex-box">
+          <div class="cost-price">
+            <p>150 <span><sup>$</sup>/<sub>мес.</sub></span></p>
+            <div class="discount">
+              <p>скидка 20% при оплате за год</p>
+            </div>
           </div>
-        </div>
 
-        <div class="cost-description">
-          <div class="cost-title">Что входит:</div>
-          <ul class="cost-list">
-            <li>идивидуальный план подготовки</li>
-            <li>обучение экономичной и безопасной технике</li>
-            <li>персональные и групповые тренировки по плаванию, вело, бегу</li>
-            <li>командная экипировка (велоформа, трисьют, футболка, кепка)</li>
-            <li>консультации по питанию и составление диеты</li>
-            <li>питание на ironman и подводящих стартах</li>
-            <li>консультации по фармакологической поддержке</li>
-            <li>ответы на все околоспортивные вопросы</li>
-          </ul>
+          <div class="cost-description">
+            <div class="cost-title">Что входит:</div>
+            <ul class="cost-list">
+              <li>идивидуальный план подготовки</li>
+              <li>обучение экономичной и безопасной технике</li>
+              <li>персональные и групповые тренировки по плаванию, вело, бегу</li>
+              <li>командная экипировка (велоформа, трисьют, футболка, кепка)</li>
+              <li>консультации по питанию и составление диеты</li>
+              <li>питание на ironman и подводящих стартах</li>
+              <li>консультации по фармакологической поддержке</li>
+              <li>ответы на все околоспортивные вопросы</li>
+            </ul>
 
-          <div class="cost-description__row">
-            <a href="#" class="btn-tur my-animate ppf" data-animated="fadeIn">
-              <span class="btn-tur__text">Начать подготовку</span>
-            </a>
+            <div class="cost-description__row">
+              <a href="#" class="btn-tur my-animate ppf" data-animated="fadeIn">
+                <span class="btn-tur__text">Начать подготовку</span>
+              </a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="content cost-run">
-      <div class="flex-box">
-        <div class="cost-price">
-          <p>100 <span><sup>$</sup>/<sub>мес.</sub></span></p>
-          <div class="discount">
-            <p>скидка 20% при оплате за год</p>
+      <div class="content cost-run">
+        <div class="flex-box">
+          <div class="cost-price">
+            <p>100 <span><sup>$</sup>/<sub>мес.</sub></span></p>
+            <div class="discount">
+              <p>скидка 20% при оплате за год</p>
+            </div>
           </div>
-        </div>
 
-        <div class="cost-description">
-          <div class="cost-title">Что входит:</div>
+          <div class="cost-description">
+            <div class="cost-title">Что входит:</div>
 
-          <ul class="cost-list">
-            <li>идивидуальный план подготовки</li>
-            <li>обучение экономичной и безопасной технике</li>
-            <li>персональные и групповые тренировки</li>
-            <li>командная экипировка</li>
-            <li>консультации по питанию и составление диеты</li>
-            <li>питание на марафон и подводящих стартах</li>
-            <li>консультации по фармакологической поддержке</li>
-            <li>ответы на все околоспортивные вопросы</li>
-          </ul>
+            <ul class="cost-list">
+              <li>идивидуальный план подготовки</li>
+              <li>обучение экономичной и безопасной технике</li>
+              <li>персональные и групповые тренировки</li>
+              <li>командная экипировка</li>
+              <li>консультации по питанию и составление диеты</li>
+              <li>питание на марафон и подводящих стартах</li>
+              <li>консультации по фармакологической поддержке</li>
+              <li>ответы на все околоспортивные вопросы</li>
+            </ul>
 
-          <div class="cost-description__row">
-            <a href="#" class="btn-tur my-animate ppf" data-animated="fadeIn">
-              <span class="btn-tur__text">Начать подготовку</span>
-            </a>
+            <div class="cost-description__row">
+              <a href="#" class="btn-tur my-animate ppf" data-animated="fadeIn">
+                <span class="btn-tur__text">Начать подготовку</span>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -532,28 +465,29 @@ $starts = [
   <section data-slide="directions-coach" class="directions-coach flex-box slide">
     <div class="name-block"><span>Тренеры</span></div>
 
-    <div class="content">
-      <div class="flex-box">
-        <div class="">
-          <div class="coach1">
-            <div data-animated="fadeInLeft" class="trainer-photo my-animate">
-              <img src="img/coach.png" alt="coach">
-            </div>
-
-            <div class="trainer-description">
-              <div class="trainer-name">Владимир Остриков</div>
-
-              <div class="trainer-text">
-                Более 12 лет в триатлоне<br>
-                Более 6 лет тренерского опыта<br>
-                Неоднократный чемпион Украины по триатлону среди юношей<br>
-                КМС по триатлону<br>
-                КМС по плаванию<br>
-                Окончил академию физической культуры<br>
-                По его планам тренируются все ученики  team404, результаты вы видите
+    <div class="directions-coach__inner">
+      <div class="content">
+        <div class="flex-box">
+          <div class="coach1-wrapper">
+            <div class="coach1">
+              <div data-animated="fadeInLeft" class="trainer-photo my-animate">
+                <img src="img/coach.png" alt="coach">
               </div>
 
-              <div class="social">
+              <div class="trainer-description">
+                <div class="trainer-name">Владимир Остриков</div>
+
+                <div class="trainer-text">
+                  Более 12 лет в триатлоне<br>
+                  Более 6 лет тренерского опыта<br>
+                  Неоднократный чемпион Украины по триатлону среди юношей<br>
+                  КМС по триатлону<br>
+                  КМС по плаванию<br>
+                  Окончил академию физической культуры<br>
+                  По его планам тренируются все ученики  team404, результаты вы видите
+                </div>
+
+                <div class="social">
               <span>
                 <a href="https://www.instagram.com/ostrikov_coach_team404" target="_blank">
                   <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
@@ -573,7 +507,7 @@ $starts = [
                 </a>
               </span>
 
-                <span>
+                  <span>
                 <a href="https://www.facebook.com/profile.php?id=100011584982670" target="_blank">
                   <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -586,30 +520,30 @@ $starts = [
                   </svg>
                 </a>
               </span>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div class="coach1__row">
+            <div class="coach1__row">
               <span class="btn-tur my-animate ppf" data-animated="fadeIn">
                 <span class="btn-tur__text">Записаться на встречу</span>
               </span>
-          </div>
-        </div>
-
-        <div class="coach2">
-          <div class="trainer-description">
-            <div class="trainer-name">Игорь Поливаный</div>
-            <div class="trainer-text">
-              Лидер team404<br>
-              рекордсмен Украины как самый молодой IRONMAN в истории<br>
-              Серебряный призер лиги IRON WAY 2018<br>
-              Один из сильнейших триатлетов-любителей страны<br>
-              Двукратный IRONMAN с лучшим результатом 9.56<br>
-              Победитель IRON WAY Kharkiv Sprint 2018<br>
-              Будущий участник чемпионата мира на Гавайях
             </div>
-            <div class="social">
+          </div>
+
+          <div class="coach2">
+            <div class="trainer-description">
+              <div class="trainer-name">Игорь Поливаный</div>
+              <div class="trainer-text">
+                Лидер team404<br>
+                рекордсмен Украины как самый молодой IRONMAN в истории<br>
+                Серебряный призер лиги IRON WAY 2018<br>
+                Один из сильнейших триатлетов-любителей страны<br>
+                Двукратный IRONMAN с лучшим результатом 9.56<br>
+                Победитель IRON WAY Kharkiv Sprint 2018<br>
+                Будущий участник чемпионата мира на Гавайях
+              </div>
+              <div class="social">
         <span>
           <a href="https://www.instagram.com/ostrikov_coach_team404" target="_blank">
             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
@@ -630,7 +564,7 @@ $starts = [
         </svg>
           </a>
         </span>
-              <span>
+                <span>
           <a href="https://www.facebook.com/profile.php?id=100011584982670" target="_blank">
             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -645,10 +579,11 @@ $starts = [
       </svg>
           </a>
         </span>
+              </div>
             </div>
-          </div>
-          <div data-animated="fadeInRight" class="trainer-photo my-animate">
-            <img src="img/coach2.png" alt="coach">
+            <div data-animated="fadeInRight" class="trainer-photo my-animate">
+              <img src="img/coach2.png" alt="coach">
+            </div>
           </div>
         </div>
       </div>
@@ -658,9 +593,9 @@ $starts = [
   <!-- start map -->
   <section data-slide="start-map" class="start-map flex-box slide">
     <div class="content-wrapper">
-      <div class="content">
-        <div class="name-block"><span>Карта основных стартов</span></div>
+      <div class="name-block"><span>Карта основных стартов</span></div>
 
+      <div class="content">
         <div class="start-map-main">
           <div class="start-map-title">
             <span class="start-map-title__text">Главные старты сезона 2019</span>
@@ -710,10 +645,10 @@ $starts = [
             <div class="additional-info__right">
               <span class="additional-info__text">Готовься к любому из них вместе с нами</span>
 
-              <div>
-            <span class="btn-black my-animate ppt" data-animated="fadeIn">
-              <span class="btn-tur__text">Начать подготовку</span>
-            </span>
+              <div class="additional-info__row">
+                <span class="btn-black my-animate ppt" data-animated="fadeIn">
+                  <span class="btn-tur__text">Начать подготовку</span>
+                </span>
               </div>
             </div>
           </div>
@@ -926,67 +861,69 @@ $starts = [
   <section data-slide="sponsors" class="sponsors flex-box slide">
     <div class="name-block"><span>Спонсоры</span></div>
 
-    <div class="content">
-      <a href="https://veloplaneta.com.ua" target="_blank" data-animated="fadeIn" data-delay="250" class="sponsor-card my-animate">
+    <div class="sponsors__inner">
+      <div class="content">
+        <a href="https://veloplaneta.com.ua" target="_blank" data-animated="fadeIn" data-delay="250" class="sponsor-card my-animate">
           <div class="sponsor-card-logo">
-              <img src="img/svg/veloplaneta.svg" alt="Велопланета">
+            <img src="img/svg/veloplaneta.svg" alt="Велопланета">
           </div>
 
           <div class="sponsor-card-name">
             <span class="sponsor-card-name__text">Велоинвентарь и экипировка</span>
           </div>
-      </a>
+        </a>
 
-      <a href="https://www.cannondale.com/en/International" target="_blank" data-animated="fadeIn" data-delay="500" class="sponsor-card my-animate">
-        <div class="sponsor-card-logo">
+        <a href="https://www.cannondale.com/en/International" target="_blank" data-animated="fadeIn" data-delay="500" class="sponsor-card my-animate">
+          <div class="sponsor-card-logo">
             <img src="img/svg/cannondale.svg" alt="Сannondale">
-        </div>
+          </div>
 
-        <div class="sponsor-card-name">
-          <span class="sponsor-card-name__text">Спонсор</span>
-        </div>
-      </a>
+          <div class="sponsor-card-name">
+            <span class="sponsor-card-name__text">Спонсор</span>
+          </div>
+        </a>
 
-      <a href="https://www.patreon.com/javascriptninja" target="_blank" data-animated="fadeIn" data-delay="700" class="sponsor-card my-animate">
-        <div class="sponsor-card-logo">
+        <a href="https://www.patreon.com/javascriptninja" target="_blank" data-animated="fadeIn" data-delay="700" class="sponsor-card my-animate">
+          <div class="sponsor-card-logo">
             <img src="img/javascriptNinja.png" alt="JavaScriptNinja">
-        </div>
+          </div>
 
-        <div class="sponsor-card-name">
-          <span class="sponsor-card-name__text">Спонсор</span>
-        </div>
-      </a>
+          <div class="sponsor-card-name">
+            <span class="sponsor-card-name__text">Спонсор</span>
+          </div>
+        </a>
 
-      <a href="http://www.akvarena.com.ua" target="_blank" data-animated="fadeIn" data-delay="1000" class="sponsor-card my-animate">
-        <div class="sponsor-card-logo">
+        <a href="http://www.akvarena.com.ua" target="_blank" data-animated="fadeIn" data-delay="1000" class="sponsor-card my-animate">
+          <div class="sponsor-card-logo">
             <img src="img/acvarena.png" alt="Акварена">
-        </div>
+          </div>
 
-        <div class="sponsor-card-name">
-          <span class="sponsor-card-name__text">Тренировочная база</span>
-        </div>
-      </a>
+          <div class="sponsor-card-name">
+            <span class="sponsor-card-name__text">Тренировочная база</span>
+          </div>
+        </a>
 
-      <a href="http://www.kunaiconsulting.com" target="_blank" data-animated="fadeIn" data-delay="1200" class="sponsor-card my-animate">
-        <div class="sponsor-card-logo">
+        <a href="http://www.kunaiconsulting.com" target="_blank" data-animated="fadeIn" data-delay="1200" class="sponsor-card my-animate">
+          <div class="sponsor-card-logo">
             <img src="img/kunai.png" alt="Kunai">
-        </div>
+          </div>
 
-        <div class="sponsor-card-name">
-          <span class="sponsor-card-name__text">Спонсор</span>
-        </div>
-      </a>
-    </div>
-
-    <div class="become-sponsor">
-      <div class="become-sponsor__title">
-        <span class="become-sponsor__text">Как стать спонсором?</span>
+          <div class="sponsor-card-name">
+            <span class="sponsor-card-name__text">Спонсор</span>
+          </div>
+        </a>
       </div>
 
-      <div class="become-sponsor__row">
+      <div class="become-sponsor">
+        <div class="become-sponsor__title">
+          <span class="become-sponsor__text">Как стать спонсором?</span>
+        </div>
+
+        <div class="become-sponsor__row">
         <span class="btn-tur">
           <span class="btn-tur__text">Записаться на встречу</span>
         </span>
+        </div>
       </div>
     </div>
   </section>
@@ -1095,6 +1032,8 @@ $starts = [
             this.classList.add('active');
             el.card.classList.add('active');
             list.insertBefore(el.card, list.firstChild);
+
+            list.scrollTop = 0;
         });
 
         el.card.addEventListener('click', function () {
