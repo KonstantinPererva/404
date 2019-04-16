@@ -37,6 +37,9 @@
   .triathlon-description, .triathlon-photo {
     flex: 1 0 63%;
   }
+  .cost {
+    padding: 20px 40px 20px 20px;
+  }
   .cost .cost-title {
     margin: 0 0 40px;
   }
@@ -85,6 +88,32 @@
   .sponsor-card-name {
     height: 40px;
   }
+  .directions {
+    padding: 20px 40px 20px 20px;
+  }
+  .philosophy {
+    padding: 20px 40px 20px 20px;
+  }
+  .directions-coach {
+    padding: 20px 40px 20px 20px;
+  }
+  .start header {
+    padding: 20px 0;
+  }
+  .start .slider-content .slider-title {
+    font-size: 54px;
+    letter-spacing: 1px;
+    line-height: 64px;
+    font-family: Oswald-Bold;
+    margin-bottom: 20px;
+  }
+  .slider-title-small {
+    margin: 0 0 20px;
+  }
+  .start .slider-content .slider-text {
+    margin-bottom: 20px;
+    margin-top: 0;
+  }
 }
 
 @media (max-width: 1280px) {
@@ -97,7 +126,8 @@
 
 @media (max-width: 1152px) {
   .start-info {
-    padding: 10px 20px 20px;
+    width: 400px;
+    padding: 10px 32px 20px 15px;
   }
   .additional-info-warning {
     justify-content: center;
@@ -112,10 +142,211 @@
     text-align: center;
     width: 100%;
   }
+  .start-map-title__text {
+    font-size: 26px;
+  }
+  .cost .cost-price > p {
+    font-size: 90px;
+  }
+  .cost-price sup, .cost-price sub, .cost-price > p span {
+    font-size: 56px;
+    line-height: 56px;
+  }
+  .cost .cost-price {
+    padding-left: 30px;
+  }
+  .start-info-card__row_registration .btn-transparent_registration {
+    min-width: 204px;
+    margin-left: -10px;
+  }
+  .team {
+    padding: 20px;
+  }
 }
 
 @media (max-width: 1024px) {
-  
+  .start {
+    padding: 10px 40px 40px;
+  }
+  .start .slider-content .slider-title {
+    font-size: 45px;
+    line-height: 55px;
+  }
+  .slider-title-small {
+    font-size: 20px;
+    line-height: 24px;
+    margin: 0 0 18px;
+  }
+  .start .mouse {
+    display: none;
+  }
+  .start .content .menu {
+    padding: 30px 0 0;
+  }
+  .team {
+    padding: 60px;
+  }
+  .philosophy {
+    padding: 60px;
+  }
+  .directions {
+    padding: 60px;
+  }
+  .direction-triathlon {
+    display: block;
+  }
+  .triathlon-description {
+    width: 100%;
+  }
+  .triathlon-description .iroman-distances {
+    justify-content: flex-start;
+  }
+  .triathlon-description .iroman-distances > div {
+    margin-right: 30px;
+  }
+  .cost {
+    padding: 60px;
+  }
+  .sponsors {
+    padding: 60px;
+  }
+  .additional-info {
+    display: block;
+  }
+  .start-info-list {
+    height: 400px;
+  }
+  .start-map .content {
+    align-items: flex-start;
+  }
+  .additional-info__right {
+    padding: 20px 10px;
+  }
+  .sponsor-card {
+    width: 250px;
+  }
+  .start-info {
+    width: 400px;
+    padding: 10px 10px 20px 15px;
+  }
+  .start-info-title {
+    padding: 20px 0;
+    font-size: 30px;
+  }
+  .header-phone {
+    display: none;
+  }
+  .social {
+    display: none;
+  }
+  .start .menu nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 282px;
+    height: 100%;
+    padding: 0 20px 30px 20px;
+    z-index: 10;
+    transition: ease-in 0.3s;
+    background: #333333;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transform: translateX(-100%);
+    opacity: 0;
+
+    &.active {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  .social-mob {
+    display: block;
+
+    & .header-phone {
+      display: flex;
+      margin: 0;
+    }
+
+    & .social {
+      display: block;
+
+      & svg {
+        max-width: 25px;
+      }
+    }
+  }
+  .start .menu nav ul {
+    width: 100%;
+  }
+  .start .menu nav ul li:not(:last-child) {
+    margin-bottom: 15px;
+  }
+  .start header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background: #111;
+    padding: 0 10px;
+  }
+  .start .logo img {
+    height: 24px;
+  }
+  .start .mobile-menu {
+    display: flex;
+  }
+  .start .logo {
+    width: 45px;
+    height: 24px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+  .main {
+    padding: 40px 0 0;
+  }
+  .start .content {
+    display: block;
+  }
+  .start__inner {
+    display: block;
+    flex: 0 0 auto;
+  }
+  .start {
+    height: calc(100vh - 40px);
+    padding: 0 27px 56px;
+    justify-content: center;
+  }
+  .start-info-card-local__text {
+    font-size: 22px;
+  }
+  .start-info-card-local {
+    margin: 0 0 16px;
+  }
+  .sponsor-card {
+    margin: 0 20px 40px;
+  }
+  .st-num {
+    font-size: 32px;
+  }
+  .banners {
+    background-position: left -200px center;
+  }
+  .philosophy-big-text {
+    font-size: 36px;
+    line-height: 46px;
+  }
+  .philosophy {
+    background: linear-gradient(to top, rgba(17, 17, 17, 1) 0, rgba(17, 17, 17, 0) 60px),
+    linear-gradient(to bottom, rgba(17, 17, 17, 1) 0, rgba(17, 17, 17, 0)  60px),
+    url(../img/philosophy-1.jpg) no-repeat center;
+  }
+
 }
 
 @media (max-width: 768px) {

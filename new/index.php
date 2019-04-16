@@ -15,15 +15,16 @@ define("VER_CSS", '1.31');
 		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 		})(window,document,'script','dataLayer','GTM-PKK35VH');</script>
 	<!-- End Google Tag Manager -->
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="description" content="Стань Ironman, марафонцем, пловцом и просто здоровым счастливым человеком под руководством профессиональных тренеров Team404" />
 
   <script>
 		if (window.innerWidth >= 1152) {
 			document.write(
-				"<link href='js/onepage-scroll/onepage-scroll.css' rel='stylesheet' type='text/css'>"
+				"<link href='js/onepage-scroll/onepage-scroll.css' rel='stylesheet' type='text/css' />"
 			);
 		}
   </script>
@@ -33,7 +34,6 @@ define("VER_CSS", '1.31');
   <link rel="stylesheet" href="css/style.css?<?= VER_CSS; ?>" />
 
   <title>Team 404 подготовка к марафону и триатлону в Харькове</title>
-  <meta name="description" content="Стань Ironman, марафонцем, пловцом и просто здоровым счастливым человеком под руководством профессиональных тренеров Team404" />
 </head>
 
 <body>
@@ -48,6 +48,14 @@ define("VER_CSS", '1.31');
   <section data-slide="start" class="start flex-box slide">
     <div class="start__inner">
       <header class="header flex-box">
+        <div class="mobile-menu">
+          <svg id="open-menu" width="31" height="18" viewBox="0 0 31 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0.640137" y="0.5" width="30" height="3" rx="1.5" fill="#89D7D7"/>
+            <rect x="0.640137" y="7.5" width="30" height="3" rx="1.5" fill="#89D7D7"/>
+            <rect x="0.640137" y="14.5" width="30" height="3" rx="1.5" fill="#89D7D7"/>
+          </svg>
+        </div>
+
         <div class="logo">
           <img src="img/logo.png" alt="logo" title="logo">
         </div>
@@ -115,36 +123,92 @@ define("VER_CSS", '1.31');
       </header>
 
       <div class="content">
-        <div class="mobile-menu">
-          <svg id="open-menu" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-               viewBox="0 0 53 53" xml:space="preserve">
-          <path d="M2,13.5h49c1.104,0,2-0.896,2-2s-0.896-2-2-2H2c-1.104,0-2,0.896-2,2S0.896,13.5,2,13.5z" />
-            <path d="M2,28.5h49c1.104,0,2-0.896,2-2s-0.896-2-2-2H2c-1.104,0-2,0.896-2,2S0.896,28.5,2,28.5z" />
-            <path d="M2,43.5h49c1.104,0,2-0.896,2-2s-0.896-2-2-2H2c-1.104,0-2,0.896-2,2S0.896,43.5,2,43.5z" />
-        </svg>
-
-          <svg id="close-menu" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"
-               xmlns:xlink="http://www.w3.org/1999/xlink">
-            <path fill="#1D1D1B"
-                  d="M28.941,31.786L0.613,60.114c-0.787,0.787-0.787,2.062,0,2.849c0.393,0.394,0.909,0.59,1.424,0.59   c0.516,0,1.031-0.196,1.424-0.59l28.541-28.541l28.541,28.541c0.394,0.394,0.909,0.59,1.424,0.59c0.515,0,1.031-0.196,1.424-0.59   c0.787-0.787,0.787-2.062,0-2.849L35.064,31.786L63.41,3.438c0.787-0.787,0.787-2.062,0-2.849c-0.787-0.786-2.062-0.786-2.848,0   L32.003,29.15L3.441,0.59c-0.787-0.786-2.061-0.786-2.848,0c-0.787,0.787-0.787,2.062,0,2.849L28.941,31.786z" />
-          </svg>
-        </div>
-
         <div class="menu">
-          <nav data-animated="fadeInLeft" class="flex-box my-animate">
+          <nav data-animated="fadeInLeft" class="flex-box my-animate menu-nav">
+            <div class="menu-nav__panel">
+              <span class="menu-nav__close">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M10.1436 9.2508L16.8286 2.56576C17.244 2.15078 17.244 1.47746 16.8286 1.06248C16.4133 0.647143 15.7407 0.647143 15.3254 1.06248L8.64031 7.74752L1.95492 1.06248C1.53959 0.647143 0.866972 0.647143 0.451637 1.06248C0.0363032 1.47746 0.0363032 2.15078 0.451637 2.56576L7.13703 9.2508L0.451637 15.9358C0.0363032 16.3508 0.0363032 17.0241 0.451637 17.4391C0.659305 17.6464 0.931469 17.7503 1.20328 17.7503C1.47509 17.7503 1.74725 17.6464 1.95492 17.4388L8.64031 10.7537L15.3254 17.4388C15.533 17.6464 15.8052 17.7503 16.077 17.7503C16.3488 17.7503 16.621 17.6464 16.8286 17.4388C17.244 17.0238 17.244 16.3505 16.8286 15.9355L10.1436 9.2508Z" fill="#89D7D7"/>
+                </svg>
+              </span>
+
+              <span class="menu-nav__logo">
+                <img src="img/logo.png" alt="logo" title="logo">
+              </span>
+            </div>
+
             <ul>
-              <!--            <li data-index-slide="1"><a href="#start">Главная</a></li>-->
               <li data-index-slide="2"><a href="#team">Команда</a></li>
               <li data-index-slide="3"><a href="#philosophy">Философия</a></li>
               <li data-index-slide="4"><a href="#directions">Направления</a></li>
               <li data-index-slide="5"><a href="#cost">Стоимость</a></li>
               <li data-index-slide="6"><a href="#directions-coach">Тренеры</a></li>
               <li data-index-slide="7"><a href="#start-map">Карта основных стартов</a></li>
-              <!--<li data-index-slide="8"><a href="#shop">магазин</a></li>-->
               <li data-index-slide="8"><a href="#sponsors">Спонсоры</a></li>
-              <!--<li>новости</li>-->
-              <!--<li>приложение</li>-->
             </ul>
+
+            <div class="social-mob">
+              <a href="tel:+380938476795" class="header-phone" data-phone="+380938476795">
+          <span class="header-phone__ico">
+            <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.82801 0.0953369H1.14058C0.583441 0.0953369 0.127441 0.550908 0.127441 1.10848V14.0818C0.127441 14.6393 0.583441 15.0953 1.14058 15.0953H7.82801C8.38516 15.0953 8.84116 14.6402 8.84116 14.0822V1.10848C8.84116 0.550908 8.38516 0.0953369 7.82801 0.0953369ZM3.41458 0.825623H5.55401C5.62173 0.825623 5.67658 0.88048 5.67658 0.948623C5.67658 1.01634 5.62173 1.07119 5.55401 1.07119H3.41458C3.34687 1.07119 3.29201 1.01634 3.29201 0.948623C3.29201 0.88048 3.34687 0.825623 3.41458 0.825623ZM4.4843 14.5888C4.20444 14.5888 3.97773 14.3621 3.97773 14.0818C3.97773 13.8015 4.20444 13.5752 4.4843 13.5752C4.76416 13.5752 4.99087 13.8015 4.99087 14.0818C4.99087 14.3621 4.76416 14.5888 4.4843 14.5888ZM8.13616 13.2203H0.832441V1.70205H8.13616V13.2203Z" fill="#ffffff"/>
+            </svg>
+          </span>
+
+                <span class="header-phone__text">+38 093 847 67 95</span>
+              </a>
+
+              <div class="social">
+                <a href="https://www.instagram.com/team404.official/" target="_blank">
+                  <span>
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                         x="0px" y="0px" viewBox="0 0 169.063 169.063"
+                         xml:space="preserve">
+                      <path d="M122.406,0H46.654C20.929,0,0,20.93,0,46.655v75.752c0,25.726,20.929,46.655,46.654,46.655h75.752
+                        c25.727,0,46.656-20.93,46.656-46.655V46.655C169.063,20.93,148.133,0,122.406,0z M154.063,122.407
+                        c0,17.455-14.201,31.655-31.656,31.655H46.654C29.2,154.063,15,139.862,15,122.407V46.655C15,29.201,29.2,15,46.654,15h75.752
+                        c17.455,0,31.656,14.201,31.656,31.655V122.407z"/>
+                      <path d="M84.531,40.97c-24.021,0-43.563,19.542-43.563,43.563c0,24.02,19.542,43.561,43.563,43.561s43.563-19.541,43.563-43.561
+                        C128.094,60.512,108.552,40.97,84.531,40.97z M84.531,113.093c-15.749,0-28.563-12.812-28.563-28.561
+                        c0-15.75,12.813-28.563,28.563-28.563s28.563,12.813,28.563,28.563C113.094,100.281,100.28,113.093,84.531,113.093z"/>
+                      <path d="M129.921,28.251c-2.89,0-5.729,1.17-7.77,3.22c-2.051,2.04-3.23,4.88-3.23,7.78c0,2.891,1.18,5.73,3.23,7.78
+                        c2.04,2.04,4.88,3.22,7.77,3.22c2.9,0,5.73-1.18,7.78-3.22c2.05-2.05,3.22-4.89,3.22-7.78c0-2.9-1.17-5.74-3.22-7.78
+                        C135.661,29.421,132.821,28.251,129.921,28.251z"/>
+                    </svg>
+                  </span>
+                </a>
+
+                <a href="https://www.youtube.com/channel/UCAPvzH2uFQUxwivVq4KhFOw" target="_blank">
+          <span>
+            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                 viewBox="0 0 512 512" xml:space="preserve">
+              <path d="M490.24,113.92c-13.888-24.704-28.96-29.248-59.648-30.976C399.936,80.864,322.848,80,256.064,80
+                c-66.912,0-144.032,0.864-174.656,2.912c-30.624,1.76-45.728,6.272-59.744,31.008C7.36,138.592,0,181.088,0,255.904
+                C0,255.968,0,256,0,256c0,0.064,0,0.096,0,0.096v0.064c0,74.496,7.36,117.312,21.664,141.728
+                c14.016,24.704,29.088,29.184,59.712,31.264C112.032,430.944,189.152,432,256.064,432c66.784,0,143.872-1.056,174.56-2.816
+                c30.688-2.08,45.76-6.56,59.648-31.264C504.704,373.504,512,330.688,512,256.192c0,0,0-0.096,0-0.16c0,0,0-0.064,0-0.096
+                C512,181.088,504.704,138.592,490.24,113.92z M192,352V160l160,96L192,352z"/>
+            </svg>
+          </span>
+                </a>
+
+                <a href="https://www.facebook.com/Team404-1601179950004340/?modal=admin_todo_tour" target="_blank">
+          <span>
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                 x="0px" y="0px"
+                 viewBox="0 0 310 310" xml:space="preserve">
+              <g id="">
+                <path id="XMLID_835_" d="M81.703,165.106h33.981V305c0,2.762,2.238,5,5,5h57.616c2.762,0,5-2.238,5-5V165.765h39.064
+                  c2.54,0,4.677-1.906,4.967-4.429l5.933-51.502c0.163-1.417-0.286-2.836-1.234-3.899c-0.949-1.064-2.307-1.673-3.732-1.673h-44.996
+                  V71.978c0-9.732,5.24-14.667,15.576-14.667c1.473,0,29.42,0,29.42,0c2.762,0,5-2.239,5-5V5.037c0-2.762-2.238-5-5-5h-40.545
+                  C187.467,0.023,186.832,0,185.896,0c-7.035,0-31.488,1.381-50.804,19.151c-21.402,19.692-18.427,43.27-17.716,47.358v37.752H81.703
+                  c-2.762,0-5,2.238-5,5v50.844C76.703,162.867,78.941,165.106,81.703,165.106z"/>
+              </g>
+            </svg>
+          </span>
+                </a>
+              </div>
+            </div>
           </nav>
         </div>
 

@@ -135,6 +135,9 @@ button a {
   -o-transition: opacity ease-in 0.3s;
   transition: opacity ease-in 0.3s; }
 
+.social-mob {
+  display: none; }
+
 /* line 2, ../sass/_modules.scss */
 .social svg {
   max-width: 20px;
@@ -358,35 +361,23 @@ label input:focus {
           align-items: center;
   background-color: transparent;
   padding: 56px 0 50px; }
-  @media (max-width: 1366px) {
-    .start header {
-      padding: 20px 0; } }
-
-/* line 34, ../sass/_layouts.scss */
-.start header > div {
-  margin: auto; }
 
 /* line 37, ../sass/_layouts.scss */
 .start header .social {
   width: 120px; }
 
-@media only screen and (min-width: 992px) {
-  /* line 49, ../sass/_layouts.scss */
-  .start header > div {
-    margin: 0; } }
-
-/* line 61, ../sass/_layouts.scss */
 .start .mobile-menu {
-  position: fixed;
-  top: 75px;
-  right: 20px;
-  width: 25px;
-  z-index: 12; }
-
-@media only screen and (min-width: 992px) {
-  /* line 61, ../sass/_layouts.scss */
-  .start .mobile-menu {
-    display: none; } }
+  display: none;
+  width: 40px;
+  height: 40px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
 
 /* line 72, ../sass/_layouts.scss */
 .start .content {
@@ -401,23 +392,6 @@ label input:focus {
 /* line 77, ../sass/_layouts.scss */
 .start #close-menu {
   display: none; }
-
-/* line 82, ../sass/_layouts.scss */
-.start .menu nav {
-  position: fixed;
-  display: inline-block;
-  width: auto;
-  height: 100%;
-  padding: 50px 50px 0 50px;
-  margin-top: 0;
-  top: 57px;
-  right: -203px;
-  z-index: 10;
-  /* для Firefox 15 */
-  -webkit-transition: ease-in 0.3s;
-  /* для Chrome и Safari */
-  -o-transition: ease-in 0.3s;
-  transition: ease-in 0.3s; }
 
 /* line 97, ../sass/_layouts.scss */
 .start .menu nav ul {
@@ -434,47 +408,36 @@ label input:focus {
   text-decoration: none;
   -webkit-transition: .15s;
   -o-transition: .15s;
-  transition: .15s; }
+  transition: .15s;
+  font-size: 20px;
+  font-family: Oswald-Regular; }
 
 @media (hover: hover) {
   .start .menu nav ul a:hover {
     color: #89D7D7; } }
 
-/* line 108, ../sass/_layouts.scss */
-.start .menu nav .nav-slider {
-  display: none;
+/* line 82, ../sass/_layouts.scss */
+.start .menu nav {
+  position: static;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  display: -ms-Flexbox;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0;
+  padding-left: 20px; }
+
+/* line 118, ../sass/_layouts.scss */
+.start .menu nav ul {
+  width: 50%;
   margin: 0; }
-
-@media only screen and (min-width: 992px) {
-  /* line 82, ../sass/_layouts.scss */
-  .start .menu nav {
-    position: static;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    display: -ms-Flexbox;
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    padding: 0;
-    padding-left: 20px; }
-  /* line 118, ../sass/_layouts.scss */
-  .start .menu nav ul {
-    width: 50%;
-    margin: 0; }
-  /* line 125, ../sass/_layouts.scss */
-  .start .menu nav .nav-slider {
-    display: block; } }
-
-@media only screen and (min-width: 1600px) {
-  /* line 82, ../sass/_layouts.scss */
-  .start .menu nav {
-    padding-left: 0; } }
 
 /* line 135, ../sass/_layouts.scss */
 .start .slider-content {
@@ -527,46 +490,47 @@ label input:focus {
 .start .slider-content .slider-text {
   margin-bottom: 40px; }
 
-@media only screen and (min-width: 992px) {
-  /* line 176, ../sass/_layouts.scss */
-  .start .content .menu {
-    padding: 90px 0 0;
-    -webkit-flex-basis: 50%;
-        -ms-flex-preferred-size: 50%;
-            flex-basis: 50%; }
-  /* line 179, ../sass/_layouts.scss */
-  .start .content .slider-content {
-    -webkit-flex-basis: 50%;
-        -ms-flex-preferred-size: 50%;
-            flex-basis: 50%; }
-  /* line 181, ../sass/_layouts.scss */
-  .start .content .slider-content .slider-text {
-    max-width: 480px; } }
+/* line 176, ../sass/_layouts.scss */
+.start .content .menu {
+  padding: 90px 0 0;
+  -webkit-flex-basis: 50%;
+      -ms-flex-preferred-size: 50%;
+          flex-basis: 50%; }
 
-@media only screen and (min-width: 1200px) {
-  /* line 205, ../sass/_layouts.scss */
-  .start .content .slider-menu {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: row;
-        -ms-flex-direction: row;
-            flex-direction: row; }
-  /* line 208, ../sass/_layouts.scss */
-  .start .content .slider-content {
-    padding-left: 0;
-    -webkit-box-pack: start;
-    -webkit-justify-content: flex-start;
-        -ms-flex-pack: start;
-            justify-content: flex-start; }
-  /* line 212, ../sass/_layouts.scss */
-  .start .content .slider-title {
-    margin-top: -7px;
-    margin-bottom: 30px; } }
+/* line 179, ../sass/_layouts.scss */
+.start .content .slider-content {
+  -webkit-flex-basis: 50%;
+      -ms-flex-preferred-size: 50%;
+          flex-basis: 50%; }
 
-@media only screen and (min-width: 1600px) {
-  /* line 230, ../sass/_layouts.scss */
-  .start .content .slider-content .slider-text {
-    margin-bottom: 30px; } }
+/* line 181, ../sass/_layouts.scss */
+.start .content .slider-content .slider-text {
+  max-width: 480px; }
+
+/* line 205, ../sass/_layouts.scss */
+.start .content .slider-menu {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row; }
+
+/* line 208, ../sass/_layouts.scss */
+.start .content .slider-content {
+  padding-left: 0;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start; }
+
+/* line 212, ../sass/_layouts.scss */
+.start .content .slider-title {
+  margin-top: -7px;
+  margin-bottom: 30px; }
+
+/* line 230, ../sass/_layouts.scss */
+.start .content .slider-content .slider-text {
+  margin-bottom: 30px; }
 
 /* line 240, ../sass/_layouts.scss */
 .banners {
@@ -609,35 +573,15 @@ label input:focus {
             flex-shrink: 0;
     display: block; }
 
-.start .logo {
-  position: fixed;
-  top: 65px;
-  left: 20px;
-  max-width: 70px; }
-
 .start .logo img {
   max-width: 100%; }
 
-@media only screen and (min-width: 992px) {
-  .start .logo {
-    position: static;
-    max-width: 100%; } }
-
 .start .mobile-menu svg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 25px;
-  fill: white; }
-
-.start .mobile-menu svg:last-child {
-  fill: black; }
-
-.start nav {
-  font-family: Oswald-Regular, sans-serif;
-  color: black;
-  font-size: 16px;
-  background-color: rgba(135, 215, 215, 0.9); }
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0; }
+  .start .mobile-menu svg rect {
+    fill: #89D7D7; }
 
 .start nav li {
   list-style-type: none; }
@@ -680,23 +624,9 @@ label input:focus {
   font-family: Oswald-Bold;
   margin-bottom: 30px; }
 
-@media only screen and (max-width: 1366px) {
-  .start .slider-content .slider-title {
-    font-size: 54px;
-    letter-spacing: 1px;
-    line-height: 64px;
-    font-family: Oswald-Bold;
-    margin-bottom: 20px; }
-  .slider-title-small {
-    margin: 0 0 20px; }
-  .start .slider-content .slider-text {
-    margin-bottom: 20px;
-    margin-top: 0; } }
-
-@media only screen and (min-width: 1600px) {
-  .start .slider-content .slider-title {
-    font-size: 64px;
-    line-height: 66px; } }
+.start .slider-content .slider-title {
+  font-size: 64px;
+  line-height: 66px; }
 
 .start .slider-content .slider-text {
   font-family: Montserrat-Light;
@@ -708,14 +638,6 @@ label input:focus {
 
 .start .slider-content .slider-menu p {
   font-size: 1.2em; }
-
-@media only screen and (min-width: 480px) {
-  .start .slider-content .slider-menu p {
-    font-size: 1.4em; } }
-
-@media only screen and (min-width: 768px) {
-  .start .slider-content {
-    font-size: 1.1em; } }
 
 .onepage-pagination li a::before {
   background-color: white; }
@@ -840,7 +762,7 @@ label input:focus {
 
 /* line 352, ../sass/_layouts.scss */
 .team .team-info {
-  background-color: #000;
+  background: rgba(0, 0, 0, 0.8);
   color: #fff;
   padding: 45px 40px 50px; }
 
@@ -873,40 +795,41 @@ label input:focus {
 .team .team-info .title-des {
   margin-bottom: 50px; }
 
-@media screen and (min-width: 768px) {
-  .team .team-statistic {
-    max-width: 500px; }
-  .team .go-in-team {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: row;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: baseline;
-    -webkit-align-items: baseline;
-        -ms-flex-align: baseline;
-            align-items: baseline; } }
+.team .team-statistic {
+  max-width: 500px; }
 
-@media screen and (min-width: 992px) {
-  .team .team-info > *:not(.m-team-photo) {
-    padding: 0 20px 0 20px; }
-  .team .team-info .title-team {
-    margin-bottom: 30px; }
-  .team:before {
-    background: -webkit-linear-gradient(left, #7dd7d7 50%, transparent 50%);
-    background: -webkit-gradient(linear, left top, right top, color-stop(50%, #7dd7d7), color-stop(50%, transparent));
-    background: -o-linear-gradient(left, #7dd7d7 50%, transparent 50%);
-    background: linear-gradient(to right, #7dd7d7 50%, transparent 50%); } }
+.team .go-in-team {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: baseline;
+  -webkit-align-items: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline; }
 
-@media screen and (min-width: 1200px) {
-  .team .m-team-photo {
-    display: none; }
-  .team .team-info > *:not(.m-team-photo) {
-    max-width: 630px; } }
+.team .team-info > *:not(.m-team-photo) {
+  padding: 0 20px 0 20px; }
+
+.team .team-info .title-team {
+  margin-bottom: 30px; }
+
+.team:before {
+  background: -webkit-linear-gradient(left, #7dd7d7 50%, transparent 50%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(50%, #7dd7d7), color-stop(50%, transparent));
+  background: -o-linear-gradient(left, #7dd7d7 50%, transparent 50%);
+  background: linear-gradient(to right, #7dd7d7 50%, transparent 50%); }
+
+.team .m-team-photo {
+  display: none; }
+
+.team .team-info > *:not(.m-team-photo) {
+  max-width: 630px; }
 
 @media screen and (min-width: 1600px) {
   .team .team-info .title-team {
@@ -1005,10 +928,7 @@ label input:focus {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 50px 0; }
-  @media (max-width: 1366px) {
-    .cost {
-      padding: 20px 0; } }
+  padding: 50px 40px 50px 20px; }
   .cost__inner {
     display: -webkit-box;
     display: -webkit-flex;
@@ -1064,19 +984,19 @@ label input:focus {
       -ms-flex-direction: column;
           flex-direction: column; }
 
-@media screen and (min-width: 768px) {
-  .cost .flex-box {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: row;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center; }
-  .cost .flex-box > div {
-    width: 50%; } }
+.cost .flex-box {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.cost .flex-box > div {
+  width: 50%; }
 
 /*====================
         COACH
@@ -1127,46 +1047,32 @@ label input:focus {
   max-width: 100%;
   height: auto; }
 
-@media screen and (max-width: 992px) {
-  .directions-coach .flex-box {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column; }
-  .directions-coach .trainer-description {
-    margin-top: 20px; } }
+.directions-coach .content .flex-box {
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start; }
 
-@media screen and (min-width: 1200px) {
-  .directions-coach .content .flex-box {
-    -webkit-box-align: start;
-    -webkit-align-items: flex-start;
-        -ms-flex-align: start;
-            align-items: flex-start; }
-  .directions-coach .trainer-photo img {
-    max-width: 100%; }
-  .directions-coach .coach2 .trainer-description > div {
-    text-align: right; } }
+.directions-coach .trainer-photo img {
+  max-width: 100%; }
 
-@media screen and (min-width: 1360px) {
-  .directions-coach .trainer-photo {
-    width: 45%; } }
+.directions-coach .coach2 .trainer-description > div {
+  text-align: right; }
 
-@media screen and (min-width: 1600px) {
-  .directions-coach .name-block {
-    margin-bottom: 125px; }
-  .directions-coach .trainer-text {
-    margin-bottom: 100px; }
-  .directions-coach .trainer-photo {
-    width: 55%; }
-  .directions-coach .coach1 .trainer-photo {
-    margin-left: -25%; }
-  .directions-coach .coach2 .trainer-photo {
-    margin-right: -25%; } }
+.directions-coach .name-block {
+  margin-bottom: 125px; }
 
-@media screen and (min-width: 1800px) {
-  .directions-coach .trainer-photo {
-    width: 60%; } }
+.directions-coach .trainer-text {
+  margin-bottom: 100px; }
+
+.directions-coach .coach1 .trainer-photo {
+  margin-left: -25%; }
+
+.directions-coach .coach2 .trainer-photo {
+  margin-right: -25%; }
+
+.directions-coach .trainer-photo {
+  width: 60%; }
 
 /*====================
         SHOP
@@ -1547,14 +1453,11 @@ label input:focus {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-image: url("../img/dir-triathlon.jpg"), url("../img/dir-run.jpg");
+  background: url("../img/dir-triathlon.jpg"), url("../img/dir-run.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   color: #fff;
-  padding: 50px 0; }
-  @media (max-width: 1366px) {
-    .directions {
-      padding: 20px 0; } }
+  padding: 50px 40px 50px 20px; }
   .directions__inner {
     display: -webkit-box;
     display: -webkit-flex;
@@ -1969,9 +1872,6 @@ label input:focus {
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 40px 0; }
-  @media (max-width: 1366px) {
-    .directions-coach {
-      padding: 20px 0; } }
   .directions-coach__inner {
     display: -webkit-box;
     display: -webkit-flex;
@@ -2617,6 +2517,51 @@ label input:focus {
       color: #fff;
       font-family: Montserrat-Bold, sans-serif; }
 
+.menu-nav__panel {
+  display: none; }
+  @media (max-width: 1024px) {
+    .menu-nav__panel {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      caption-side: bottom;
+      padding: 0 10px;
+      height: 40px; } }
+
+.menu-nav__logo img {
+  height: 24px;
+  display: block; }
+
+.menu-nav__close {
+  width: 30px;
+  height: 30px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .menu-nav__close svg {
+    display: block;
+    -webkit-flex-shrink: 0;
+        -ms-flex-negative: 0;
+            flex-shrink: 0; }
+
 @media (max-width: 1366px) {
   .team .name-block {
     margin-bottom: 20px; }
@@ -2647,6 +2592,8 @@ label input:focus {
     -webkit-flex: 1 0 63%;
         -ms-flex: 1 0 63%;
             flex: 1 0 63%; }
+  .cost {
+    padding: 20px 40px 20px 20px; }
   .cost .cost-title {
     margin: 0 0 40px; }
   .cost-list {
@@ -2680,7 +2627,26 @@ label input:focus {
   .sponsors .name-block {
     margin: 0 auto 30px; }
   .sponsor-card-name {
-    height: 40px; } }
+    height: 40px; }
+  .directions {
+    padding: 20px 40px 20px 20px; }
+  .philosophy {
+    padding: 20px 40px 20px 20px; }
+  .directions-coach {
+    padding: 20px 40px 20px 20px; }
+  .start header {
+    padding: 20px 0; }
+  .start .slider-content .slider-title {
+    font-size: 54px;
+    letter-spacing: 1px;
+    line-height: 64px;
+    font-family: Oswald-Bold;
+    margin-bottom: 20px; }
+  .slider-title-small {
+    margin: 0 0 20px; }
+  .start .slider-content .slider-text {
+    margin-bottom: 20px;
+    margin-top: 0; } }
 
 @media (max-width: 1280px) {
   .additional-info-warning__text {
@@ -2690,7 +2656,8 @@ label input:focus {
 
 @media (max-width: 1152px) {
   .start-info {
-    padding: 10px 20px 20px; }
+    width: 400px;
+    padding: 10px 32px 20px 15px; }
   .additional-info-warning {
     -webkit-box-pack: center;
     -webkit-justify-content: center;
@@ -2709,4 +2676,186 @@ label input:focus {
         -ms-flex-pack: center;
             justify-content: center;
     text-align: center;
-    width: 100%; } }
+    width: 100%; }
+  .start-map-title__text {
+    font-size: 26px; }
+  .cost .cost-price > p {
+    font-size: 90px; }
+  .cost-price sup, .cost-price sub, .cost-price > p span {
+    font-size: 56px;
+    line-height: 56px; }
+  .cost .cost-price {
+    padding-left: 30px; }
+  .start-info-card__row_registration .btn-transparent_registration {
+    min-width: 204px;
+    margin-left: -10px; }
+  .team {
+    padding: 20px; } }
+
+@media (max-width: 1024px) {
+  .start {
+    padding: 10px 40px 40px; }
+  .start .slider-content .slider-title {
+    font-size: 45px;
+    line-height: 55px; }
+  .slider-title-small {
+    font-size: 20px;
+    line-height: 24px;
+    margin: 0 0 18px; }
+  .start .mouse {
+    display: none; }
+  .start .content .menu {
+    padding: 30px 0 0; }
+  .team {
+    padding: 60px; }
+  .philosophy {
+    padding: 60px; }
+  .directions {
+    padding: 60px; }
+  .direction-triathlon {
+    display: block; }
+  .triathlon-description {
+    width: 100%; }
+  .triathlon-description .iroman-distances {
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start; }
+  .triathlon-description .iroman-distances > div {
+    margin-right: 30px; }
+  .cost {
+    padding: 60px; }
+  .sponsors {
+    padding: 60px; }
+  .additional-info {
+    display: block; }
+  .start-info-list {
+    height: 400px; }
+  .start-map .content {
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+            align-items: flex-start; }
+  .additional-info__right {
+    padding: 20px 10px; }
+  .sponsor-card {
+    width: 250px; }
+  .start-info {
+    width: 400px;
+    padding: 10px 10px 20px 15px; }
+  .start-info-title {
+    padding: 20px 0;
+    font-size: 30px; }
+  .header-phone {
+    display: none; }
+  .social {
+    display: none; }
+  .start .menu nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 282px;
+    height: 100%;
+    padding: 0 20px 30px 20px;
+    z-index: 10;
+    -webkit-transition: ease-in 0.3s;
+    -o-transition: ease-in 0.3s;
+    transition: ease-in 0.3s;
+    background: #333333;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-transform: translateX(-100%);
+        -ms-transform: translateX(-100%);
+            transform: translateX(-100%);
+    opacity: 0; }
+    .start .menu nav.active {
+      opacity: 1;
+      -webkit-transform: translateX(0);
+          -ms-transform: translateX(0);
+              transform: translateX(0); }
+  .social-mob {
+    display: block; }
+    .social-mob .header-phone {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      margin: 0; }
+    .social-mob .social {
+      display: block; }
+      .social-mob .social svg {
+        max-width: 25px; }
+  .start .menu nav ul {
+    width: 100%; }
+  .start .menu nav ul li:not(:last-child) {
+    margin-bottom: 15px; }
+  .start header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background: #111;
+    padding: 0 10px; }
+  .start .logo img {
+    height: 24px; }
+  .start .mobile-menu {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
+  .start .logo {
+    width: 45px;
+    height: 24px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto; }
+  .main {
+    padding: 40px 0 0; }
+  .start .content {
+    display: block; }
+  .start__inner {
+    display: block;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 auto;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto; }
+  .start {
+    height: -webkit-calc(100vh - 40px);
+    height: calc(100vh - 40px);
+    padding: 0 27px 56px;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  .start-info-card-local__text {
+    font-size: 22px; }
+  .start-info-card-local {
+    margin: 0 0 16px; }
+  .sponsor-card {
+    margin: 0 20px 40px; }
+  .st-num {
+    font-size: 32px; }
+  .banners {
+    background-position: left -200px center; }
+  .philosophy-big-text {
+    font-size: 36px;
+    line-height: 46px; }
+  .philosophy {
+    background: -webkit-linear-gradient(bottom, #111111 0, rgba(17, 17, 17, 0) 60px), -webkit-linear-gradient(top, #111111 0, rgba(17, 17, 17, 0) 60px), url(../img/philosophy-1.jpg) no-repeat center;
+    background: -o-linear-gradient(bottom, #111111 0, rgba(17, 17, 17, 0) 60px), -o-linear-gradient(top, #111111 0, rgba(17, 17, 17, 0) 60px), url(../img/philosophy-1.jpg) no-repeat center;
+    background: linear-gradient(to top, #111111 0, rgba(17, 17, 17, 0) 60px), linear-gradient(to bottom, #111111 0, rgba(17, 17, 17, 0) 60px), url(../img/philosophy-1.jpg) no-repeat center; } }

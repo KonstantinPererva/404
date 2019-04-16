@@ -3,18 +3,18 @@ $(document).ready(function () {
 	/*===============
 			HIDE LOGO
 	===============*/
-	function showLgog(){
-		if ($(window).scrollTop() > 20){
-			$(".logo").css({opacity : 0, "visibility": "hidden"});
-		} else {
-			$(".logo").css({opacity : 1, "visibility": "visible"});
-		}
-	}
-
-	/* hide / show logo */
-	$(window).scroll(function (e) {
-		showLgog();
-	});
+	// function showLgog(){
+	// 	if ($(window).scrollTop() > 20){
+	// 		$(".logo").css({opacity : 0, "visibility": "hidden"});
+	// 	} else {
+	// 		$(".logo").css({opacity : 1, "visibility": "visible"});
+	// 	}
+	// }
+    //
+	// /* hide / show logo */
+	// $(window).scroll(function (e) {
+	// 	showLgog();
+	// });
 
 	/*===============
 				PHONE
@@ -182,7 +182,7 @@ $(document).ready(function () {
 
 		init : $("body").ready(function () {
 
-			showLgog();
+			// showLgog();
 			Slide.posScroll = $(window).scrollTop();
 
 			Slide.setCurSlide($(window));
