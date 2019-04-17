@@ -962,9 +962,6 @@ button a {
   position: relative;
   padding: 0 0 0 10px; }
 
-.cost .cost-run {
-  display: none; }
-
 .cost .price-title {
   margin-top: 50px;
   margin-bottom: 50px; }
@@ -1046,7 +1043,7 @@ button a {
   display: flex; }
 
 .directions-coach .trainer-name {
-  margin-bottom: 20px; }
+  margin-bottom: 16px; }
 
 .coach1__row {
   margin-top: 197px;
@@ -1604,9 +1601,6 @@ button a {
   font-family: Montserrat-Bold;
   font-size: 24px; }
 
-.directions .dir-run {
-  display: none; }
-
 .directions .dir-run .ironman-title {
   font-family: Montserrat-Bold;
   font-size: 24px;
@@ -1965,9 +1959,9 @@ button a {
 .directions-coach .trainer-text {
   font-family: Montserrat-SemiBold;
   font-size: 14px;
-  line-height: 22px;
+  line-height: 18px;
   max-width: 336px;
-  margin-bottom: 26px; }
+  margin-bottom: 20px; }
 
 /*====================
         SHOP
@@ -2288,6 +2282,9 @@ button a {
     -webkit-transition: none !important;
     -o-transition: none !important;
     transition: none !important; } }
+
+.content.dir-run, .content.cost-run {
+  display: none; }
 
 .slider-title-small {
   max-width: 480px;
@@ -3122,8 +3119,8 @@ button a {
         -ms-flex: 0 0 auto;
             flex: 0 0 auto; }
   .start {
-    height: -webkit-calc(100vh - 40px);
-    height: calc(100vh - 40px);
+    height: -webkit-calc(100vh - 100px);
+    height: calc(100vh - 100px);
     padding: 0 27px 56px;
     -webkit-box-pack: center;
     -webkit-justify-content: center;

@@ -1,0 +1,95 @@
+@media (max-width: 1366px) {
+  .start .mouse {
+    padding: 0 0 14px;
+  }
+  .start-title {
+    font-size: 32px;
+    line-height: 37px;
+  }
+  .start-title-img img {
+    width: 120px;
+  }
+  .start-descr__text {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .start-descr {
+    margin: 0 0 10px;
+  }
+}
+
+@media (max-width: 1280px) {
+
+}
+
+@media (max-width: 1152px) {
+
+}
+
+@media (max-width: 1024px) {
+  .athens-menu {
+    display: block;
+  }
+  .discount-box {
+    max-width: 350px;
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+@media (max-width: 992px) {
+  .athens-banners {
+    background-image: url(../img/start-mob-athens.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .discount-box {
+    margin: 0 auto;
+  }
+  .start-box {
+    max-width: 460px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .start-title-wrapper {
+    margin: 0 auto;
+  }
+  .start-box__row {
+    text-align: center;
+  }
+  .start-title {
+    font-size: 36px;
+    line-height: 44px;
+  }
+  .start-title_top {
+    margin: 0 0 20px;
+  }
+  .start-title_bottom {
+    margin: 20px 0 30px;
+  }
+  .start-list {
+    margin: 0 0 60px;
+  }
+}
+
+@media (max-width: 767px) {
+  .start-title {
+    font-size: 28px;
+    line-height: 34px;
+  }
+  .start-title-img img {
+    width: 100px;
+  }
+  .start-descr__text {
+    font-size: 14px;
+  }
+  .discount-box {
+    text-align: left;
+    font-size: 15px;
+    line-height: 21px;
+  }
+  .start-box__row {
+    text-align: center;
+  }
+}

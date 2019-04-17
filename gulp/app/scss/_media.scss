@@ -319,7 +319,7 @@
     margin: auto;
   }
   .main {
-    padding: 40px 0 0;
+    padding: 38px 0 0;
   }
   .start .content {
     display: block;
@@ -329,7 +329,7 @@
     flex: 0 0 auto;
   }
   .start {
-    height: calc(100vh - 40px);
+    height: calc(100vh - 100px);
     padding: 0 27px 56px;
     justify-content: center;
   }
@@ -759,8 +759,4 @@
   .sponsor-card {
     margin: 0 0 20px;
   }
-}
-
-@media (max-width: 360px) {
-
 }

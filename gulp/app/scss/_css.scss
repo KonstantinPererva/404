@@ -947,10 +947,6 @@ button a {
   padding: 0 0 0 10px;
 }
 
-.cost .cost-run {
-  display: none;
-}
-
 .cost .price-title {
   margin-top: 50px;
   margin-bottom: 50px;
@@ -1022,7 +1018,7 @@ button a {
 }
 
 .directions-coach .trainer-name {
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 .coach1__row {
@@ -1544,10 +1540,6 @@ button a {
   font-size: 24px;
 }
 
-.directions .dir-run {
-  display: none;
-}
-
 .directions .dir-run .ironman-title {
   font-family: Montserrat-Bold;
   font-size: 24px;
@@ -1881,9 +1873,9 @@ button a {
 .directions-coach .trainer-text {
   font-family: Montserrat-SemiBold;
   font-size: 14px;
-  line-height: 22px;
+  line-height: 18px;
   max-width: 336px;
-  margin-bottom: 26px;
+  margin-bottom: 20px;
 }
 
 /*====================
@@ -2207,5 +2199,8 @@ button a {
     transition: none !important;
   }
 }
-
-
+//
+//
+//.content.dir-run, .content.cost-run {
+//  display: none;
+//}

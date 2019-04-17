@@ -423,9 +423,9 @@ define("VER_CSS", '1.31');
             </div>
 
             <div class="triathlon-description__row">
-              <a href="#" class="btn-tur my-animate delay-1s" data-animated="fadeIn">
+              <span class="btn-tur ppf my-animate delay-1s" data-animated="fadeIn">
                 <span class="btn-tur__text">Хочу бегать правильно</span>
-              </a>
+              </span>
             </div>
           </div>
 
