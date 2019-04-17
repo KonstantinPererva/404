@@ -1,0 +1,50 @@
+.directions-substrate {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 0;
+
+  &__triathlon {
+    background: url("../img/dir-triathlon.jpg") no-repeat center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: .2s;
+
+    @media (max-width: 767px) {
+      background: url("../img/mobile/4.png") no-repeat center;
+      background-size: cover;
+    }
+
+    &.active {
+      opacity: 1;
+    }
+  }
+
+  &__run {
+    background: url("../img/dir-run.jpg") no-repeat center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: .2s;
+
+    @media (max-width: 767px) {
+      background: url("../img/mobile/4.png") no-repeat center;
+      background-size: cover;
+    }
+
+    &.active {
+      opacity: 1;
+    }
+  }
+}

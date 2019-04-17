@@ -3,15 +3,27 @@ $(document).ready(function () {
 				MENU
 	===============*/
 
-	$("#btnOpenMenu").click(function () {
+	function openMenu() {
 		$(".menu-nav").addClass('active');
+		$(".menu__substrate").show();
+	}
+
+	function closeMenu() {
+		$(".menu-nav").removeClass('active');
+		$(".menu__substrate").hide();
+	}
+
+	$("#btnOpenMenu").click(function () {
+		openMenu();
 	});
 
 	$("#btnCloseMenu").click(function () {
-        $(".menu-nav").removeClass('active');
+		closeMenu();
 	});
 
-
+	$(".menu__substrate").click(function () {
+		closeMenu();
+	});
 
 	/* work animation navigation */
 	$(".menu nav li, .slider-content button").click(function (event) {
@@ -27,16 +39,15 @@ $(document).ready(function () {
 
 			Slide.current  = $("section."+el);
 
-			var h = 56; // height fixed header
+			var h = 40; // height fixed header
 
 			var top = Slide.current.offset().top - h;
 			$('body,html').animate({scrollTop: top}, 500, function () {
 				Slide.work = false;
 			});
-
 		}
 
-        $(".menu-nav").removeClass('active');
+		closeMenu();
 	});
 
 
@@ -366,7 +377,7 @@ $(document).ready(function () {
 
 
 	/* send data */
-	$(".pp-form form button").click(function (e) {
+	$(".pp-form .btn-send").click(function (e) {
 		e.preventDefault();
 		ppForm.sendData($(this).closest("form"));
 	});
@@ -378,8 +389,12 @@ $(document).ready(function () {
 	$(".switch span").click(function () {
 		if ($(".switch").is(".run")) {
             $(".switch").removeClass("run");
+			$(".directions-substrate__run").removeClass("active");
+			$(".directions-substrate__triathlon").addClass("active");
 		} else {
             $(".switch").addClass("run");
+            $(".directions-substrate__run").addClass("active");
+            $(".directions-substrate__triathlon").removeClass("active");
 		}
 
 		var directions = $(".directions");
@@ -389,9 +404,98 @@ $(document).ready(function () {
 
 		directions.find(".content").hide();
 		cost.find(".content").hide();
-
-		directions.css({'background' : 'url("../img/dir-' +content+ '.jpg")'});
-
 		$(".dir-"+content).show();
 		$(".cost-"+content).show();
 	});
+
+$(document).ready(function () {
+	var pointList = [
+		{
+			title: 'Gdynia',
+			y: '52.2%',
+			x: '54.5%'
+		},
+		{
+			title: 'Cervia',
+			y: '75%',
+			x: '38%'
+		},
+		{
+			title: 'Athens',
+			y: '89.5%',
+			x: '59%'
+		},
+		{
+			title: 'Dnipro',
+			y: '66%',
+			x: '80%'
+		}
+	];
+
+	var points = document.querySelectorAll('[data-point]');
+	var cards = document.querySelectorAll('[data-card]');
+	var list = document.querySelector('.start-info-list');
+
+	for (var i=0; i < pointList.length; i++) {
+		[].forEach.call(points, function (el) {
+			if(el.dataset.point == pointList[i].title) {
+				pointList[i].point = el;
+				el.style.top = pointList[i].y;
+				el.style.left = pointList[i].x;
+			}
+		});
+
+		[].forEach.call(cards, function (el) {
+			if(el.dataset.card == pointList[i].title) {
+				pointList[i].card = el;
+			}
+		});
+	}
+
+	function removeClass() {
+		[].forEach.call(points, function (point) {
+			point.classList.remove('active');
+		});
+
+		[].forEach.call(cards, function (card) {
+			card.classList.remove('active');
+		});
+	}
+
+	pointList.map(function (el) {
+		el.point.addEventListener('click', function () {
+			list.scrollTop = 0;
+
+			list.insertBefore(el.card, list.firstChild);
+
+			removeClass();
+
+			var self = this;
+
+			function addClassActive() {
+				self.classList.add('active');
+				el.card.classList.add('active');
+			}
+
+			setTimeout(addClassActive, 10);
+		});
+
+		el.card.addEventListener('click', function () {
+			removeClass();
+
+			this.classList.add('active');
+			el.point.classList.add('active');
+		})
+	})
+});
+
+
+function scrollbars() {
+	var ps = new PerfectScrollbar('#startInfo', {
+		wheelSpeed: 2,
+		wheelPropagation: false,
+		minScrollbarLength: 20
+	});
+};
+
+window.addEventListener('load',scrollbars);

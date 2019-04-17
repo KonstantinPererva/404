@@ -1,4 +1,7 @@
 @media (max-width: 1366px) {
+  .directions .name-block {
+    margin: 0 auto 20px;
+  }
   .team .name-block {
     margin-bottom: 20px;
   }
@@ -57,7 +60,10 @@
     margin-top: 60px;
   }
   .directions-coach .trainer-photo {
-    width: 34%;
+    width: 38%;
+  }
+  .directions-coach .trainer-photo img {
+    height: 240px;
   }
   .map-wrapper {
     max-width: 580px;
@@ -95,7 +101,7 @@
     padding: 20px 40px 20px 20px;
   }
   .directions-coach {
-    padding: 20px 40px 20px 20px;
+    padding: 20px 40px;
   }
   .start header {
     padding: 20px 0;
@@ -125,6 +131,12 @@
 }
 
 @media (max-width: 1152px) {
+  .directions-coach .trainer-photo img {
+    height: 200px;
+  }
+  .directions-coach .trainer-photo {
+    width: 36%;
+  }
   .start-info {
     width: 400px;
     padding: 10px 32px 20px 15px;
@@ -159,7 +171,7 @@
     min-width: 204px;
     margin-left: -10px;
   }
-  .team {
+  .team__inner {
     padding: 20px;
   }
 }
@@ -180,7 +192,7 @@
   .start .mouse {
     display: none;
   }
-  .team {
+  .team__inner {
     padding: 60px;
   }
   .philosophy {
@@ -262,7 +274,7 @@
 
     & .header-phone {
       display: flex;
-      margin: 0 0 40px 26px;
+      margin: 0 0 40px 20px;
     }
 
     & .social {
@@ -343,23 +355,76 @@
   .philosophy {
     background: linear-gradient(to top, rgba(17, 17, 17, 1) 0, rgba(17, 17, 17, 0) 60px),
     linear-gradient(to bottom, rgba(17, 17, 17, 1) 0, rgba(17, 17, 17, 0)  60px),
-    url(../img/philosophy-1.jpg) no-repeat center;
+    url("../img/philosophy-1.jpg") no-repeat center;
   }
-
+  .directions-coach {
+    padding: 60px;
+  }
+  .directions-coach__inner {
+    display: block;
+  }
+  .directions-coach .content .flex-box {
+    display: block;
+  }
+  .coach1__row {
+    display: none;
+  }
+  .directions-coach .coach1 .trainer-photo {
+    margin: 0;
+    width: 44%;
+  }
+  .directions-coach .trainer-photo {
+    width: 44%;
+  }
+  .directions-coach .trainer-photo img {
+    height: auto;
+    max-width: 100%;
+  }
+  .directions-coach .coach1, .directions-coach .coach2 {
+    justify-content: center;
+  }
+  .start .content .menu {
+    padding: 0;
+  }
 }
 
 @media (max-width: 992px) {
-  .banners {
-    background-position: left -322px center;
-  }
-  .team .name-block span {
-    margin: 0;
+
+  .team__inner {
+    padding: 30px 10px 0;
   }
   .team .name-block {
+    margin-bottom: 30px;
+    padding: 0;
     text-align: center;
+  }
+  .team .team-info {
+    padding: 30px 10px 40px;
+  }
+  .team .team-statistic .statistic-text {
+    font-size: 16px;
+  }
+  .team .team-info .statistic-data {
+    margin: 20px -20px;
+  }
+  .team {
+    background: #89D7D7;
+    padding: 60px 0 0;
+  }
+  .team > div.team-photo-mob {
+    display: block;
   }
   .team .go-in-team {
     display: block;
+  }
+  .team .content.flex-box {
+    display: block;
+  }
+
+
+
+  .banners {
+    background-position: left -322px center;
   }
   .philosophy-big-text {
     max-width: 460px;
@@ -400,22 +465,6 @@
     padding: 0;
     text-align: center;
   }
-  .directions-coach__inner {
-    display: block;
-  }
-  .directions-coach .content .flex-box {
-    display: block;
-  }
-  .coach1__row {
-    display: none;
-  }
-  .directions-coach .coach1 .trainer-photo {
-    margin: 0;
-    width: 44%;
-  }
-  .directions-coach .trainer-photo {
-    width: 44%;
-  }
   .cost .discount {
     text-align: center;
   }
@@ -424,9 +473,6 @@
   }
   .cost .cost-price {
     padding: 0;
-  }
-  .directions-coach {
-    padding: 60px;
   }
   .start-map.flex-box {
     display: block;
@@ -474,6 +520,8 @@
   }
   .start-info-card {
     padding: 16px 20px 10px;
+    width: 360px;
+    margin: 0 auto 30px;
   }
   .sponsors .name-block {
     text-align: center;
@@ -511,8 +559,205 @@
 }
 
 @media (max-width: 767px) {
+  .team .team-statistic .statistic-text {
+    font-size: 16px;
+  }
+  .team .title-team {
+    font-size: 18px;
+    line-height: 26px;
+  }
+  .team .title-des {
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .pp-form .form-text {
+    font-size: 12px;
+    line-height: 22px;
+  }
+  .pp-form .form {
+    padding: 40px 20px;
+  }
+  .pp-form .form-title {
+    font-size: 26px;
+    line-height: 36px;
+  }
   .start-info-list {
     padding: 0;
+  }
+
+  .start .slider-content__row {
+    text-align: center;
+  }
+
+  .start .content .slider-content {
+    padding: 0;
+  }
+
+  .start {
+    justify-content: flex-end;
+  }
+
+  .banners {
+    background: url("../img/mobile/1.png") no-repeat center top;
+    background-size: cover;
+  }
+
+  .st-num {
+    font-size: 40px;
+  }
+  .statistic-data div {
+    margin: 0 5px 20px;
+  }
+  .start .slider-content .slider-title {
+    font-size: 36px;
+    line-height: 46px;
+  }
+  .slider-title-small {
+    font-size: 18px;
+    line-height: 22px;
+    margin: 0 0 18px;
+  }
+  .start .slider-content .slider-text {
+    font-size: 12px;
+    line-height: 20px;
+    margin-bottom: 50px;
+  }
+
+  .philosophy {
+    padding: 60px 30px 40px;
+  }
+  .philosophy .content {
+    padding: 0;
+  }
+  .philosophy-small-text {
+    font-size: 12px;
+  }
+  .philosophy__button {
+    text-align: center;
+    padding: 20px 0 0;
+  }
+
+  .directions {
+    padding: 60px 30px;
+  }
+
+  .directions .directions-title {
+    font-size: 36px;
+  }
+  .directions .directions-subtitle {
+    font-size: 18px;
+  }
+  .directions .directions-text {
+    font-size: 12px;
+  }
+  .directions p, .directions .ironman-subtitle {
+    font-size: 12px;
+  }
+  .triathlon-description__row {
+    text-align: center;
+    padding: 20px 0 0;
+  }
+  .triathlon-description .iroman-distances {
+    display: block;
+  }
+  .triathlon-description .iroman-distances > div {
+    margin: 0 0 30px;
+  }
+  .directions .iroman-distances div {
+    justify-content: center;
+  }
+  .directions .iroman-distances img{
+    width: 60px;
+  }
+  .triathlon-description .iroman-distances {
+    margin: 30px 0;
+  }
+  .cost {
+    padding: 60px 30px;
+  }
+  .cost .cost-price > p {
+     font-size: 64px;
+    line-height: 64px;
+   }
+  .cost-price sup, .cost-price sub, .cost-price > p span {
+    font-size: 36px;
+    line-height: 36px;
+  }
+  .cost .discount p {
+    padding: 0;
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .cost .cost-title {
+    font-size: 18px;
+    line-height: 18px;
+  }
+  .cost-list {
+    font-size: 12px;
+    line-height: 20px;
+    padding: 0 0 0 16px;
+  }
+  .cost-description__row {
+    padding: 20px 0 0;
+    text-align: center;
+  }
+  .directions-coach {
+    padding: 60px 30px;
+  }
+  .directions-coach .coach1, .directions-coach .coach2 {
+    display: block;
+  }
+  .directions-coach .coach1 .trainer-photo {
+    width: 100%;
+    margin: 0 0 20px;
+  }
+  .directions-coach .trainer-photo {
+    width: 100%;
+    margin: 0 0 20px;
+  }
+  .directions-coach .coach2 .trainer-description > div {
+    text-align: left;
+  }
+  .directions-coach .trainer-text {
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .directions-coach .coach2 {
+    margin-top: 60px;
+  }
+  .map-img {
+    display: block;
+    padding: 100% 0 0;
+  }
+  .start-map {
+    background: $tur;
+  }
+  .sponsors {
+    background: url("../img/mobile/8.png") no-repeat;
+    background-size: cover;
+  }
+  .directions-coach {
+    background-image: linear-gradient(to top, #111111 0, rgba(17, 17, 17, 0) 60px),
+    linear-gradient(to bottom, #111111 0, rgba(17, 17, 17, 0) 60px),
+    url("../img/mobile/6.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .cost {
+    background-image: linear-gradient(to top, #111111 0, rgba(17, 17, 17, 0) 60px),
+    linear-gradient(to bottom, #111111 0, rgba(17, 17, 17, 0) 60px),
+    url("../img/mobile/5.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .additional-info-warning__text {
+    width: 210px;
+  }
+  .map-wrapper {
+    margin: 0 auto 40px;
+  }
+  .sponsor-card {
+    margin: 0 0 20px;
   }
 }
 

@@ -30,7 +30,6 @@ define("VER_CSS", '1.31');
   </script>
 
   <link rel="shortcut icon" href="/new/favicon.ico" />
-  <link rel="stylesheet" href="css/animate.css" />
   <link rel="stylesheet" href="css/style.css?<?= VER_CSS; ?>" />
 
   <title>Team 404 подготовка к марафону и триатлону в Харькове</title>
@@ -210,6 +209,8 @@ define("VER_CSS", '1.31');
               </div>
             </div>
           </nav>
+
+          <span class="menu__substrate"></span>
         </div>
 
         <div class="slider-content">
@@ -219,10 +220,10 @@ define("VER_CSS", '1.31');
 
           <p data-animated="fadeIn" class="slider-text my-animate delay-1s faster">Team 404 – команда, в которой под руководством профессиональных тренеров, каждый, вне зависимости от исходного уровня, сможет стать Ironman, марафонцем, пловцом и просто здоровым счастливым человеком.</p>
 
-          <div>
-            <a href="#" class="btn-tur my-animate delay-1s" data-animated="fadeIn">
+          <div class="slider-content__row">
+            <span class="btn-tur ppf my-animate delay-1s" data-animated="fadeIn">
               <span class="btn-tur__text">Присоединиться к команде</span>
-            </a>
+            </span>
           </div>
         </div>
 
@@ -242,17 +243,14 @@ define("VER_CSS", '1.31');
 
   <!-- team -->
   <section data-slide="team" class="team flex-box slide">
-    <div class="team__inner">
-      <div class="name-block"><span>Команда</span></div>
+    <div class="name-block"><span>Команда</span></div>
 
+    <div class="team__inner">
       <div class="content flex-box">
         <div class="team-info">
           <div class="title-team">Больше, чем люди,<br>тренирующиеся вместе</div>
 
-          <div class="title-des"><strong>team404</strong> - место, где в тебя поверят и поддержат любые твои безумства. В
-            команду не берут кого попало, команда- это почти семья. Вне зависимости от уровня подготовки и целей, именно
-            здесь ты найдешь тех, кто должен быть рядом для комфортного достижения цели.
-          </div>
+          <div class="title-des">team404 — место, где в тебя поверят и поддержат любые твои безумства. В нашу команду не берут кого попало, team404 — это почти семья. Вне зависимости от уровня подготовки и целей, именно здесь ты найдешь тех, кто будет рядом и поможет комфортно двигаться вперед к мечте.</div>
 
           <div class="m-team-photo">
             <img src="img/team.jpg" alt="team404">
@@ -292,9 +290,9 @@ define("VER_CSS", '1.31');
               <p class="statistic-text">и это только начало...</p>
 
               <div>
-                <a class="btn-tur ppf">
+                <span class="btn-tur ppf">
                   <span class="btn-tur__text">Хочу в team404</span>
-                </a>
+                </span>
               </div>
             </div>
           </div>
@@ -303,13 +301,17 @@ define("VER_CSS", '1.31');
         <div class="team-photo"></div>
       </div>
     </div>
+    <div class="team-photo-mob">
+      <img src="img/mobile/2.png" alt="photo">
+      <span class="team-photo-mob__substrate"></span>
+    </div>
   </section>
 
   <!-- philosophy -->
   <section data-slide="philosophy" class="philosophy flex-box slide">
-    <div class="philosophy__inner">
-      <div class="name-block"><span>Философия</span></div>
+    <div class="name-block"><span>Философия</span></div>
 
+    <div class="philosophy__inner">
       <div class="content">
         <div class="content__row">
           <p data-animated="fadeInRight" class="philosophy-big-text my-animate">Мы в <span>team404</span> считаем, что для команды нет ничего важнее, чем <span>ЛЮДИ</span></p>
@@ -319,19 +321,17 @@ define("VER_CSS", '1.31');
           <p class="philosophy-small-text">И мы тут сейчас не про результаты на соревнованиях, а про атмосферу в коллективе и огромную всестороннюю поддержку внутри team404.</p>
         </div>
 
-        <div>
-          <a href="#" class="btn-tur my-animate delay-1s" data-animated="fadeIn">
+        <div class="philosophy__button">
+          <span class="btn-tur ppf my-animate delay-1s" data-animated="fadeIn">
             <span class="btn-tur__text">Присоединиться к команде</span>
-          </a>
+          </span>
         </div>
       </div>
     </div>
   </section>
 
   <!-- directions -->
-  <section data-slide="directions " class="directions flex-box slide">
-    <div class="black-overlay"></div>
-
+  <section data-slide="directions" class="directions flex-box slide">
     <div class="name-block">
       <span class="name-block__title">Направления</span>
 
@@ -385,9 +385,9 @@ define("VER_CSS", '1.31');
             </div>
 
             <div class="triathlon-description__row">
-              <a href="#" class="btn-tur my-animate delay-1s" data-animated="fadeIn">
+              <span class="btn-tur ppf my-animate delay-1s" data-animated="fadeIn">
                 <span class="btn-tur__text">Хочу стать триатлетом</span>
-              </a>
+              </span>
             </div>
           </div>
 
@@ -434,6 +434,12 @@ define("VER_CSS", '1.31');
         </div>
       </div>
     </div>
+
+    <span class="directions-substrate">
+      <span class="directions-substrate__triathlon active"></span>
+
+      <span class="directions-substrate__run"></span>
+    </span>
   </section>
 
   <!-- cost -->
@@ -475,9 +481,9 @@ define("VER_CSS", '1.31');
             </ul>
 
             <div class="cost-description__row">
-              <a href="#" class="btn-tur my-animate ppf" data-animated="fadeIn">
+              <span class="btn-tur ppf my-animate" data-animated="fadeIn">
                 <span class="btn-tur__text">Начать подготовку</span>
-              </a>
+              </span>
             </div>
           </div>
         </div>
@@ -498,18 +504,18 @@ define("VER_CSS", '1.31');
             <ul class="cost-list">
               <li>идивидуальный план подготовки</li>
               <li>обучение экономичной и безопасной технике</li>
-              <li>персональные и групповые тренировки</li>
-              <li>командная экипировка</li>
+              <li>персональные и групповые тренировки по плаванию, вело, бегу</li>
+              <li>командная экипировка (велоформа, трисьют, футболка, кепка)</li>
               <li>консультации по питанию и составление диеты</li>
-              <li>питание на марафон и подводящих стартах</li>
+              <li>питание на ironman и подводящих стартах</li>
               <li>консультации по фармакологической поддержке</li>
               <li>ответы на все околоспортивные вопросы</li>
             </ul>
 
             <div class="cost-description__row">
-              <a href="#" class="btn-tur my-animate ppf" data-animated="fadeIn">
+              <span class="btn-tur ppf my-animate" data-animated="fadeIn">
                 <span class="btn-tur__text">Начать подготовку</span>
-              </a>
+              </span>
             </div>
           </div>
         </div>
@@ -536,7 +542,7 @@ define("VER_CSS", '1.31');
                 <div class="trainer-text">
                   Более 12 лет в триатлоне<br>
                   Более 6 лет тренерского опыта<br>
-                  Неоднократный чемпион Украины по триатлону среди юношей<br>
+                  Многократный чемпион Украины по триатлону среди юношей<br>
                   КМС по триатлону<br>
                   КМС по плаванию<br>
                   Окончил академию физической культуры<br>
@@ -581,27 +587,32 @@ define("VER_CSS", '1.31');
             </div>
 
             <div class="coach1__row">
-              <span class="btn-tur my-animate ppf" data-animated="fadeIn">
+              <span class="btn-tur ppf my-animate" data-animated="fadeIn">
                 <span class="btn-tur__text">Записаться на встречу</span>
               </span>
             </div>
           </div>
 
           <div class="coach2">
+            <div data-animated="fadeInRight" class="trainer-photo my-animate">
+              <img src="img/coach2.png" alt="coach">
+            </div>
+
             <div class="trainer-description">
               <div class="trainer-name">Игорь Поливаный</div>
               <div class="trainer-text">
                 Лидер team404<br>
                 рекордсмен Украины как самый молодой IRONMAN в истории<br>
                 Серебряный призер лиги IRON WAY 2018<br>
-                Один из сильнейших триатлетов-любителей страны<br>
+                Один из сильнейших<br>
+                триатлетов-любителей страны<br>
                 Двукратный IRONMAN с лучшим результатом 9.56<br>
                 Победитель IRON WAY Kharkiv Sprint 2018<br>
                 Будущий участник чемпионата мира на Гавайях
               </div>
               <div class="social">
         <span>
-          <a href="https://www.instagram.com/ostrikov_coach_team404" target="_blank">
+          <a href="https://www.instagram.com/i.polyvanyi/" target="_blank">
             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 169.063 169.063"
                  xml:space="preserve">
@@ -621,7 +632,7 @@ define("VER_CSS", '1.31');
           </a>
         </span>
                 <span>
-          <a href="https://www.facebook.com/profile.php?id=100011584982670" target="_blank">
+          <a href="https://www.facebook.com/ihorpolyvanyi" target="_blank">
             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                  viewBox="0 0 310 310" xml:space="preserve">
@@ -636,9 +647,6 @@ define("VER_CSS", '1.31');
           </a>
         </span>
               </div>
-            </div>
-            <div data-animated="fadeInRight" class="trainer-photo my-animate">
-              <img src="img/coach2.png" alt="coach">
             </div>
           </div>
         </div>
@@ -676,9 +684,9 @@ define("VER_CSS", '1.31');
                 <span class="map-point__text">Athens</span>
               </div>
 
-              <div class="map-point" data-point="Dnieper">
+              <div class="map-point" data-point="Dnipro">
                 <span class="map-point__ico"></span>
-                <span class="map-point__text">Dnieper</span>
+                <span class="map-point__text">Dnipro</span>
               </div>
             </div>
           </div>
@@ -702,7 +710,7 @@ define("VER_CSS", '1.31');
               <span class="additional-info__text">Готовься к любому из них вместе с нами</span>
 
               <div class="additional-info__row">
-                <span class="btn-black my-animate ppt" data-animated="fadeIn">
+                <span class="btn-black ppf my-animate" data-animated="fadeIn">
                   <span class="btn-tur__text">Начать подготовку</span>
                 </span>
               </div>
@@ -762,7 +770,7 @@ define("VER_CSS", '1.31');
           <div class="start-info-card__row start-info-card__row_registration">
             <span class="start-info-card-property">На старт</span>
 
-            <span class="btn-transparent btn-transparent_registration"><span class="btn-transparent__text">Зарегистрироваться</span></span>
+            <span class="btn-transparent ppf btn-transparent_registration"><span class="btn-transparent__text">Зарегистрироваться</span></span>
           </div>
         </div>
 
@@ -810,7 +818,7 @@ define("VER_CSS", '1.31');
           <div class="start-info-card__row start-info-card__row_registration">
             <span class="start-info-card-property">На старт</span>
 
-            <span class="btn-transparent btn-transparent_registration"><span class="btn-transparent__text">Зарегистрироваться</span></span>
+            <span class="btn-transparent ppf btn-transparent_registration"><span class="btn-transparent__text">Зарегистрироваться</span></span>
           </div>
         </div>
 
@@ -858,11 +866,11 @@ define("VER_CSS", '1.31');
           <div class="start-info-card__row start-info-card__row_registration">
             <span class="start-info-card-property">На старт</span>
 
-            <span class="btn-transparent btn-transparent_registration"><span class="btn-transparent__text">Зарегистрироваться</span></span>
+            <span class="btn-transparent ppf btn-transparent_registration"><span class="btn-transparent__text">Зарегистрироваться</span></span>
           </div>
         </div>
 
-        <div class="start-info-card" data-card="Dnieper">
+        <div class="start-info-card" data-card="Dnipro">
           <div class="start-info-card-local">
             <span class="start-info-card-local__text">Ukraine</span>
 
@@ -888,7 +896,7 @@ define("VER_CSS", '1.31');
           <div class="start-info-card__row">
             <span class="start-info-card-property">Город</span>
 
-            <span class="start-info-card-value">Dnieper</span>
+            <span class="start-info-card-value">Dnipro</span>
           </div>
 
           <div class="start-info-card__row">
@@ -906,7 +914,7 @@ define("VER_CSS", '1.31');
           <div class="start-info-card__row start-info-card__row_registration">
             <span class="start-info-card-property">На старт</span>
 
-            <span class="btn-transparent btn-transparent_registration"><span class="btn-transparent__text">Зарегистрироваться</span></span>
+            <span class="btn-transparent ppf btn-transparent_registration"><span class="btn-transparent__text">Зарегистрироваться</span></span>
           </div>
         </div>
       </div>
@@ -976,7 +984,7 @@ define("VER_CSS", '1.31');
         </div>
 
         <div class="become-sponsor__row">
-        <span class="btn-tur">
+        <span class="btn-tur ppf">
           <span class="btn-tur__text">Записаться на встречу</span>
         </span>
         </div>
@@ -990,23 +998,35 @@ define("VER_CSS", '1.31');
   <div class="overlay"></div>
 
   <div class="form">
-
     <div class="close">
-      <svg id="close-pp-form" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"
-           xmlns:xlink="http://www.w3.org/1999/xlink">
-        <path d="M28.941,31.786L0.613,60.114c-0.787,0.787-0.787,2.062,0,2.849c0.393,0.394,0.909,0.59,1.424,0.59   c0.516,0,1.031-0.196,1.424-0.59l28.541-28.541l28.541,28.541c0.394,0.394,0.909,0.59,1.424,0.59c0.515,0,1.031-0.196,1.424-0.59   c0.787-0.787,0.787-2.062,0-2.849L35.064,31.786L63.41,3.438c0.787-0.787,0.787-2.062,0-2.849c-0.787-0.786-2.062-0.786-2.848,0   L32.003,29.15L3.441,0.59c-0.787-0.786-2.061-0.786-2.848,0c-0.787,0.787-0.787,2.062,0,2.849L28.941,31.786z"/>
+      <svg id="close-pp-form" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9.82304 8.41656L15.7216 2.518C16.0881 2.15184 16.0881 1.55773 15.7216 1.19157C15.3551 0.8251 14.7617 0.8251 14.3952 1.19157L8.49662 7.09013L2.59774 1.19157C2.23127 0.8251 1.63778 0.8251 1.27131 1.19157C0.904842 1.55773 0.904842 2.15184 1.27131 2.518L7.17019 8.41656L1.27131 14.3151C0.904842 14.6813 0.904842 15.2754 1.27131 15.6416C1.45455 15.8245 1.69469 15.9161 1.93453 15.9161C2.17436 15.9161 2.4145 15.8245 2.59774 15.6412L8.49662 9.74267L14.3952 15.6412C14.5784 15.8245 14.8186 15.9161 15.0584 15.9161C15.2982 15.9161 15.5384 15.8245 15.7216 15.6412C16.0881 15.2751 16.0881 14.681 15.7216 14.3148L9.82304 8.41656Z" fill="white"/>
       </svg>
     </div>
 
-    <form action="">
-      <label for="">
-        <input name="name" type="text" placeholder="Виктор">
-      </label>
-      <label for="">
-        <input name="phone" type="text" placeholder="+38 (0__) ___-__-__">
-      </label>
+    <div class="form-title">
+      <span class="form-title__text">Вы в шаге от цели</span>
+    </div>
+
+    <span class="form-text">Мы ответим на все ваши вопросы и договорится о бесплатной встрече на удобное время.</span>
+
+    <form action="!">
+      <div class="form-row">
+        <label class="form-label" for="">
+          <input class="form-input" name="name" type="text" placeholder="Ваше имя">
+        </label>
+        <label class="form-label" for="">
+          <input class="form-input" name="phone" type="text" placeholder="+38 (0__) ___-__-__">
+        </label>
+      </div>
+
       <input type="hidden" name="send">
-      <button type="button" class="white-btn">Отправить</button>
+
+      <div class="form__button">
+        <div class="btn-tur btn-send">
+          <span class="btn-tur__text">Присоединитсья к команде</span>
+        </div>
+      </div>
     </form>
   </div>
 </div>
@@ -1015,98 +1035,8 @@ define("VER_CSS", '1.31');
 <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
 <script src="js/jquery.maskedinput.js"></script>
 <script type="text/javascript" src="js/onepage-scroll/jquery.onepage-scroll.js"></script>
+  <script src="js/perfect-scrollbar.js"></script>
 <script src="js/layouts.js?<?= VER_JS; ?>"></script>
-<script src="js/perfect-scrollbar.js"></script>
-  <script>
-    window.addEventListener('load', scrollbars);
-
-    function scrollbars() {
-      var ps = new PerfectScrollbar('#startInfo', {
-        wheelSpeed: 2,
-        wheelPropagation: false,
-        minScrollbarLength: 20
-      });
-    }
-
-    var pointList = [
-        {
-            title: 'Gdynia',
-            y: '52.2%',
-            x: '54.5%'
-        },
-        {
-            title: 'Cervia',
-            y: '75%',
-            x: '38%'
-        },
-        {
-            title: 'Athens',
-            y: '89.5%',
-            x: '59%'
-        },
-        {
-            title: 'Dnieper',
-            y: '66%',
-            x: '80%'
-        }
-    ];
-
-    var points = document.querySelectorAll('[data-point]');
-    var cards = document.querySelectorAll('[data-card]');
-    var list = document.querySelector('.start-info-list');
-
-    for (var i=0; i < pointList.length; i++) {
-      [].forEach.call(points, function (el) {
-          if(el.dataset.point == pointList[i].title) {
-              pointList[i].point = el;
-              el.style.top = pointList[i].y;
-              el.style.left = pointList[i].x;
-          }
-      });
-
-      [].forEach.call(cards, function (el) {
-          if(el.dataset.card == pointList[i].title) {
-              pointList[i].card = el;
-          }
-      });
-    }
-
-    function removeClass() {
-        [].forEach.call(points, function (point) {
-            point.classList.remove('active');
-        });
-
-        [].forEach.call(cards, function (card) {
-            card.classList.remove('active');
-        });
-    }
-
-    pointList.map(function (el) {
-        el.point.addEventListener('click', function () {
-            list.scrollTop = 0;
-
-            list.insertBefore(el.card, list.firstChild);
-
-            removeClass();
-
-            var self = this;
-
-            function addClassActive() {
-                self.classList.add('active');
-                el.card.classList.add('active');
-            }
-
-            setTimeout(addClassActive, 10);
-        });
-
-        el.card.addEventListener('click', function () {
-            removeClass();
-
-            this.classList.add('active');
-            el.point.classList.add('active');
-        })
-    })
-  </script>
 </body>
 </html>
 

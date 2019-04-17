@@ -5,6 +5,7 @@
   border: 1px solid #89D7D7;
   border-radius: 20px;
   display: flex;
+  user-select: none;
 
   &:after {
     content: "";
