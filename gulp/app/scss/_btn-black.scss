@@ -12,4 +12,8 @@
       background: $tur;
     }
   };
+
+  @media (max-width: 767px) {
+    min-width: 280px;
+  }
 }

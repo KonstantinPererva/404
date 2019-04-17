@@ -48,8 +48,8 @@ define("VER_CSS", '1.31');
   <section data-slide="start" class="start flex-box slide">
     <div class="start__inner">
       <header class="header flex-box">
-        <div class="mobile-menu">
-          <svg id="open-menu" width="31" height="18" viewBox="0 0 31 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div class="mobile-menu" id="btnOpenMenu">
+          <svg width="31" height="18" viewBox="0 0 31 18" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="0.640137" y="0.5" width="30" height="3" rx="1.5" fill="#89D7D7"/>
             <rect x="0.640137" y="7.5" width="30" height="3" rx="1.5" fill="#89D7D7"/>
             <rect x="0.640137" y="14.5" width="30" height="3" rx="1.5" fill="#89D7D7"/>
@@ -126,14 +126,14 @@ define("VER_CSS", '1.31');
         <div class="menu">
           <nav data-animated="fadeInLeft" class="flex-box my-animate menu-nav">
             <div class="menu-nav__panel">
-              <span class="menu-nav__close">
+              <span class="menu-nav__close" id="btnCloseMenu">
                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M10.1436 9.2508L16.8286 2.56576C17.244 2.15078 17.244 1.47746 16.8286 1.06248C16.4133 0.647143 15.7407 0.647143 15.3254 1.06248L8.64031 7.74752L1.95492 1.06248C1.53959 0.647143 0.866972 0.647143 0.451637 1.06248C0.0363032 1.47746 0.0363032 2.15078 0.451637 2.56576L7.13703 9.2508L0.451637 15.9358C0.0363032 16.3508 0.0363032 17.0241 0.451637 17.4391C0.659305 17.6464 0.931469 17.7503 1.20328 17.7503C1.47509 17.7503 1.74725 17.6464 1.95492 17.4388L8.64031 10.7537L15.3254 17.4388C15.533 17.6464 15.8052 17.7503 16.077 17.7503C16.3488 17.7503 16.621 17.6464 16.8286 17.4388C17.244 17.0238 17.244 16.3505 16.8286 15.9355L10.1436 9.2508Z" fill="#89D7D7"/>
                 </svg>
               </span>
 
               <span class="menu-nav__logo">
-                <img src="img/logo.png" alt="logo" title="logo">
+                <img src="img/logo.png" alt="logo">
               </span>
             </div>
 
@@ -149,11 +149,11 @@ define("VER_CSS", '1.31');
 
             <div class="social-mob">
               <a href="tel:+380938476795" class="header-phone" data-phone="+380938476795">
-          <span class="header-phone__ico">
-            <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M7.82801 0.0953369H1.14058C0.583441 0.0953369 0.127441 0.550908 0.127441 1.10848V14.0818C0.127441 14.6393 0.583441 15.0953 1.14058 15.0953H7.82801C8.38516 15.0953 8.84116 14.6402 8.84116 14.0822V1.10848C8.84116 0.550908 8.38516 0.0953369 7.82801 0.0953369ZM3.41458 0.825623H5.55401C5.62173 0.825623 5.67658 0.88048 5.67658 0.948623C5.67658 1.01634 5.62173 1.07119 5.55401 1.07119H3.41458C3.34687 1.07119 3.29201 1.01634 3.29201 0.948623C3.29201 0.88048 3.34687 0.825623 3.41458 0.825623ZM4.4843 14.5888C4.20444 14.5888 3.97773 14.3621 3.97773 14.0818C3.97773 13.8015 4.20444 13.5752 4.4843 13.5752C4.76416 13.5752 4.99087 13.8015 4.99087 14.0818C4.99087 14.3621 4.76416 14.5888 4.4843 14.5888ZM8.13616 13.2203H0.832441V1.70205H8.13616V13.2203Z" fill="#ffffff"/>
-            </svg>
-          </span>
+                <span class="header-phone__ico">
+                  <svg width="14" height="25" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M7.82801 0.0953369H1.14058C0.583441 0.0953369 0.127441 0.550908 0.127441 1.10848V14.0818C0.127441 14.6393 0.583441 15.0953 1.14058 15.0953H7.82801C8.38516 15.0953 8.84116 14.6402 8.84116 14.0822V1.10848C8.84116 0.550908 8.38516 0.0953369 7.82801 0.0953369ZM3.41458 0.825623H5.55401C5.62173 0.825623 5.67658 0.88048 5.67658 0.948623C5.67658 1.01634 5.62173 1.07119 5.55401 1.07119H3.41458C3.34687 1.07119 3.29201 1.01634 3.29201 0.948623C3.29201 0.88048 3.34687 0.825623 3.41458 0.825623ZM4.4843 14.5888C4.20444 14.5888 3.97773 14.3621 3.97773 14.0818C3.97773 13.8015 4.20444 13.5752 4.4843 13.5752C4.76416 13.5752 4.99087 13.8015 4.99087 14.0818C4.99087 14.3621 4.76416 14.5888 4.4843 14.5888ZM8.13616 13.2203H0.832441V1.70205H8.13616V13.2203Z" fill="#ffffff"/>
+                  </svg>
+                </span>
 
                 <span class="header-phone__text">+38 093 847 67 95</span>
               </a>
@@ -337,13 +337,9 @@ define("VER_CSS", '1.31');
 
       <div class="switch-wrapper">
         <div class="switch">
-          <span class="switch-item active" data-content="triathlon">
-            <span class="switch-item__text">Триатлон</span>
-          </span>
+          <span class="switch-item" data-content="triathlon">Триатлон</span>
 
-          <span class="switch-item" data-content="run">
-            <span class="switch-item__text">Бег</span>
-          </span>
+          <span class="switch-item" data-content="run">Бег</span>
         </div>
       </div>
     </div>
@@ -447,13 +443,9 @@ define("VER_CSS", '1.31');
 
       <div class="switch-wrapper">
         <div class="switch">
-          <span class="switch-item active" data-content="triathlon">
-            <span class="switch-item__text">Триатлон</span>
-          </span>
+          <span class="switch-item active" data-content="triathlon">Триатлон</span>
 
-          <span class="switch-item" data-content="run">
-            <span class="switch-item__text">Бег</span>
-          </span>
+          <span class="switch-item" data-content="run">Бег</span>
         </div>
       </div>
     </div>
@@ -461,7 +453,7 @@ define("VER_CSS", '1.31');
     <div class="cost__inner">
 
       <div class="content cost-triathlon">
-        <div class="flex-box">
+        <div class="flex-box cost-box">
           <div class="cost-price">
             <p>150 <span><sup>$</sup>/<sub>мес.</sub></span></p>
             <div class="discount">
@@ -492,7 +484,7 @@ define("VER_CSS", '1.31');
       </div>
 
       <div class="content cost-run">
-        <div class="flex-box">
+        <div class="flex-box cost-box">
           <div class="cost-price">
             <p>100 <span><sup>$</sup>/<sub>мес.</sub></span></p>
             <div class="discount">
@@ -1091,13 +1083,20 @@ define("VER_CSS", '1.31');
 
     pointList.map(function (el) {
         el.point.addEventListener('click', function () {
-            removeClass();
+            list.scrollTop = 0;
 
-            this.classList.add('active');
-            el.card.classList.add('active');
             list.insertBefore(el.card, list.firstChild);
 
-            list.scrollTop = 0;
+            removeClass();
+
+            var self = this;
+
+            function addClassActive() {
+                self.classList.add('active');
+                el.card.classList.add('active');
+            }
+
+            setTimeout(addClassActive, 10);
         });
 
         el.card.addEventListener('click', function () {

@@ -38,6 +38,7 @@
 
   &.active {
     background: rgba(255,255,255,.2);
+    transition: .3s;
 
     & .start-info-card-local__ico {
       & svg path {

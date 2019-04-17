@@ -1,59 +1,14 @@
 $(document).ready(function () {
-
-	/*===============
-			HIDE LOGO
-	===============*/
-	// function showLgog(){
-	// 	if ($(window).scrollTop() > 20){
-	// 		$(".logo").css({opacity : 0, "visibility": "hidden"});
-	// 	} else {
-	// 		$(".logo").css({opacity : 1, "visibility": "visible"});
-	// 	}
-	// }
-    //
-	// /* hide / show logo */
-	// $(window).scroll(function (e) {
-	// 	showLgog();
-	// });
-
-	/*===============
-				PHONE
-	===============*/
-	// if ($(window).width() < 1200) {
-	// 	elem = $(".phone");
-	// 	elem.html(
-	// 		'<a href="tel:'+elem.data('phone')+'">'+elem.html()+'</a>'
-	// 	);
-	// }
-
-
 	/*===============
 				MENU
 	===============*/
-	var Menu = {
-		active : false,
 
-		burgerWork : function () {
+	$("#btnOpenMenu").click(function () {
+		$(".menu-nav").addClass('active');
+	});
 
-			if (!Menu.active) {
-				Menu.active = true;
-				$("#open-menu").hide();
-				$("#close-menu").show();
-
-				$(".menu nav").css({right: "0", opacity: 1});
-
-			} else{
-				Menu.active = false;
-				$("#open-menu").show();
-				$("#close-menu").hide();
-
-				$(".menu nav").css({right: "-203px", opacity: 0});
-			}
-		},
-	};
-
-	$("#open-menu, #close-menu").click(function () {
-			Menu.burgerWork();
+	$("#btnCloseMenu").click(function () {
+        $(".menu-nav").removeClass('active');
 	});
 
 
@@ -61,7 +16,6 @@ $(document).ready(function () {
 	/* work animation navigation */
 	$(".menu nav li, .slider-content button").click(function (event) {
 		event.preventDefault();
-
 
 		if ($(window).width() >= 1152) {
 			var index = $(this).data('index-slide');
@@ -72,18 +26,17 @@ $(document).ready(function () {
 			var el = $(this).find("a").attr('href').replace('#', '');
 
 			Slide.current  = $("section."+el);
-			console.log(Slide.current);
 
 			var h = 56; // height fixed header
 
 			var top = Slide.current.offset().top - h;
-			$('body,html').animate({scrollTop: top}, 700, function () {
+			$('body,html').animate({scrollTop: top}, 500, function () {
 				Slide.work = false;
 			});
 
 		}
 
-		Menu.burgerWork();
+        $(".menu-nav").removeClass('active');
 	});
 
 
@@ -250,51 +203,6 @@ $(document).ready(function () {
 					}
 				}
 			}
-
-
-				/*$('body').bind('DOMMouseScroll', function(e){
-
-						Slide.disable();
-						scrollMove(e);
-						return false;
-				});*/
-
-
-
-
-
-
-
-			/*if ($(window).width() > 1200) {
-
-				Slide.setCurSlide($(window));
-				Slide.goSlide();
-
-				//Firefox
-				$('body').bind('DOMMouseScroll', function(e){
-
-					if (!Slide.work) {
-						if(e.originalEvent.detail > 0) {
-							Slide.down();
-						} else {
-							Slide.up();
-						}
-					}
-
-				});
-
-				//IE, Opera, Safari
-				$('body').bind('mousewheel', function(e){
-					if (!Slide.work) {
-						if(e.originalEvent.wheelDelta < 0) {
-							Slide.down();
-						} else {
-							Slide.up();
-						}
-					}
-				});
-			}*/
-
 		}),
 
 		setAnimation : function () {
@@ -463,70 +371,26 @@ $(document).ready(function () {
 		ppForm.sendData($(this).closest("form"));
 	});
 
-
-
-	/*===============
-			START MAP
-	===============*/
-	$(".about-start-mobile .title-start").click(function() {
-		$(this).siblings(".des-start").toggle();
-	});
-
-	var point = false;
-
-	$(".map-img .point").click(function () {
-
-		var id = $(this).attr("id");
-
-		if ($(this).data('id')) {
-			var arr = $(this).data('id').split(",");
-			var ids = "";
-			for (i=0; i < arr.length; i++) {
-				ids += (i === 0) ? "#"+arr[i] : ",#"+arr[i];
-			}
-
-			if (!point) {
-				$(ids).show(300);
-				point = true;
-			} else {
-				point = false;
-				$(ids).hide(300);
-			}
-
-		} else {
-			var html = $(".about-start-mobile div[data-id='" +id+ "']").html();
-		}
-		$(".start-map-description .des-start").html(html);
-
-		$(".map-img .point").removeClass("point-active");
-		$(this).toggleClass("point-active");
-	});
-
-
 	/*===============
 				SWITCH
 	===============*/
-	$(document).ready(function () {
-		var img = new Image();
-		img.src = '/img/dir-run.jpg';
-	});
-
 
 	$(".switch span").click(function () {
-		$(".switch span").removeClass("active");
-		$(this).toggleClass("active");
+		if ($(".switch").is(".run")) {
+            $(".switch").removeClass("run");
+		} else {
+            $(".switch").addClass("run");
+		}
 
 		var directions = $(".directions");
 		var cost = $(".cost");
 
 		var content = $(this).attr("data-content");
 
-		$(".switch span[data-content="+content+"]").addClass("active");
-
 		directions.find(".content").hide();
 		cost.find(".content").hide();
 
-		directions.css({'background-image' : 'url("../img/dir-' +content+ '.jpg")'});
+		directions.css({'background' : 'url("../img/dir-' +content+ '.jpg")'});
 
 		$(".dir-"+content).show();
 		$(".cost-"+content).show();
