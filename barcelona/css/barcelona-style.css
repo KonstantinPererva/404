@@ -2030,9 +2030,6 @@ button a {
   display: none;
   padding: 0; }
 
-.content.dir-run, .content.cost-run {
-  display: none; }
-
 .slider-title-small {
   max-width: 480px;
   font-size: 24px;
@@ -2584,6 +2581,97 @@ button a {
                 background-size: cover; } }
     .directions-substrate__run.active {
       opacity: 1; }
+
+.barcelona-banners {
+  background-image: url(../img/start-barcelona.jpg);
+  -webkit-background-size: cover;
+          background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -10; }
+
+.start-title {
+  font-family: Oswald-Regular;
+  font-size: 36px;
+  line-height: 40px;
+  color: #fff;
+  text-align: center;
+  font-weight: normal; }
+  .start-title_top {
+    margin: 0 0 10px; }
+  .start-title_bottom {
+    margin: 4px 0 26px; }
+  .start-title-wrapper {
+    max-width: 320px;
+    width: 100%; }
+    .start-title-wrapper_barcelona {
+      margin-bottom: 50px; }
+  .start-title__mark {
+    color: #89D7D7; }
+  .start-title-img {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .start-title-img img {
+      width: 150px;
+      display: block; }
+      .start-title-img img.start-title-img__barcelona {
+        width: 322px; }
+
+.start-descr {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 0 12px; }
+  .start-descr__ico {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 16px 0 0; }
+  .start-descr__text {
+    font-family: Montserrat-Bold;
+    font-size: 18px;
+    line-height: 22px; }
+    .start-descr__text_mark {
+      color: #89D7D7; }
+
+.start-list {
+  margin: 0 0 40px; }
+
+.discount-box {
+  max-width: 450px;
+  width: 100%;
+  padding: 14px 20px;
+  border: 2px solid #fff;
+  font-family: Montserrat-Bold;
+  font-size: 24px;
+  line-height: 28px;
+  color: #89D7D7; }
+  .discount-box__mark {
+    color: #fff;
+    text-decoration: underline; }
 
 @media (max-width: 1366px) {
   .directions .name-block {

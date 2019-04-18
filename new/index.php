@@ -1,6 +1,6 @@
 <?php
 
-define("VER_JS", '1.22');
+define("VER_JS", '1.23');
 define("VER_CSS", '1.31');
 
 ?>
@@ -457,7 +457,6 @@ define("VER_CSS", '1.31');
     </div>
 
     <div class="cost__inner">
-
       <div class="content cost-triathlon">
         <div class="flex-box cost-box">
           <div class="cost-price">
@@ -684,9 +683,9 @@ define("VER_CSS", '1.31');
                 <span class="map-point__text">Athens</span>
               </div>
 
-              <div class="map-point" data-point="Dnipro">
+              <div class="map-point left" data-point="Kharkiv">
                 <span class="map-point__ico"></span>
-                <span class="map-point__text">Dnipro</span>
+                <span class="map-point__text">Kharkiv</span>
               </div>
             </div>
           </div>
@@ -694,13 +693,13 @@ define("VER_CSS", '1.31');
           <div class="additional-info">
             <div class="additional-info__left">
               <div class="additional-info-warning">
-            <span class="additional-info-warning__ico">
-              <svg width="30" height="29" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M14.9997 19.8818C14.161 19.8818 13.458 20.5849 13.458 21.4236C13.458 22.2623 14.161 22.9653 14.9997 22.9653C15.8076 22.9653 16.5415 22.2623 16.5045 21.4606C16.5415 20.5787 15.8446 19.8818 14.9997 19.8818Z" fill="#111111"/>
-                <path d="M29.27 25.3456C30.2382 23.6743 30.2444 21.6824 29.2823 20.0173L19.6249 3.29249C18.669 1.60891 16.9422 0.609863 15.0058 0.609863C13.0694 0.609863 11.3426 1.61508 10.3867 3.28633L0.716939 20.0296C-0.245107 21.7132 -0.23894 23.7175 0.73544 25.3887C1.69749 27.0415 3.41807 28.0344 5.34216 28.0344H24.6324C26.5627 28.0344 28.2956 27.0291 29.27 25.3456ZM27.1732 24.1368C26.6367 25.0619 25.687 25.6107 24.6263 25.6107H5.336C4.28761 25.6107 3.34407 25.0742 2.81987 24.1677C2.28952 23.2488 2.28335 22.1511 2.81371 21.226L12.4835 4.48888C13.0077 3.57001 13.9451 3.02731 15.0058 3.02731C16.0603 3.02731 17.0039 3.57617 17.5281 4.49505L27.1917 21.2322C27.7097 22.1326 27.7036 23.218 27.1732 24.1368Z" fill="#111111"/>
-                <path d="M14.6172 9.05866C13.8834 9.26834 13.427 9.93437 13.427 10.7422C13.464 11.2294 13.4948 11.7228 13.5318 12.21C13.6367 14.0662 13.7415 15.8855 13.8464 17.7417C13.8834 18.3708 14.3705 18.8271 14.9996 18.8271C15.6286 18.8271 16.122 18.3399 16.1528 17.7047C16.1528 17.3224 16.1528 16.9709 16.1898 16.5824C16.2576 15.3921 16.3316 14.2019 16.3995 13.0117C16.4365 12.2408 16.5043 11.4699 16.5413 10.6991C16.5413 10.4216 16.5043 10.1749 16.3995 9.9282C16.085 9.2375 15.3511 8.88599 14.6172 9.05866Z" fill="#111111"/>
-              </svg>
-            </span>
+                <span class="additional-info-warning__ico">
+                  <svg width="30" height="29" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14.9997 19.8818C14.161 19.8818 13.458 20.5849 13.458 21.4236C13.458 22.2623 14.161 22.9653 14.9997 22.9653C15.8076 22.9653 16.5415 22.2623 16.5045 21.4606C16.5415 20.5787 15.8446 19.8818 14.9997 19.8818Z" fill="#111111"/>
+                    <path d="M29.27 25.3456C30.2382 23.6743 30.2444 21.6824 29.2823 20.0173L19.6249 3.29249C18.669 1.60891 16.9422 0.609863 15.0058 0.609863C13.0694 0.609863 11.3426 1.61508 10.3867 3.28633L0.716939 20.0296C-0.245107 21.7132 -0.23894 23.7175 0.73544 25.3887C1.69749 27.0415 3.41807 28.0344 5.34216 28.0344H24.6324C26.5627 28.0344 28.2956 27.0291 29.27 25.3456ZM27.1732 24.1368C26.6367 25.0619 25.687 25.6107 24.6263 25.6107H5.336C4.28761 25.6107 3.34407 25.0742 2.81987 24.1677C2.28952 23.2488 2.28335 22.1511 2.81371 21.226L12.4835 4.48888C13.0077 3.57001 13.9451 3.02731 15.0058 3.02731C16.0603 3.02731 17.0039 3.57617 17.5281 4.49505L27.1917 21.2322C27.7097 22.1326 27.7036 23.218 27.1732 24.1368Z" fill="#111111"/>
+                    <path d="M14.6172 9.05866C13.8834 9.26834 13.427 9.93437 13.427 10.7422C13.464 11.2294 13.4948 11.7228 13.5318 12.21C13.6367 14.0662 13.7415 15.8855 13.8464 17.7417C13.8834 18.3708 14.3705 18.8271 14.9996 18.8271C15.6286 18.8271 16.122 18.3399 16.1528 17.7047C16.1528 17.3224 16.1528 16.9709 16.1898 16.5824C16.2576 15.3921 16.3316 14.2019 16.3995 13.0117C16.4365 12.2408 16.5043 11.4699 16.5413 10.6991C16.5413 10.4216 16.5043 10.1749 16.3995 9.9282C16.085 9.2375 15.3511 8.88599 14.6172 9.05866Z" fill="#111111"/>
+                  </svg>
+                </span>
 
                 <span class="additional-info-warning__text">team404 не работает с людьми, купившими слоты на старт без согласования с тренером</span>
               </div>
@@ -758,7 +757,7 @@ define("VER_CSS", '1.31');
           <div class="start-info-card__row">
             <span class="start-info-card-property">Дата</span>
 
-            <span class="start-info-card-value">19 Августа 2019</span>
+            <span class="start-info-card-value">11 Августа 2019</span>
           </div>
 
           <div class="start-info-card__row">
@@ -770,7 +769,13 @@ define("VER_CSS", '1.31');
           <div class="start-info-card__row start-info-card__row_registration">
             <span class="start-info-card-property">На старт</span>
 
-            <span class="btn-transparent ppf btn-transparent_registration"><span class="btn-transparent__text">Зарегистрироваться</span></span>
+            <a
+                    href="http://eu.ironman.com/triathlon/events/emea/ironman-70.3/gdynia.aspx#axzz5lPwCKAdm"
+                    class="btn-transparent ppf btn-transparent_registration"
+                    target="_blank"
+            >
+              <span class="btn-transparent__text">Зарегистрироваться</span>
+            </a>
           </div>
         </div>
 
@@ -788,7 +793,7 @@ define("VER_CSS", '1.31');
           <div class="start-info-card__row">
             <span class="start-info-card-property">Название</span>
 
-            <span class="start-info-card-value start-info-card-value_name">IRONMAN 70.3 GDYNIA</span>
+            <span class="start-info-card-value start-info-card-value_name">IRONMAN ITALY EMILIA-ROMAGNA</span>
           </div>
 
           <div class="start-info-card__row">
@@ -806,7 +811,7 @@ define("VER_CSS", '1.31');
           <div class="start-info-card__row">
             <span class="start-info-card-property">Дата</span>
 
-            <span class="start-info-card-value">19 Августа 2019</span>
+            <span class="start-info-card-value">21 Сентября 2019</span>
           </div>
 
           <div class="start-info-card__row">
@@ -818,7 +823,13 @@ define("VER_CSS", '1.31');
           <div class="start-info-card__row start-info-card__row_registration">
             <span class="start-info-card-property">На старт</span>
 
-            <span class="btn-transparent ppf btn-transparent_registration"><span class="btn-transparent__text">Зарегистрироваться</span></span>
+            <a
+                    href="http://eu.ironman.com/triathlon/events/emea/ironman/emilia-romagna.aspx#axzz5lPwCKAdm"
+                    class="btn-transparent ppf btn-transparent_registration"
+                    target="_blank"
+            >
+              <span class="btn-transparent__text">Зарегистрироваться</span>
+            </a>
           </div>
         </div>
 
@@ -854,23 +865,29 @@ define("VER_CSS", '1.31');
           <div class="start-info-card__row">
             <span class="start-info-card-property">Дата</span>
 
-            <span class="start-info-card-value">19 Августа 2019</span>
+            <span class="start-info-card-value">10 Ноября 2019</span>
           </div>
 
           <div class="start-info-card__row">
             <span class="start-info-card-property">Дистанция</span>
 
-            <span class="start-info-card-value">Триатлон 1900 / 90 / 21.1</span>
+            <span class="start-info-card-value">Бег 42.2</span>
           </div>
 
           <div class="start-info-card__row start-info-card__row_registration">
             <span class="start-info-card-property">На старт</span>
 
-            <span class="btn-transparent ppf btn-transparent_registration"><span class="btn-transparent__text">Зарегистрироваться</span></span>
+            <a
+                    href="https://www.athensauthenticmarathon.gr/site/index.php/en/"
+                    class="btn-transparent ppf btn-transparent_registration"
+                    target="_blank"
+            >
+              <span class="btn-transparent__text">Зарегистрироваться</span>
+            </a>
           </div>
         </div>
 
-        <div class="start-info-card" data-card="Dnipro">
+        <div class="start-info-card" data-card="Kharkiv">
           <div class="start-info-card-local">
             <span class="start-info-card-local__text">Ukraine</span>
 
@@ -884,7 +901,7 @@ define("VER_CSS", '1.31');
           <div class="start-info-card__row">
             <span class="start-info-card-property">Название</span>
 
-            <span class="start-info-card-value start-info-card-value_name">IRONMAN 70.3 GDYNIA</span>
+            <span class="start-info-card-value start-info-card-value_name">IRON WAY Kharkiv 70.3</span>
           </div>
 
           <div class="start-info-card__row">
@@ -896,25 +913,31 @@ define("VER_CSS", '1.31');
           <div class="start-info-card__row">
             <span class="start-info-card-property">Город</span>
 
-            <span class="start-info-card-value">Dnipro</span>
+            <span class="start-info-card-value">Kharkiv</span>
           </div>
 
           <div class="start-info-card__row">
             <span class="start-info-card-property">Дата</span>
 
-            <span class="start-info-card-value">19 Августа 2019</span>
+            <span class="start-info-card-value">11 Августа 2019</span>
           </div>
 
           <div class="start-info-card__row">
             <span class="start-info-card-property">Дистанция</span>
 
-            <span class="start-info-card-value">Триатлон 1900 / 90 / 21.1</span>
+            <span class="start-info-card-value">Бег 70.3</span>
           </div>
 
           <div class="start-info-card__row start-info-card__row_registration">
             <span class="start-info-card-property">На старт</span>
 
-            <span class="btn-transparent ppf btn-transparent_registration"><span class="btn-transparent__text">Зарегистрироваться</span></span>
+            <a
+                    href="https://iron-way.com/kharkiv-70.3.html"
+                    class="btn-transparent btn-transparent_registration"
+                    target="_blank"
+            >
+              <span class="btn-transparent__text">Зарегистрироваться</span>
+            </a>
           </div>
         </div>
       </div>
@@ -1035,7 +1058,7 @@ define("VER_CSS", '1.31');
 <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
 <script src="js/jquery.maskedinput.js"></script>
 <script type="text/javascript" src="js/onepage-scroll/jquery.onepage-scroll.js"></script>
-  <script src="js/perfect-scrollbar.js"></script>
+<script src="js/perfect-scrollbar.js"></script>
 <script src="js/layouts.js?<?= VER_JS; ?>"></script>
 </body>
 </html>

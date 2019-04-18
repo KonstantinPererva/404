@@ -18,6 +18,14 @@
     &-wrapper {
       max-width: 320px;
       width: 100%;
+
+      &_barcelona {
+        margin-bottom: 50px;
+      }
+    }
+
+    &__mark {
+      color: $tur;
     }
 
     &-img {
@@ -29,6 +37,10 @@
       & img {
         width: 150px;
         display: block;
+
+        &.start-title-img__barcelona {
+          width: 322px;
+        }
       }
     }
   }

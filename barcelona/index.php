@@ -30,7 +30,7 @@ define("VER_CSS", '1.31');
   </script>
 
   <link rel="shortcut icon" href="/new/favicon.ico" />
-  <link rel="stylesheet" href="css/athens-style.css?<?= VER_CSS; ?>" />
+  <link rel="stylesheet" href="css/barcelona-style.css?<?= VER_CSS; ?>" />
 
   <title>Team 404 подготовка к марафону и триатлону в Харькове</title>
 </head>
@@ -122,7 +122,7 @@ define("VER_CSS", '1.31');
       </header>
 
       <div class="content">
-        <div class="menu athens-menu">
+        <div class="menu hide-menu">
           <nav data-animated="fadeInLeft" class="flex-box my-animate menu-nav">
             <div class="menu-nav__panel">
               <span class="menu-nav__close" id="btnCloseMenu">
@@ -214,17 +214,15 @@ define("VER_CSS", '1.31');
         </div>
 
         <div class="start-box">
-          <div class="start-title-wrapper">
-            <h2 class="start-title start-title_top">
-              Марафон в Афинах<br>
-              THE AUTHENTIC
-            </h2>
-
+          <div class="start-title-wrapper start-title-wrapper_barcelona">
             <div class="start-title-img">
-              <img src="img/opap.png" alt="logo">
+              <img src="img/svg/ironman-barcelona.svg" alt="logo" class="start-title-img__barcelona">
             </div>
 
-            <h2 class="start-title start-title_bottom">С любого уровня</h2>
+            <h2 class="start-title start-title">
+              С любого уровня<br>
+              <span class="start-title__mark">за 18 месяцев</span>
+            </h2>
           </div>
 
           <div class="start-list">
@@ -265,7 +263,7 @@ define("VER_CSS", '1.31');
           </div>
         </div>
 
-        <div class="athens-banners"></div>
+        <div class="barcelona-banners"></div>
       </div>
 
       <div class="mouse">
@@ -375,35 +373,47 @@ define("VER_CSS", '1.31');
     </div>
 
     <div class="directions__inner">
-      <!-- run -->
-      <div class="content dir-run">
+      <!-- triathlon -->
+      <div class="content dir-triathlon">
         <div class="direction-triathlon">
           <div class="triathlon-description">
-            <div class="directions-title">Бег</div>
+            <div class="directions-title">Триатлон</div>
 
-            <div data-animated="fadeIn" data-delay="300" class="directions-subtitle my-animate">
-              Если хочешь быть сильным — бегай,<br>
-              хочешь быть красивым — бегай,<br>
-              хочешь быть умным — бегай.
-            </div>
+            <div data-animated="fadeIn" data-delay="300" class="directions-subtitle my-animate">Плавание. Вело. Бег.</div>
 
-            <div data-animated="fadeInUp" data-delay="300" class="directions-text my-animate">Беговые тренировки в Харькове стали культовым спортивным направлением совсем недавно. Многие на сегодняшний день вышли на улицу и начали заниматься этим прекрасным видом спорта. Но мало кто делает это обдуманно и полезно.</div>
+            <div data-animated="fadeInUp" data-delay="300" class="directions-text my-animate">Триатлон объединяет в себе три популярных и любимых всеми вида спорта. Гармоничное развитие организма во всех направлениях, масса здоровья и незабываемые эмоции от соревнований на любом уровне привели его к огромной популярности среди любителей в Европе и США. Триатлон в Харькове еще совсем молод, но с каждым месяцем число занимающихся в team404 растет почти так же быстро, как уровень результатов наших учеников.</div>
 
             <div class="ironman-block">
-              <div class="ironman-title">МАРАФОН 42,195 км.</div>
+              <div class="ironman-title">Ironman</div>
 
-              <div class="ironman-subtitle">
-                <p>легендарная дистанция, о которой (тайно) мечтает каждый бегун-любитель*</p>
+              <div class="ironman-subtitle">соревнования, о которых мечтает каждый спортсмен.</div>
 
-                <p>В team404 подготовка к марафону с нуля занимает около 1 года.</p>
+              <div class="iroman-distances">
+                <div>
+                  <img src="/new/img/swim.png" alt="swim" width="60"/>
 
-                <p class="ironman-subtitle__mark">* всего 1% людей преодолевают хотя бы 1 марафон</p>
+                  <span>3,9 км</span>
+                </div>
+
+                <div>
+                  <img src="/new/img/velo.png" alt="velo" width="60"/>
+
+                  <span>180 км</span>
+                </div>
+
+                <div>
+                  <img src="/new/img/run.png" alt="run" width="56"/>
+
+                  <span>42,2 км</span>
+                </div>
               </div>
+
+              <p>В нашей команде преодоление IRONMAN становится реальностью уже через 1-2 года занятий триатлоном.</p>
             </div>
 
             <div class="triathlon-description__row">
               <span class="btn-tur ppf my-animate delay-1s" data-animated="fadeIn">
-                <span class="btn-tur__text">Хочу бегать правильно</span>
+                <span class="btn-tur__text">Хочу стать триатлетом</span>
               </span>
             </div>
           </div>
@@ -426,24 +436,22 @@ define("VER_CSS", '1.31');
     </div>
 
     <div class="cost__inner">
-      <div class="content cost-run">
+      <div class="content cost-triathlon">
         <div class="flex-box cost-box">
           <div class="cost-price">
-            <p>100 <span><sup>$</sup>/<sub>мес.</sub></span></p>
+            <p>150 <span><sup>$</sup>/<sub>мес.</sub></span></p>
             <div class="discount">
-              <div class="discount-box">При оплате сразу за весь курс
-                подготовки слот на <span class="discount-box__mark">участие в марафоне в подарок</span></div>
+              <div class="discount-box">При оплате сразу за весь курс подготовки скидка <span class="discount-box__mark">900$</span></div>
             </div>
           </div>
 
           <div class="cost-description">
             <div class="cost-title">Что входит:</div>
-
             <ul class="cost-list">
               <li>идивидуальный план подготовки</li>
-              <li>обучение экономичной и безопасной технике бега</li>
-              <li>персональные и групповые тренировки</li>
-              <li>командная экипировка</li>
+              <li>обучение экономичной и безопасной технике</li>
+              <li>персональные и групповые тренировки по плаванию, вело, бегу</li>
+              <li>командная экипировка (велоформа, трисьют, футболка, кепка)</li>
               <li>консультации по питанию и составление диеты</li>
               <li>питание на ironman и подводящих стартах</li>
               <li>консультации по фармакологической поддержке</li>

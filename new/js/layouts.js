@@ -426,9 +426,9 @@ $(document).ready(function () {
 			x: '59%'
 		},
 		{
-			title: 'Dnipro',
-			y: '66%',
-			x: '80%'
+			title: 'Kharkiv',
+			y: '63%',
+			x: '82%'
 		}
 	];
 

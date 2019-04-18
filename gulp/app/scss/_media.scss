@@ -120,6 +120,30 @@
     margin-bottom: 20px;
     margin-top: 0;
   }
+
+//  athens
+
+  .start .mouse {
+    padding: 0 0 14px;
+  }
+  .start-title {
+    font-size: 32px;
+    line-height: 37px;
+  }
+  .start-title-img img {
+    width: 120px;
+
+    &.start-title-img__barcelona {
+      width: 290px;
+    }
+  }
+  .start-descr__text {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .start-descr {
+    margin: 0 0 10px;
+  }
 }
 
 @media (max-width: 1280px) {
@@ -127,6 +151,14 @@
     font-size: 12px;
     line-height: 16px;
     width: 300px;
+  }
+
+  //  athens
+
+  .discount-box {
+    max-width: 350px;
+    font-size: 18px;
+    line-height: 24px;
   }
 }
 
@@ -177,6 +209,9 @@
 }
 
 @media (max-width: 1024px) {
+  .hide-menu {
+    display: block;
+  }
   .start {
     padding: 10px 40px 40px;
   }
@@ -329,7 +364,7 @@
     flex: 0 0 auto;
   }
   .start {
-    height: calc(100vh - 100px);
+    min-height: calc(100vh - 90px);
     padding: 0 27px 56px;
     justify-content: center;
   }
@@ -389,7 +424,6 @@
 }
 
 @media (max-width: 992px) {
-
   .team__inner {
     padding: 30px 10px 0;
   }
@@ -420,9 +454,6 @@
   .team .content.flex-box {
     display: block;
   }
-
-
-
   .banners {
     background-position: left -322px center;
   }
@@ -555,6 +586,50 @@
   }
   .sponsor-card-name {
     height: 54px;
+  }
+
+//  athens
+  .athens-banners {
+    background-image: url(../img/start-mob-athens.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .discount-box {
+    margin: 0 auto;
+  }
+  .start-box {
+    max-width: 460px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .start-title-wrapper {
+    margin: 0 auto;
+  }
+  .start-box__row {
+    text-align: center;
+  }
+  .start-title {
+    font-size: 36px;
+    line-height: 44px;
+  }
+  .start-title_top {
+    margin: 0 0 20px;
+  }
+  .start-title_bottom {
+    margin: 20px 0 30px;
+  }
+  .start-list {
+    margin: 0 0 60px;
+  }
+
+//  barcelona
+
+  .barcelona-banners {
+    background-image: url(../img/start-barcelona-mob.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
   }
 }
 
@@ -758,5 +833,30 @@
   }
   .sponsor-card {
     margin: 0 0 20px;
+  }
+
+//  athens
+
+  .start-title {
+    font-size: 28px;
+    line-height: 34px;
+  }
+  .start-title-img img {
+    width: 100px;
+
+    &.start-title-img__barcelona {
+      width: 270px;
+    }
+  }
+  .start-descr__text {
+    font-size: 14px;
+  }
+  .discount-box {
+    text-align: left;
+    font-size: 15px;
+    line-height: 21px;
+  }
+  .start-box__row {
+    text-align: center;
   }
 }

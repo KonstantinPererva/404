@@ -1062,268 +1062,6 @@ button a {
   margin-bottom: 100px; }
 
 /*====================
-        SHOP
-====================*/
-.shop {
-  padding: 0 20px;
-  padding-top: 20px;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-  -webkit-align-content: baseline;
-      -ms-flex-line-pack: baseline;
-          align-content: baseline; }
-
-.shop > div {
-  max-width: 1366px;
-  margin: auto; }
-
-.shop p {
-  margin: 0; }
-
-.shop img {
-  max-width: 100%; }
-
-.shop .content.payment, .shop .content.deliver {
-  display: none; }
-
-.shop .content.payment h3, .shop .content.deliver h3 {
-  font-family: Montserrat-Bold;
-  font-size: 32px; }
-
-.shop .content.payment p, .shop .content.deliver p {
-  font-family: Montserrat-Regular;
-  font-size: 16px;
-  margin-bottom: 15px; }
-
-.shop .name-block {
-  -webkit-flex-basis: 100%;
-      -ms-flex-preferred-size: 100%;
-          flex-basis: 100%;
-  margin-bottom: 100px; }
-
-.shop .product {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  display: -ms-Flexbox;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-bottom: 80px;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-          flex-direction: row; }
-
-.shop .product .name-product {
-  text-align: center;
-  width: 100%;
-  margin-bottom: 30px; }
-
-.shop .product .img-product {
-  width: 45%; }
-
-.shop .product .product-options {
-  padding-left: 15px; }
-
-.shop .product .name-option {
-  margin-bottom: 5px; }
-
-.shop .product .price-product {
-  margin-top: 15px;
-  margin-bottom: 20px; }
-
-.shop .product .btn-product {
-  margin-top: 30px; }
-
-.shop .product .btn-product button {
-  font-size: 14px; }
-
-.shop .p3 {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-  -webkit-flex-direction: row-reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse; }
-
-@media screen and (min-width: 768px) {
-  .shop .product .product-options {
-    padding-left: 30px; }
-  .shop .product .btn-product button {
-    font-size: 18px; } }
-
-@media screen and (min-width: 992px) {
-  .shop {
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center; } }
-
-@media screen and (min-width: 1200px) {
-  .shop {
-    height: 100vh;
-    padding: 0;
-    -webkit-box-pack: start;
-    -webkit-justify-content: flex-start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-align-content: space-around;
-        -ms-flex-line-pack: distribute;
-            align-content: space-around; }
-  .shop .name-block {
-    margin-bottom: 0; }
-  .shop .content {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    display: -ms-Flexbox;
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: row;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
-    padding: 0 20px; }
-  .shop .product {
-    position: relative;
-    margin-bottom: 0;
-    -webkit-box-pack: start;
-    -webkit-justify-content: flex-start;
-        -ms-flex-pack: start;
-            justify-content: flex-start; }
-  .shop .product .name-product {
-    position: absolute;
-    top: 0;
-    display: inline-block;
-    width: auto;
-    margin: 0; }
-  .shop .product .img-product {
-    width: 30%; }
-  .shop .p1 {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: row;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-align-content: flex-start;
-        -ms-flex-line-pack: start;
-            align-content: flex-start;
-    width: 50%; }
-  .shop .p1 .img-product {
-    width: 40%; }
-  .shop .p1 .name-product {
-    top: -40px;
-    left: 0; }
-  .shop .p2 {
-    margin-top: -50px;
-    margin-bottom: 100px; }
-  .shop .p2 .name-product {
-    left: -20px; }
-  .shop .p3 {
-    -webkit-box-align: end;
-    -webkit-align-items: flex-end;
-        -ms-flex-align: end;
-            align-items: flex-end; }
-  .shop .p3 .name-product {
-    right: 200px;
-    top: -35px; }
-  .shop .join {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    display: -ms-Flexbox;
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    width: 50%; }
-  .shop .join .product {
-    width: 100%;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: row;
-        -ms-flex-direction: row;
-            flex-direction: row; }
-  .shop .join .product:last-child {
-    -webkit-box-align: end;
-    -webkit-align-items: flex-end;
-        -ms-flex-align: end;
-            align-items: flex-end;
-    padding: 0; }
-  .shop .join .product:last-child .product-options {
-    padding-right: 30px; }
-  .shop .join .product:last-child .btn-product {
-    text-align: left; } }
-
-@media screen and (min-width: 1360px) {
-  .shop {
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center; } }
-
-@media screen and (min-width: 1600px) {
-  .shop {
-    -webkit-align-content: flex-start;
-        -ms-flex-line-pack: start;
-            align-content: flex-start;
-    padding-top: 50px; }
-  .shop .name-block {
-    margin-bottom: 75px; }
-  .shop .name-block span {
-    margin-left: 0; }
-  .shop .content {
-    padding: 0; }
-  .shop .product .img-product {
-    width: 45%; }
-  .shop .product .option {
-    margin-bottom: 50px; }
-  .shop .product .btn-product {
-    margin: 0; }
-  .shop .p1 .img-product {
-    width: 50%; }
-  .shop .p1 .product-options {
-    margin-bottom: -100px; }
-  .shop .p3 .product-options {
-    margin-bottom: -50px; } }
-
-@media screen and (min-width: 1800px) {
-  .shop {
-    padding-top: 100px; }
-  .shop .name-block {
-    margin-bottom: 150px; } }
-
-/*====================
       PP FORM
 ====================*/
 .pp-form {
@@ -1856,6 +1594,11 @@ button a {
     margin: auto;
     visibility: hidden;
     opacity: 0; }
+  @media (max-width: 767px) {
+    .map-point.left .map-point__text {
+      left: auto;
+      right: -4px;
+      padding: 0 32px 0 12px; } }
   .map-point.active .map-point__ico {
     border: 4px solid #fff; }
   .map-point.active .map-point__text {
@@ -2282,6 +2025,10 @@ button a {
     -webkit-transition: none !important;
     -o-transition: none !important;
     transition: none !important; } }
+
+.hide-menu {
+  display: none;
+  padding: 0; }
 
 .slider-title-small {
   max-width: 480px;
@@ -2849,10 +2596,6 @@ button a {
   height: 100%;
   z-index: -10; }
 
-.athens-menu {
-  display: none;
-  padding: 0; }
-
 .start-title {
   font-family: Oswald-Regular;
   font-size: 36px;
@@ -2867,6 +2610,10 @@ button a {
   .start-title-wrapper {
     max-width: 320px;
     width: 100%; }
+    .start-title-wrapper_barcelona {
+      margin-bottom: 50px; }
+  .start-title__mark {
+    color: #89D7D7; }
   .start-title-img {
     display: -webkit-box;
     display: -webkit-flex;
@@ -2884,6 +2631,8 @@ button a {
     .start-title-img img {
       width: 150px;
       display: block; }
+      .start-title-img img.start-title-img__barcelona {
+        width: 322px; }
 
 .start-descr {
   display: -webkit-box;
@@ -2923,53 +2672,6 @@ button a {
   .discount-box__mark {
     color: #fff;
     text-decoration: underline; }
-
-@media (max-width: 1366px) {
-  .start .mouse {
-    padding: 0 0 14px; }
-  .start-title {
-    font-size: 32px;
-    line-height: 37px; }
-  .start-title-img img {
-    width: 120px; }
-  .start-descr__text {
-    font-size: 16px;
-    line-height: 20px; }
-  .start-descr {
-    margin: 0 0 10px; } }
-
-@media (max-width: 1024px) {
-  .athens-menu {
-    display: block; }
-  .discount-box {
-    max-width: 350px;
-    font-size: 18px;
-    line-height: 24px; } }
-
-@media (max-width: 992px) {
-  .athens-banners {
-    background-image: url(../img/start-mob-athens.jpg);
-    -webkit-background-size: cover;
-            background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center; }
-  .discount-box {
-    margin: 0 auto; } }
-
-@media (max-width: 767px) {
-  .start-title {
-    font-size: 28px;
-    line-height: 34px; }
-  .start-title-img img {
-    width: 100px; }
-  .start-descr__text {
-    font-size: 14px; }
-  .discount-box {
-    text-align: left;
-    font-size: 15px;
-    line-height: 21px; }
-  .start-box__row {
-    text-align: center; } }
 
 @media (max-width: 1366px) {
   .directions .name-block {
@@ -3059,13 +2761,31 @@ button a {
     margin: 0 0 20px; }
   .start .slider-content .slider-text {
     margin-bottom: 20px;
-    margin-top: 0; } }
+    margin-top: 0; }
+  .start .mouse {
+    padding: 0 0 14px; }
+  .start-title {
+    font-size: 32px;
+    line-height: 37px; }
+  .start-title-img img {
+    width: 120px; }
+    .start-title-img img.start-title-img__barcelona {
+      width: 290px; }
+  .start-descr__text {
+    font-size: 16px;
+    line-height: 20px; }
+  .start-descr {
+    margin: 0 0 10px; } }
 
 @media (max-width: 1280px) {
   .additional-info-warning__text {
     font-size: 12px;
     line-height: 16px;
-    width: 300px; } }
+    width: 300px; }
+  .discount-box {
+    max-width: 350px;
+    font-size: 18px;
+    line-height: 24px; } }
 
 @media (max-width: 1152px) {
   .directions-coach .trainer-photo img {
@@ -3110,6 +2830,8 @@ button a {
     padding: 20px; } }
 
 @media (max-width: 1024px) {
+  .hide-menu {
+    display: block; }
   .start {
     padding: 10px 40px 40px; }
   .start .slider-content .slider-title {
@@ -3252,8 +2974,8 @@ button a {
         -ms-flex: 0 0 auto;
             flex: 0 0 auto; }
   .start {
-    height: -webkit-calc(100vh - 100px);
-    height: calc(100vh - 100px);
+    min-height: -webkit-calc(100vh - 90px);
+    min-height: calc(100vh - 90px);
     padding: 0 27px 56px;
     -webkit-box-pack: center;
     -webkit-justify-content: center;
@@ -3420,7 +3142,38 @@ button a {
     color: #fff;
     font-family: Montserrat-Bold, sans-serif; }
   .sponsor-card-name {
-    height: 54px; } }
+    height: 54px; }
+  .athens-banners {
+    background-image: url(../img/start-mob-athens.jpg);
+    -webkit-background-size: cover;
+            background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; }
+  .discount-box {
+    margin: 0 auto; }
+  .start-box {
+    max-width: 460px;
+    margin: 0 auto;
+    width: 100%; }
+  .start-title-wrapper {
+    margin: 0 auto; }
+  .start-box__row {
+    text-align: center; }
+  .start-title {
+    font-size: 36px;
+    line-height: 44px; }
+  .start-title_top {
+    margin: 0 0 20px; }
+  .start-title_bottom {
+    margin: 20px 0 30px; }
+  .start-list {
+    margin: 0 0 60px; }
+  .barcelona-banners {
+    background-image: url(../img/start-barcelona-mob.jpg);
+    -webkit-background-size: cover;
+            background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; } }
 
 @media (max-width: 767px) {
   .team .team-statistic .statistic-text {
@@ -3571,4 +3324,19 @@ button a {
   .map-wrapper {
     margin: 0 auto 40px; }
   .sponsor-card {
-    margin: 0 0 20px; } }
+    margin: 0 0 20px; }
+  .start-title {
+    font-size: 28px;
+    line-height: 34px; }
+  .start-title-img img {
+    width: 100px; }
+    .start-title-img img.start-title-img__barcelona {
+      width: 270px; }
+  .start-descr__text {
+    font-size: 14px; }
+  .discount-box {
+    text-align: left;
+    font-size: 15px;
+    line-height: 21px; }
+  .start-box__row {
+    text-align: center; } }

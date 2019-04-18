@@ -411,24 +411,14 @@ $(document).ready(function () {
 $(document).ready(function () {
 	var pointList = [
 		{
-			title: 'Gdynia',
-			y: '52.2%',
-			x: '54.5%'
-		},
-		{
-			title: 'Cervia',
-			y: '75%',
-			x: '38%'
-		},
-		{
 			title: 'Athens',
 			y: '89.5%',
 			x: '59%'
 		},
 		{
-			title: 'Dnipro',
-			y: '66%',
-			x: '80%'
+			title: 'Kharkiv',
+			y: '63%',
+			x: '82%'
 		}
 	];
 
