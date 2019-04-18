@@ -1,0 +1,40 @@
+Aug 11
+2019
+
+IRONMAN 70.3 GDYNIA
+Gdynia, Poland
+
+http://eu.ironman.com/triathlon/events/emea/ironman-70.3/gdynia.aspx#axzz5lPwCKAdm
+
+==================
+
+Sep 21
+2019
+IRONMAN ITALY EMILIA-ROMAGNA
+Cervia, Italy
+
+http://eu.ironman.com/triathlon/events/emea/ironman/emilia-romagna.aspx#axzz5lPwCKAdm
+
+====================
+
+Greece
+дистанция бег 42.2
+
+https://www.athensauthenticmarathon.gr/site/index.php/en/
+
+==================
+11 августа 2019 года
+IRON WAY Kharkiv 70.3
+
+https://iron-way.com/kharkiv-70.3.html
+
+
+
+
+            <a
+                    href="http://eu.ironman.com/triathlon/events/emea/ironman/emilia-romagna.aspx#axzz5lPwCKAdm"
+                    class="btn-transparent ppf btn-transparent_registration"
+                    target="_blank"
+            >
+              <span class="btn-transparent__text">Зарегистрироваться</span>
+            </a>

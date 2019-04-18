@@ -631,9 +631,14 @@ define("VER_CSS", '1.31');
                 <span class="map-point__text">Athens</span>
               </div>
 
-              <div class="map-point" data-point="Dnipro">
+              <div class="map-point left" data-point="Kharkiv">
                 <span class="map-point__ico"></span>
-                <span class="map-point__text">Dnipro</span>
+                <span class="map-point__text">Kharkiv</span>
+              </div>
+
+              <div class="map-point" data-point="Barcelona">
+                <span class="map-point__ico"></span>
+                <span class="map-point__text">Barcelona</span>
               </div>
             </div>
           </div>
@@ -705,7 +710,7 @@ define("VER_CSS", '1.31');
           <div class="start-info-card__row">
             <span class="start-info-card-property">Дата</span>
 
-            <span class="start-info-card-value">19 Августа 2019</span>
+            <span class="start-info-card-value">11 Августа 2019</span>
           </div>
 
           <div class="start-info-card__row">
@@ -717,7 +722,13 @@ define("VER_CSS", '1.31');
           <div class="start-info-card__row start-info-card__row_registration">
             <span class="start-info-card-property">На старт</span>
 
-            <span class="btn-transparent ppf btn-transparent_registration"><span class="btn-transparent__text">Зарегистрироваться</span></span>
+            <a
+                    href="http://eu.ironman.com/triathlon/events/emea/ironman-70.3/gdynia.aspx#axzz5lPwCKAdm"
+                    class="btn-transparent ppf btn-transparent_registration"
+                    target="_blank"
+            >
+              <span class="btn-transparent__text">Зарегистрироваться</span>
+            </a>
           </div>
         </div>
 
@@ -735,7 +746,7 @@ define("VER_CSS", '1.31');
           <div class="start-info-card__row">
             <span class="start-info-card-property">Название</span>
 
-            <span class="start-info-card-value start-info-card-value_name">IRONMAN 70.3 GDYNIA</span>
+            <span class="start-info-card-value start-info-card-value_name">IRONMAN ITALY EMILIA-ROMAGNA</span>
           </div>
 
           <div class="start-info-card__row">
@@ -753,7 +764,7 @@ define("VER_CSS", '1.31');
           <div class="start-info-card__row">
             <span class="start-info-card-property">Дата</span>
 
-            <span class="start-info-card-value">19 Августа 2019</span>
+            <span class="start-info-card-value">21 Сентября 2019</span>
           </div>
 
           <div class="start-info-card__row">
@@ -765,7 +776,13 @@ define("VER_CSS", '1.31');
           <div class="start-info-card__row start-info-card__row_registration">
             <span class="start-info-card-property">На старт</span>
 
-            <span class="btn-transparent ppf btn-transparent_registration"><span class="btn-transparent__text">Зарегистрироваться</span></span>
+            <a
+                    href="http://eu.ironman.com/triathlon/events/emea/ironman/emilia-romagna.aspx#axzz5lPwCKAdm"
+                    class="btn-transparent ppf btn-transparent_registration"
+                    target="_blank"
+            >
+              <span class="btn-transparent__text">Зарегистрироваться</span>
+            </a>
           </div>
         </div>
 
@@ -801,23 +818,29 @@ define("VER_CSS", '1.31');
           <div class="start-info-card__row">
             <span class="start-info-card-property">Дата</span>
 
-            <span class="start-info-card-value">19 Августа 2019</span>
+            <span class="start-info-card-value">10 Ноября 2019</span>
           </div>
 
           <div class="start-info-card__row">
             <span class="start-info-card-property">Дистанция</span>
 
-            <span class="start-info-card-value">Триатлон 1900 / 90 / 21.1</span>
+            <span class="start-info-card-value">Бег 42.2</span>
           </div>
 
           <div class="start-info-card__row start-info-card__row_registration">
             <span class="start-info-card-property">На старт</span>
 
-            <span class="btn-transparent ppf btn-transparent_registration"><span class="btn-transparent__text">Зарегистрироваться</span></span>
+            <a
+                    href="https://www.athensauthenticmarathon.gr/site/index.php/en/"
+                    class="btn-transparent ppf btn-transparent_registration"
+                    target="_blank"
+            >
+              <span class="btn-transparent__text">Зарегистрироваться</span>
+            </a>
           </div>
         </div>
 
-        <div class="start-info-card" data-card="Dnipro">
+        <div class="start-info-card" data-card="Kharkiv">
           <div class="start-info-card-local">
             <span class="start-info-card-local__text">Ukraine</span>
 
@@ -831,7 +854,7 @@ define("VER_CSS", '1.31');
           <div class="start-info-card__row">
             <span class="start-info-card-property">Название</span>
 
-            <span class="start-info-card-value start-info-card-value_name">IRONMAN 70.3 GDYNIA</span>
+            <span class="start-info-card-value start-info-card-value_name">IRON WAY Kharkiv 70.3</span>
           </div>
 
           <div class="start-info-card__row">
@@ -843,25 +866,85 @@ define("VER_CSS", '1.31');
           <div class="start-info-card__row">
             <span class="start-info-card-property">Город</span>
 
-            <span class="start-info-card-value">Dnipro</span>
+            <span class="start-info-card-value">Kharkiv</span>
           </div>
 
           <div class="start-info-card__row">
             <span class="start-info-card-property">Дата</span>
 
-            <span class="start-info-card-value">19 Августа 2019</span>
+            <span class="start-info-card-value">11 Августа 2019</span>
           </div>
 
           <div class="start-info-card__row">
             <span class="start-info-card-property">Дистанция</span>
 
-            <span class="start-info-card-value">Триатлон 1900 / 90 / 21.1</span>
+            <span class="start-info-card-value">Бег 70.3</span>
           </div>
 
           <div class="start-info-card__row start-info-card__row_registration">
             <span class="start-info-card-property">На старт</span>
 
-            <span class="btn-transparent ppf btn-transparent_registration"><span class="btn-transparent__text">Зарегистрироваться</span></span>
+            <a
+                    href="https://iron-way.com/kharkiv-70.3.html"
+                    class="btn-transparent btn-transparent_registration"
+                    target="_blank"
+            >
+              <span class="btn-transparent__text">Зарегистрироваться</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="start-info-card" data-card="Barcelona">
+          <div class="start-info-card-local">
+            <span class="start-info-card-local__text">Spain</span>
+
+            <span class="start-info-card-local__ico">
+              <svg width="18" height="26" viewBox="0 0 18 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16.8349 6.97859C16.7459 6.64508 16.5652 6.28971 16.4315 5.97857C14.8318 2.13412 11.3365 0.756348 8.51425 0.756348C4.73612 0.756348 0.57496 3.28975 0.0194092 8.51168V9.57854C0.0194092 9.62307 0.0347539 10.023 0.0565505 10.2231C0.36798 12.7117 2.3317 15.3566 3.79829 17.8452C5.37613 20.5116 7.01337 23.1345 8.63544 25.7563C9.63564 24.0453 10.6322 22.3119 11.6097 20.6453C11.876 20.1561 12.1853 19.6673 12.4519 19.2005C12.6297 18.8896 12.9692 18.5788 13.1244 18.2895C14.7021 15.4008 17.2418 12.4898 17.2418 9.62301V8.4453C17.2418 8.13451 16.8566 7.04561 16.8349 6.97859ZM8.58342 12.3343C7.47284 12.3343 6.25723 11.7789 5.65722 10.2453C5.56782 10.0012 5.57503 9.51199 5.57503 9.46718V8.77829C5.57503 6.82323 7.23505 5.93416 8.67921 5.93416C10.4571 5.93416 11.8321 7.35657 11.8321 9.13447C11.8321 10.9123 10.3613 12.3343 8.58342 12.3343Z" />
+              </svg>
+            </span>
+          </div>
+
+          <div class="start-info-card__row">
+            <span class="start-info-card-property">Название</span>
+
+            <span class="start-info-card-value start-info-card-value_name">IRONMAN</span>
+          </div>
+
+          <div class="start-info-card__row">
+            <span class="start-info-card-property">Страна</span>
+
+            <span class="start-info-card-value">Spain</span>
+          </div>
+
+          <div class="start-info-card__row">
+            <span class="start-info-card-property">Город</span>
+
+            <span class="start-info-card-value">Barcelona</span>
+          </div>
+
+          <div class="start-info-card__row">
+            <span class="start-info-card-property">Дата</span>
+
+            <span class="start-info-card-value">11 Августа 2019</span>
+          </div>
+
+          <div class="start-info-card__row">
+            <span class="start-info-card-property">Дистанция</span>
+
+            <span class="start-info-card-value">Бег </span>
+          </div>
+
+          <div class="start-info-card__row start-info-card__row_registration">
+            <span class="start-info-card-property">На старт</span>
+
+            <a
+                    href="https://iron-way.com/kharkiv-70.3.html"
+                    class="btn-transparent btn-transparent_registration"
+                    target="_blank"
+            >
+              <span class="btn-transparent__text">Зарегистрироваться</span>
+            </a>
           </div>
         </div>
       </div>
